@@ -1044,6 +1044,229 @@
             font-size: 1.1rem;
         }
 
+        /* Support Section */
+        .support-section {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+            position: relative;
+        }
+
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .support-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(74, 21, 37, 0.08);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(74, 21, 37, 0.12);
+        }
+
+        .support-card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .support-card h3 {
+            color: var(--burgundy-deep);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .support-card p {
+            color: var(--charcoal-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .support-card .btn {
+            display: inline-block;
+        }
+
+        /* Transparency Section */
+        .transparency-section {
+            background: var(--burgundy-deep);
+            color: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .transparency-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .transparency-section .section-title {
+            color: var(--gold);
+        }
+
+        .transparency-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .transparency-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .transparency-box h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .transparency-box h3 span {
+            font-size: 1.5rem;
+        }
+
+        .transparency-box p {
+            color: var(--cream);
+            opacity: 0.9;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .transparency-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .transparency-highlight {
+            background: rgba(201, 162, 39, 0.15);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .transparency-highlight p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Funds Usage Section */
+        .funds-section {
+            background: var(--cream);
+        }
+
+        .funds-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .funds-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            border-top: 4px solid var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .funds-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .funds-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 1.8rem;
+        }
+
+        .funds-item h4 {
+            color: var(--burgundy-deep);
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .funds-item p {
+            color: var(--charcoal-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .funds-note {
+            max-width: 700px;
+            margin: 3rem auto 0;
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--gold);
+        }
+
+        .funds-note p {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .funds-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .funds-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Contact Section */
         .contact-section {
             background: var(--cream);
@@ -1370,6 +1593,7 @@
             <li><a href="#approach">Our Approach</a></li>
             <li><a href="#communities">Communities</a></li>
             <li><a href="#partnerships">Partner</a></li>
+            <li><a href="#support">Support</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="nav-mobile-toggle" onclick="toggleNav()">
@@ -2006,7 +2230,7 @@
                         <div class="contact-icon">✉️</div>
                         <div>
                             <strong>Email</strong><br>
-                            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+                            <a href="/cdn-cgi/l/email-protection#bfd6d1d9d0ffd8d7ded1deddd3d0d0dbcfcddacccccacdda91d0cdd8"><span class="__cf_email__" data-cfemail="98f1f6fef7d8fff0f9f6f9faf4f7f7fce8eafdebebedeafdb6f7eaff">[email&#160;protected]</span></a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2023,7 +2247,7 @@
                 <div class="contact-form">
                     <!-- Using Formspree for form handling (free tier: 50 submissions/month) -->
                     <!-- To activate: 1) Go to formspree.io 2) Sign up free 3) Create form 4) Replace YOUR_FORM_ID below -->
-                    <form action="https://formspree.io/f/xjgvlazg" method="POST">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
@@ -2055,6 +2279,102 @@
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Our Work Section -->
+    <section class="support-section section" id="support">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Make a Difference</div>
+                <h2 class="section-title">Support Our Work</h2>
+                <p class="section-intro">Every contribution—whether financial or material—directly supports free blood pressure screenings for Ghana's working communities.</p>
+            </div>
+
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-card-icon">💰</div>
+                    <h3>Financial Contribution</h3>
+                    <p>Your financial support funds screening equipment, educational materials in local languages, community health events, and volunteer coordination. Contributions are processed securely through Ko-fi.</p>
+                    <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="btn btn-primary">Support on Ko-fi</a>
+                </div>
+                <div class="support-card">
+                    <div class="support-card-icon">📦</div>
+                    <h3>Donate Supplies</h3>
+                    <p>We maintain a wishlist of essential screening supplies including blood pressure monitors, stethoscopes, pulse oximeters, and educational materials. Items ship directly to our team.</p>
+                    <a href="#contact" class="btn btn-secondary">Contact for Wishlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="transparency-section section" id="transparency">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color: var(--gold-pale);">Our Commitment</div>
+                <h2 class="section-title">Transparency & Accountability</h2>
+            </div>
+
+            <div class="transparency-content">
+                <div class="transparency-box">
+                    <h3><span>📋</span> Who We Are</h3>
+                    <p>The Ghana Hypertension Screening Initiative is a <strong>grassroots community health project</strong> in its early stages, led by health professionals in the United States and Ghana. We operate through direct volunteer effort and community partnerships.</p>
+                    <p>We are <strong>not a registered nonprofit organization</strong>. We are neighbors, professionals, and advocates who believe prevention shouldn't be a privilege.</p>
+                </div>
+
+                <div class="transparency-box">
+                    <h3><span>💡</span> What This Means for You</h3>
+                    <p>Because we are not a 501(c)(3) or registered charity, contributions to this initiative are <strong>not tax-deductible</strong>. Your support is a direct gift to community health work, not a charitable donation in the legal sense.</p>
+                    <div class="transparency-highlight">
+                        <p>We maintain complete transparency about how every contribution is used. Quarterly updates will be posted on this website, and supporters can request detailed breakdowns at any time.</p>
+                    </div>
+                </div>
+
+                <div class="transparency-box">
+                    <h3><span>🎯</span> Our Commitment</h3>
+                    <p>100% of contributions go toward screening operations. There are no salaries, administrative overhead, or hidden costs. This is volunteer-driven work with one goal: healthier communities.</p>
+                    <p>Questions about our operations, finances, or approach? We welcome them. Reach out through our contact form or email us directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Use Funds Section -->
+    <section class="funds-section section" id="funds">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Financial Stewardship</div>
+                <h2 class="section-title">How Your Support Is Used</h2>
+                <p class="section-intro">Every contribution directly funds the tools and logistics needed to bring free screenings to communities in need.</p>
+            </div>
+
+            <div class="funds-grid">
+                <div class="funds-item">
+                    <div class="funds-icon">🩺</div>
+                    <h4>Screening Equipment</h4>
+                    <p>Blood pressure monitors, stethoscopes, pulse oximeters, and medical supplies for accurate community screenings.</p>
+                </div>
+                <div class="funds-item">
+                    <div class="funds-icon">📚</div>
+                    <h4>Educational Materials</h4>
+                    <p>Health education resources translated into Twi and Ga, including pamphlets, posters, and visual aids.</p>
+                </div>
+                <div class="funds-item">
+                    <div class="funds-icon">🚐</div>
+                    <h4>Event Logistics</h4>
+                    <p>Transportation, venue setup, and coordination for community screening events at lorry stations and markets.</p>
+                </div>
+                <div class="funds-item">
+                    <div class="funds-icon">👥</div>
+                    <h4>Volunteer Support</h4>
+                    <p>Training materials, coordination tools, and modest stipends for community health volunteers in Ghana.</p>
+                </div>
+            </div>
+
+            <div class="funds-note">
+                <p><strong>Our Promise:</strong> We do not take salaries or administrative fees. Quarterly financial updates will be published on this website for full accountability.</p>
             </div>
         </div>
     </section>
@@ -2126,7 +2446,7 @@
                     <li><a href="#partnerships">Partner With Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#resources">Research Sources</a></li>
-                    <li><a href="mailto:info@ghanabloodpressure.org">Email Us</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#ff96919990bf98979e919e9d9390909b8f8d9a8c8c8a8d9ad1908d98">Email Us</a></li>
                 </ul>
             </div>
         </div>
@@ -2135,7 +2455,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
@@ -2150,12 +2470,44 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile nav if open
-                    document.getElementById('navLinks').classList.remove('active');
                 }
+                // Close mobile nav if open
+                document.getElementById('navLinks').classList.remove('active');
             });
         });
 
-        // Add scroll effect to nav
-        window.addEventListener('scroll', function() {
-            
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-item, .warning-card, .barrier-card, .community-card, .principle-card, .partner-card, .support-card, .funds-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- Ko-fi Widget -->
+    <script>
+        function initKofi() {
+            if (typeof kofiWidgetOverlay !== 'undefined') {
+                kofiWidgetOverlay.draw('ghanahealthscreening', {
+                    'type': 'floating-chat',
+                    'floating-chat.donateButton.text': 'Donate',
+                    'floating-chat.donateButton.background-color': '#00b9fe',
+                    'floating-chat.donateButton.text-color': '#fff'
+                });
+            }
+        }
+    </script>
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js' onload='initKofi()'></script>
+</body>
+</html>
