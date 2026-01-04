@@ -2230,7 +2230,7 @@
                         <div class="contact-icon">✉️</div>
                         <div>
                             <strong>Email</strong><br>
-                            <a href="/cdn-cgi/l/email-protection#bfd6d1d9d0ffd8d7ded1deddd3d0d0dbcfcddacccccacdda91d0cdd8"><span class="__cf_email__" data-cfemail="98f1f6fef7d8fff0f9f6f9faf4f7f7fce8eafdebebedeafdb6f7eaff">[email&#160;protected]</span></a>
+                            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -2245,9 +2245,19 @@
                 </div>
 
                 <div class="contact-form">
-                    <!-- Using Formspree for form handling (free tier: 50 submissions/month) -->
-                    <!-- To activate: 1) Go to formspree.io 2) Sign up free 3) Create form 4) Replace YOUR_FORM_ID below -->
+                    <!-- FORMSPREE CONTACT FORM WITH SPAM PROTECTION -->
+                    <!-- TO ACTIVATE: Replace YOUR_FORM_ID with your actual Formspree form ID -->
+                    <!-- Get your form ID at: https://formspree.io (free tier: 50 submissions/month) -->
                     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- Honeypot field - hidden from humans, catches bots -->
+                        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+                        
+                        <!-- Redirect after submission (optional) -->
+                        <input type="hidden" name="_next" value="https://ghanabloodpressure.org/#contact">
+                        
+                        <!-- Email subject line -->
+                        <input type="hidden" name="_subject" value="New GHSI Website Inquiry">
+                        
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
@@ -2276,6 +2286,10 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="4"></textarea>
                         </div>
+                        
+                        <!-- reCAPTCHA widget - uncomment and add your site key after registering at google.com/recaptcha -->
+                        <!-- <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY" style="margin-bottom: 1rem;"></div> -->
+                        
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
@@ -2446,16 +2460,16 @@
                     <li><a href="#partnerships">Partner With Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#resources">Research Sources</a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#ff96919990bf98979e919e9d9390909b8f8d9a8c8c8a8d9ad1908d98">Email Us</a></li>
+                    <li><a href="mailto:info@ghanabloodpressure.org">Email Us</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Ghana Hypertension Screening Initiative. All rights reserved.</p>
+            <p>© 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
