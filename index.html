@@ -973,6 +973,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
+            position: relative;
         }
 
         .partner-card {
@@ -1578,6 +1579,170 @@
         .animate-in {
             animation: fadeInUp 0.6s ease forwards;
         }
+
+        /* Collapsible Section Styles */
+        /* Show More / Show Less Pattern */
+        .partnerships-grid.collapsed .partner-card:nth-child(n+4) {
+            display: none;
+        }
+        
+        .partnerships-grid.collapsed::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--cream));
+            pointer-events: none;
+        }
+        
+        .show-more-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .show-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--burgundy);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .show-more-btn:hover {
+            background: var(--gold);
+            color: var(--white);
+        }
+        
+        .show-more-btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .show-more-btn.expanded svg {
+            transform: rotate(180deg);
+        }
+
+        .section-toggle-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .section-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            color: var(--gold);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-toggle-btn:hover {
+            background: var(--gold);
+            color: var(--burgundy-deep);
+        }
+
+        .section-toggle-btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .section-toggle-btn.expanded svg {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .collapsible-content.expanded {
+            max-height: 3000px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        /* Preview content shown before expand */
+        .preview-content {
+            position: relative;
+        }
+
+        .preview-content::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, var(--cream));
+            pointer-events: none;
+        }
+
+        .preview-content.no-fade::after {
+            display: none;
+        }
+
+        /* Join Us Section */
+        .joinus-section {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            position: relative;
+        }
+
+        .joinus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .joinus-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(74, 21, 37, 0.08);
+            border-left: 4px solid var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        .joinus-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .joinus-card h4 {
+            color: var(--burgundy-deep);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .joinus-card p {
+            color: var(--charcoal-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .joinus-cta {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
     </style>
 </head>
 <body>
@@ -2094,7 +2259,7 @@
                 <div class="principle-card">
                     <h4>Evidence-Based</h4>
                     <p class="what-means">What this means:</p>
-                    <p>Every element of our programme is grounded in peer-reviewed research. Our screening protocols follow World Health Organization guidelines. Our community engagement approach builds on successful interventions in sub-Saharan Africa, including Weill Cornell Medicine's religious leader hypertension programme in Tanzania. We use data to measure impact and adjust our approach. </p>
+                    <p>Every element of our programme is grounded in peer-reviewed research. Our screening protocols follow World Health Organization guidelines. Our community engagement approach builds on successful interventions in sub-Saharan Africa, including Weill Cornell Medicine's religious leader hypertension programme in Tanzania. We use data to measure impact and adjust our approach.</p>
                 </div>
                 <div class="principle-card">
                     <h4>Sustainable</h4>
@@ -2119,7 +2284,7 @@
                 <p class="section-intro">GHSI seeks strategic partnerships to scale our impact. Here is what we need from each partner type.</p>
             </div>
 
-            <div class="partnerships-grid">
+            <div class="partnerships-grid collapsed" id="partnershipsGrid">
                 <div class="partner-card">
                     <div class="partner-icon">🏥</div>
                     <h4>Healthcare Partners</h4>
@@ -2211,6 +2376,58 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="show-more-container">
+                <button class="show-more-btn" id="showMorePartners" onclick="togglePartners()">
+                    Show All Partners
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us / Volunteer Section -->
+    <section class="joinus-section section" id="joinus">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Build With Us</div>
+                <h2 class="section-title">Join Our Team</h2>
+                <p class="section-intro">GHSI is powered by volunteers who believe in accessible healthcare for all. We are looking for passionate individuals to fill key roles as we prepare for our pilot launch.</p>
+            </div>
+
+            <div class="joinus-grid">
+                <div class="joinus-card">
+                    <h4>Medical Director (Ghana-Based)</h4>
+                    <p>Licensed physician to oversee clinical protocols, ensure quality of screening procedures, and provide medical guidance. Supervises screening events and manages referral pathways.</p>
+                </div>
+                <div class="joinus-card">
+                    <h4>Programme Coordinator (Ghana-Based)</h4>
+                    <p>Manages day-to-day operations in Ghana: coordinates with GPRTU unions and Market Queen associations, schedules screening events, and oversees local volunteer teams.</p>
+                </div>
+                <div class="joinus-card">
+                    <h4>Community Health Volunteers</h4>
+                    <p>Trained volunteers who conduct blood pressure screenings, deliver health education sessions in Twi and English, and help build trust within communities.</p>
+                </div>
+                <div class="joinus-card">
+                    <h4>Data & Monitoring Officer</h4>
+                    <p>Tracks screening outcomes, manages participant data securely, and produces impact reports. Helps measure our progress toward the 1,000-screening pilot goal.</p>
+                </div>
+                <div class="joinus-card">
+                    <h4>Outreach & Communications</h4>
+                    <p>Creates educational materials in local languages, manages social media presence, and helps spread awareness through community networks and media.</p>
+                </div>
+                <div class="joinus-card">
+                    <h4>Fundraising & Partnerships</h4>
+                    <p>Identifies grant opportunities, cultivates donor relationships, and helps secure equipment donations and sponsorships for screening events.</p>
+                </div>
+            </div>
+
+            <div class="joinus-cta">
+                <p style="margin-bottom: 1rem; color: var(--charcoal-light);">Interested in volunteering? Let us know which role fits your skills and availability.</p>
+                <a href="#contact" class="btn btn-primary">Apply to Volunteer</a>
+            </div>
         </div>
     </section>
 
@@ -2248,7 +2465,7 @@
                     <!-- FORMSPREE CONTACT FORM WITH SPAM PROTECTION -->
                     <!-- TO ACTIVATE: Replace YOUR_FORM_ID with your actual Formspree form ID -->
                     <!-- Get your form ID at: https://formspree.io (free tier: 50 submissions/month) -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form action="https://formspree.io/f/xjgvlazg" method="POST">
                         <!-- Honeypot field - hidden from humans, catches bots -->
                         <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
                         
@@ -2438,6 +2655,7 @@
                     <p>Weill Cornell Medicine research demonstrating effectiveness of religious leader-based hypertension screening and education in Tanzania, with documented improvements in health outcomes.</p>
                     <a href="https://news.cornell.edu/stories/2025/04/religious-leaders-physicians-fight-hypertension-tanzania-and-beyond" target="_blank">Cornell Chronicle: Religious leaders fight hypertension in Tanzania →</a>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -2473,9 +2691,24 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
+        }
+        
+        function togglePartners() {
+            const grid = document.getElementById('partnershipsGrid');
+            const btn = document.getElementById('showMorePartners');
+            
+            if (grid.classList.contains('collapsed')) {
+                grid.classList.remove('collapsed');
+                btn.classList.add('expanded');
+                btn.innerHTML = 'Show Fewer Partners <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            } else {
+                grid.classList.add('collapsed');
+                btn.classList.remove('expanded');
+                btn.innerHTML = 'Show All Partners <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            }
         }
 
         // Smooth scroll for anchor links
@@ -2520,12 +2753,4 @@
                 kofiWidgetOverlay.draw('ghanahealthscreening', {
                     'type': 'floating-chat',
                     'floating-chat.donateButton.text': 'Donate',
-                    'floating-chat.donateButton.background-color': '#00b9fe',
-                    'floating-chat.donateButton.text-color': '#fff'
-                });
-            }
-        }
-    </script>
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js' onload='initKofi()'></script>
-</body>
-</html>
+              
