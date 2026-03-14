@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The evidence base behind GHSI: peer-reviewed research on hypertension prevalence in Ghana, community screening methodologies, the Simple app platform, and WHO HEARTS technical guidance.">
+    <meta property="og:title" content="Research & Evidence — GHSI">
+    <meta property="og:description" content="The evidence base behind GHSI: peer-reviewed research on hypertension prevalence in Ghana, community screening methodologies, the Simple app platform, and WHO HEARTS technical guidance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ghanabloodpressure.org/research/">
+    <meta property="og:site_name" content="Ghana Hypertension Screening Initiative">
+    <link rel="canonical" href="https://ghanabloodpressure.org/research/">
+    <title>Research | Ghana Hypertension Screening Initiative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --teal: #1A5F5F;
+    --teal-dark: #134747;
+    --teal-light: #238080;
+    --burgundy-deep: #4A1525;
+    --burgundy: #5D1A2E;
+    --gold: #C9A227;
+    --gold-light: #D4B84A;
+    --gold-pale: #E8D590;
+    --cream: #FDFAF5;
+    --cream-dark: #F5EEE0;
+    --charcoal: #2C2C2C;
+    --charcoal-light: #4A4A4A;
+    --white: #FFFFFF;
+    --green: #2D8B2D;
+    --yellow: #D4A017;
+    --orange: #D97706;
+    --red: #C53030;
+    --darkred: #7B1818;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* === COUNTDOWN BANNER === */
+.countdown-banner {
+    background: var(--teal);
+    color: var(--white);
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1001;
+}
+.countdown-banner a {
+    color: var(--gold-pale);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+.countdown-banner a:hover { color: var(--gold); }
+.countdown-banner strong { color: var(--gold-pale); font-size: 1.05rem; }
+
+/* === NAVIGATION === */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--burgundy-deep);
+    padding: 0.6rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(74, 21, 37, 0.3);
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.nav-logo-text {
+    color: var(--gold);
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+    align-items: center;
+}
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--gold); }
+.nav-links a.active::after { width: 100%; }
+.nav-donate-btn {
+    background: var(--gold);
+    color: var(--burgundy-deep) !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-decoration: none !important;
+}
+.nav-donate-btn:hover {
+    background: var(--gold-light) !important;
+    color: var(--burgundy-deep) !important;
+}
+.nav-donate-btn::after { display: none !important; }
+.nav-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.nav-mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--gold);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* === SECTIONS === */
+section { padding: 5rem 2rem; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+}
+.section-title {
+    font-size: 2.6rem;
+    color: var(--burgundy-deep);
+    margin-bottom: 1rem;
+}
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--charcoal-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* === BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary {
+    background: var(--teal);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 95, 95, 0.4);
+}
+.btn-secondary {
+    background: transparent;
+    color: var(--teal);
+    border: 2px solid var(--teal);
+}
+.btn-secondary:hover {
+    background: var(--teal);
+    color: var(--white);
+}
+.btn-gold {
+    background: var(--gold);
+    color: var(--burgundy-deep);
+    font-weight: 700;
+}
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+}
+
+/* === STATS BAR === */
+.stats-bar {
+    background: var(--burgundy-deep);
+    padding: 3rem 2rem;
+}
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.stat-item { text-align: center; color: var(--cream); }
+.stat-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.stat-label { font-size: 1rem; font-weight: 500; color: var(--cream); }
+.stat-source { font-size: 0.8rem; color: #C5BBAB; margin-top: 0.5rem; }
+.stat-source a { color: var(--gold-pale); text-decoration: none; }
+.stat-source a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--teal);
+    transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-4px); }
+.card h3, .card h4 {
+    color: var(--burgundy-deep);
+    margin-bottom: 0.75rem;
+}
+.card p {
+    color: var(--charcoal-light);
+    line-height: 1.7;
+}
+
+/* === PILLAR CARDS === */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.pillar-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+.pillar-card:hover { transform: translateY(-4px); }
+.pillar-header {
+    background: var(--teal);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+.pillar-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-pale);
+    margin-bottom: 0.25rem;
+}
+.pillar-title { color: var(--white); font-size: 1.3rem; }
+.pillar-subtitle { font-size: 0.85rem; color: var(--cream-dark); margin-top: 0.25rem; }
+.pillar-content { padding: 1.5rem; }
+.pillar-content p { margin-bottom: 1rem; color: var(--charcoal-light); }
+.pillar-list {
+    list-style: none;
+    padding: 0;
+}
+.pillar-list li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    color: var(--charcoal-light);
+    font-size: 0.95rem;
+}
+.pillar-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+}
+
+/* === IMAGE SECTIONS === */
+.hero-image-section {
+    position: relative;
+    overflow: hidden;
+}
+.hero-image-section img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.hero-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(74, 21, 37, 0.85));
+    padding: 3rem 2rem 2rem;
+    color: var(--white);
+}
+.hero-image-overlay h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+.hero-image-overlay p {
+    font-size: 1.15rem;
+    color: var(--cream);
+    max-width: 700px;
+}
+
+/* === SECTION IMAGE (side by side) === */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.split-section img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    object-fit: cover;
+    height: 400px;
+}
+.split-section .content h2 {
+    font-size: 2.2rem;
+    color: var(--burgundy-deep);
+    margin-bottom: 1rem;
+}
+.split-section .content p {
+    color: var(--charcoal-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* === BP COLOR SYSTEM === */
+.bp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+.bp-tier {
+    padding: 1.25rem 0.75rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    font-size: 0.85rem;
+}
+.bp-tier .bp-label {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.bp-tier .bp-range { font-size: 0.8rem; margin-bottom: 0.4rem; }
+.bp-tier .bp-action { font-size: 0.78rem; font-weight: 600; }
+
+/* === CLOSED LOOP VISUAL === */
+.loop-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.loop-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.loop-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+.loop-unit { font-size: 0.9rem; color: #E6E0D2; }
+.loop-question { margin-top: 0.75rem; font-size: 0.85rem; }
+
+/* === TIMELINE === */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+.timeline-item {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    padding: 0 0.5rem;
+}
+.timeline-dot {
+    width: 56px;
+    height: 56px;
+    background: var(--teal);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--cream);
+}
+.timeline-label {
+    font-weight: 700;
+    color: var(--burgundy-deep);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+.timeline-desc {
+    font-size: 0.82rem;
+    color: var(--charcoal-light);
+    max-width: 130px;
+    margin: 0 auto;
+}
+
+/* === TEAM === */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.team-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    border-top: 4px solid var(--teal);
+}
+.team-card h4 {
+    color: var(--burgundy-deep);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+.team-role {
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+.team-location {
+    color: var(--charcoal-light);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+.team-bio {
+    color: var(--charcoal-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* === PARTNER CARDS === */
+.partner-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--gold);
+}
+.partner-card h4 {
+    color: var(--burgundy-deep);
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+.partner-type {
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.partner-card p {
+    color: var(--charcoal-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.partner-card a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+.partner-card a:hover { text-decoration: underline; }
+
+/* === CONTACT FORM === */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-info h3 {
+    color: var(--burgundy-deep);
+    margin-bottom: 1.5rem;
+}
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.contact-icon { font-size: 1.5rem; }
+.contact-item a { color: var(--teal); text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+
+/* === FOOTER === */
+.footer {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+.footer-brand p {
+    max-width: 350px;
+    
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+}
+.footer h4 {
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.footer ul {
+    list-style: none;
+}
+.footer ul li { margin-bottom: 0.5rem; }
+.footer ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    color: #C5BBAB;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.footer ul li a:hover { color: var(--cream); }
+.footer-bottom {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #B0A88F;
+}
+
+/* === DARK SECTION === */
+.dark-section {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+}
+.dark-section .section-label { color: var(--gold-pale); }
+.dark-section .section-title { color: var(--gold); }
+.dark-section .section-intro { color: #E6E0D2; }
+
+.teal-section {
+    background: var(--teal);
+    color: var(--white);
+}
+.teal-section .section-label { color: var(--gold-pale); }
+.teal-section .section-title { color: var(--white); }
+.teal-section .section-intro { color: #E6E0D2; }
+
+/* === DONATE CTA === */
+.donate-cta {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+.donate-cta h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.donate-cta p {
+    color: var(--cream);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: #E6E0D2;
+}
+
+/* === OPEN ROLES === */
+.roles-list { margin-top: 1.5rem; }
+.role-item {
+    background: var(--cream);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.role-item strong { color: var(--burgundy-deep); }
+.role-item span { color: var(--charcoal-light); font-size: 0.9rem; }
+
+/* === RESPONSIVE === */
+
+/* === ACCESSIBILITY: Focus styles === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* === ACCESSIBILITY: Skip navigation === */
+.skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--burgundy-deep);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    z-index: 2000;
+    border-radius: 0 0 6px 6px;
+    text-decoration: none;
+}
+.skip-nav:focus {
+    top: 0;
+}
+
+/* === TOUCH TARGETS: Nav links === */
+.nav-links a {
+    padding: 0.6rem 0.25rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    .split-section { gap: 2rem; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 4rem 2rem; }
+    .section-title { font-size: 2.3rem; }
+    .hero-image-overlay h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--burgundy-deep);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 0.75rem;
+    }
+    .nav-links.active { display: flex; }
+    .nav-mobile-toggle { display: block; }
+    .hero-image-section img { height: 300px; }
+    .hero-image-overlay h1 { font-size: 2rem; }
+    .stats-container { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .split-section { grid-template-columns: 1fr; }
+    .bp-grid { grid-template-columns: repeat(2, 1fr); }
+    .loop-grid { grid-template-columns: repeat(2, 1fr); }
+    .timeline { flex-wrap: wrap; gap: 2rem; }
+    .timeline::before { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-brand p { max-width: none; }
+    section { padding: 3rem 1.5rem; }
+    .section-title { font-size: 2rem; }
+    .team-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp 0.5s ease forwards; }
+
+/* === RESEARCH PAGE SPECIFIC === */
+.research-hero {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.research-hero h1 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+.research-hero p {
+    font-size: 1.15rem;
+    color: var(--cream);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.research-nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--cream-dark);
+    padding: 1.25rem 2rem;
+    position: sticky;
+    top: 52px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.research-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: center;
+}
+.research-nav-inner a {
+    color: var(--charcoal-light);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.research-nav-inner a:hover {
+    color: var(--teal);
+    background: rgba(26, 95, 95, 0.08);
+}
+
+.research-section {
+    padding: 4rem 2rem;
+}
+.research-section:nth-child(even) {
+    background: var(--cream-dark);
+}
+.research-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.research-section-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+}
+.research-section-title {
+    font-size: 2rem;
+    color: var(--burgundy-deep);
+    margin-bottom: 0.75rem;
+}
+.research-section-desc {
+    color: var(--charcoal-light);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+}
+
+.ref-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--teal);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ref-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.ref-card-type {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.75rem;
+}
+.ref-card-type.meta-analysis { background: #E8F5E9; color: #2E7D32; }
+.ref-card-type.trial { background: #E3F2FD; color: #1565C0; }
+.ref-card-type.survey { background: #FFF3E0; color: #E65100; }
+.ref-card-type.framework { background: #F3E5F5; color: #6A1B9A; }
+.ref-card-type.cohort { background: #E0F7FA; color: #00695C; }
+.ref-card-type.report { background: #ECEFF1; color: #37474F; }
+.ref-card-type.tool { background: #FFF8E1; color: #F57F17; }
+.ref-card-type.roundtable { background: #FCE4EC; color: #880E4F; }
+.ref-card-type.news { background: #E8EAF6; color: #283593; }
+
+.ref-card h4 {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.ref-card .ref-authors {
+    font-size: 0.88rem;
+    color: var(--charcoal-light);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+.ref-card .ref-annotation {
+    font-size: 0.95rem;
+    color: var(--charcoal-light);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+.ref-card .ref-link a {
+    color: var(--teal);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.ref-card .ref-link a:hover {
+    color: var(--teal-dark);
+    text-decoration: underline;
+}
+.ref-card .ref-relevance {
+    font-size: 0.82rem;
+    color: var(--teal);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--cream-dark);
+}
+
+/* Donate CTA */
+.donate-cta {
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.donate-cta h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.donate-cta p {
+    color: var(--cream);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .research-hero h1 { font-size: 2rem; }
+    .research-section-title { font-size: 1.6rem; }
+    .ref-card { padding: 1.25rem 1.5rem; }
+    .research-nav { top: 0; position: relative; }
+    .research-nav-inner { gap: 0.3rem 0.75rem; }
+}
+</style>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <!-- World Hypertension Day Countdown Banner -->
+    <div class="countdown-banner" id="countdownBanner">
+        <span id="countdownText"></span>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
+    </div>
+    <script>
+    (function() {
+        var target = new Date('2026-05-17T00:00:00').getTime();
+        var now = new Date().getTime();
+        var diff = target - now;
+        var el = document.getElementById('countdownText');
+        if (diff > 0) {
+            var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            el.innerHTML = '<strong>' + days + ' days</strong> until World Hypertension Day (May 17). Every 5 seconds, someone in Ghana has a blood pressure reading they do not know about.';
+        } else {
+            el.innerHTML = 'Today is <strong>World Hypertension Day</strong>. Hypertension is Ghana\'s silent crisis. Help us change that.';
+        }
+    })();
+    </script>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav-logo">
+            <span class="nav-logo-text">GHSI</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/approach/">Our Approach</a></li>
+            <li><a href="/pilot/">The Pilot</a></li>
+            <li><a href="/team/">Team &amp; Partners</a></li>
+            <li><a href="/research/" class="active">Research</a></li>
+            <li><a href="/involved/">Get Involved</a></li>
+            <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="nav-donate-btn">Donate</a></li>
+        </ul>
+        <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="research-hero">
+        <div class="container">
+            <div class="section-label" style="color: var(--gold-pale);">Evidence Base</div>
+            <h1>Research and References</h1>
+            <p>GHSI is built on peer-reviewed evidence, validated frameworks, and lessons from global hypertension control programs. Every element of our model is grounded in research that has demonstrated measurable impact in comparable settings.</p>
+        </div>
+    </section>
+
+    <!-- Jump Nav -->
+    <div class="research-nav">
+        <div class="research-nav-inner">
+            <a href="#prevalence">Prevalence</a>
+            <a href="#education">Education</a>
+            <a href="#screening">Screening &amp; Treatment</a>
+            <a href="#technology">Technology</a>
+            <a href="#partnerships">Partnerships</a>
+            <a href="#population">Population Research</a>
+        </div>
+    </div>
+
+    <!-- SECTION 1: Prevalence and Burden -->
+    <section class="research-section" id="prevalence">
+        <div class="research-section-inner">
+            <div class="research-section-label">Foundation</div>
+            <h2 class="research-section-title">Hypertension Prevalence and Burden in Ghana</h2>
+            <p class="research-section-desc">These studies document the scale of the hypertension crisis in Ghana and establish the epidemiological foundation for GHSI's intervention.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type meta-analysis">Meta-Analysis</span>
+                <h4>Prevalence, awareness, and control of hypertension in Ghana: A systematic review and meta-analysis</h4>
+                <div class="ref-authors">Bosu WK, Bosu DK. PLOS ONE. 2021;16(3):e0248137.</div>
+                <div class="ref-annotation">The most comprehensive analysis of hypertension data across Ghana, synthesizing findings from multiple population studies. Establishes that approximately one in three Ghanaian adults has hypertension, while only 22% receive treatment and just 6% achieve blood pressure control. These figures define the treatment gap that GHSI addresses.</div>
+                <div class="ref-link"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0248137" target="_blank">Read the full study &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Establishes the 1-in-3 prevalence statistic and the awareness-treatment-control cascade that anchors our pilot design.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type report">Report</span>
+                <h4>Ghana Heart Initiative: Cardiovascular disease as a leading cause of death in Ghana</h4>
+                <div class="ref-authors">Ghana Heart Initiative. Frontiers in Public Health. 2024.</div>
+                <div class="ref-annotation">Documents cardiovascular disease as the number one cause of death in Ghana, with hypertension as the primary modifiable risk factor. Reinforces the urgency of community-level screening programs that reach populations outside the formal healthcare system.</div>
+                <div class="ref-link"><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1330708/full" target="_blank">Read the full report &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Establishes CVD as Ghana's leading cause of death, positioning hypertension screening as a national health priority.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type survey">National Survey</span>
+                <h4>Ghana Demographic and Health Survey 2018</h4>
+                <div class="ref-authors">Ghana Statistical Service.</div>
+                <div class="ref-annotation">Nationally representative household survey providing demographic and health indicators across all regions. Supplies the population-level context for understanding hypertension within broader patterns of healthcare access, urbanization, and socioeconomic status in Ghana.</div>
+                <div class="ref-link"><a href="https://dhsprogram.com/publications/publication-FR340-DHS-Final-Reports.cfm" target="_blank">Access the survey &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Provides demographic baseline data for Greater Accra and nationally, informing our target population estimates.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type report">Regional Screening</span>
+                <h4>Ashanti Region Hypertension Screening Campaign (2022)</h4>
+                <div class="ref-authors">Ghana Health Service, Ashanti Regional Directorate.</div>
+                <div class="ref-annotation">Large-scale screening campaign in the Ashanti Region demonstrating the feasibility of community-based blood pressure measurement in Ghana. Findings revealed significant undiagnosed hypertension in working-age populations, supporting the case for mobile screening at sites where people gather for work.</div>
+                <div class="ref-relevance">GHSI relevance: Demonstrates that community-level screening in Ghana works and can identify large numbers of undiagnosed cases.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type report">Clinical Review</span>
+                <h4>Stroke in Ghana: A systematic review of risk factors and interventions (2012)</h4>
+                <div class="ref-authors">Stroke research literature, Ghana-focused.</div>
+                <div class="ref-annotation">Establishes the direct link between uncontrolled hypertension and stroke in the Ghanaian population. Hypertension is the strongest modifiable risk factor for stroke in sub-Saharan Africa, making blood pressure control the single most impactful preventive intervention available.</div>
+                <div class="ref-relevance">GHSI relevance: Grounds our tagline, "Stroke is not sudden. We can prevent it," in clinical evidence specific to Ghana.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Health Education -->
+    <section class="research-section" id="education">
+        <div class="research-section-inner">
+            <div class="research-section-label">Pillar 1</div>
+            <h2 class="research-section-title">Health Education and Behavior Change</h2>
+            <p class="research-section-desc">GHSI's education model is built on the Patient Activated Learning System (PALS) and the Training of Trainers approach validated in comparable settings across sub-Saharan Africa.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type trial">Randomized Controlled Trial</span>
+                <h4>Patient Activated Learning System (PALS): Randomized controlled pilot trial of a peer-led health education intervention</h4>
+                <div class="ref-authors">Carmel A, Draucker L, Guo Y, et al. Patient Education and Counseling. 2019;102(8):1419-1424.</div>
+                <div class="ref-annotation">The foundational trial establishing the PALS methodology. Demonstrated that peer-delivered health education using Reusable Knowledge Objects (RKOs) and Adult Learning Theory can produce measurable improvements in health literacy and patient activation. Participants showed significant gains in understanding their conditions and engaging with care.</div>
+                <div class="ref-link"><a href="https://pubmed.ncbi.nlm.nih.gov/30928344/" target="_blank">Read the full study &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: PALS is the core methodology adapted for our community health education curriculum at all screening and church-based events.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type trial">Multi-Site Trial</span>
+                <h4>Southeastern Collaboration to Improve Blood Pressure Control (SEC Trial): Population-level blood pressure improvement</h4>
+                <div class="ref-authors">Safford MM, et al. 2024.</div>
+                <div class="ref-annotation">Large-scale implementation trial demonstrating that the PALS-based peer education approach can achieve population-level impact. Achieved a 5 mmHg average blood pressure reduction across diverse community settings. This magnitude of reduction, applied at population scale, is associated with significant decreases in stroke and cardiovascular mortality.</div>
+                <div class="ref-relevance">GHSI relevance: Validates the scalable impact of PALS methodology. The 5 mmHg population-level effect is a benchmark for what community-based education can achieve.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type trial">Curriculum Validation</span>
+                <h4>Training religious leaders as hypertension educators in Tanzania: A mixed-methods evaluation</h4>
+                <div class="ref-authors">Cohen JE, et al. BMC Medical Education. 2025.</div>
+                <div class="ref-annotation">Evaluates a Training of Trainers curriculum for religious leaders delivering hypertension education in communities with limited healthcare access. Conducted through the Cornell-Weill-Bugando collaboration in Tanzania. Demonstrated that non-medical community leaders can be effectively trained to deliver accurate, culturally appropriate health education using structured materials.</div>
+                <div class="ref-link"><a href="https://bmcmededuc.biomedcentral.com/articles/10.1186/s12909-025-06796-w" target="_blank">Read the full study &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Direct methodological precedent. Our Training of Trainers curriculum for SASNET educators and church leaders adapts materials developed and validated in this project.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type news">Research Feature</span>
+                <h4>Religious leaders, physicians fight hypertension in Tanzania and beyond</h4>
+                <div class="ref-authors">Cornell Chronicle. April 2025.</div>
+                <div class="ref-annotation">Feature article describing the Cornell and Weill Cornell Medicine research collaboration training religious leaders to address hypertension in their communities. Documents the real-world application of the Training of Trainers model and its potential for replication across sub-Saharan Africa.</div>
+                <div class="ref-link"><a href="https://news.cornell.edu/stories/2025/04/religious-leaders-physicians-fight-hypertension-tanzania-and-beyond" target="_blank">Read the article &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Public documentation of the research partnership whose methods directly inform GHSI's church-based screening and education model.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type framework">Clinical Protocol</span>
+                <h4>BE-FAST Stroke Recognition Protocol</h4>
+                <div class="ref-authors">American Stroke Association / Clinical validation literature.</div>
+                <div class="ref-annotation">The BE-FAST mnemonic (Balance, Eyes, Face, Arms, Speech, Time) is an expanded stroke recognition tool validated for public health education. Studies demonstrate improved stroke recognition and faster emergency response when community members are trained in structured recognition protocols.</div>
+                <div class="ref-relevance">GHSI relevance: BE-FAST is integrated into our community education sessions, empowering participants to recognize stroke symptoms and act immediately.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Screening & Treatment Models -->
+    <section class="research-section" id="screening">
+        <div class="research-section-inner">
+            <div class="research-section-label">Pillars 2 &amp; 3</div>
+            <h2 class="research-section-title">Screening, Treatment, and Follow-Up Models</h2>
+            <p class="research-section-desc">GHSI's clinical protocol and 12-month follow-up system are grounded in WHO-recommended frameworks and validated implementation models from community hypertension programs.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type framework">Technical Package</span>
+                <h4>WHO HEARTS Technical Package for Cardiovascular Disease Management</h4>
+                <div class="ref-authors">World Health Organization.</div>
+                <div class="ref-annotation">The WHO's integrated framework for cardiovascular disease management in primary healthcare. HEARTS provides standardized protocols for Healthy lifestyle counselling, Evidence-based treatment protocols, Access to essential medicines, Risk-based management, Team-based care, and Systems for monitoring. Designed specifically for low- and middle-income country implementation.</div>
+                <div class="ref-link"><a href="https://www.who.int/publications/i/item/hearts-technical-package" target="_blank">Access the HEARTS package &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Our M&amp;E Framework uses WHO HEARTS indicators (H1-H5) as the primary outcome measurement system for the pilot.</div>
+            </div>
+
+            <div class="ref-card">
+                <span class="ref-card-type survey">Community Program</span>
+                <h4>May Measurement Month: Blood pressure screening results from Ghana</h4>
+                <div class="ref-authors">May Measurement Month investigators, Ghana sites. European Heart Journal Supplements. 2022.</div>
+                <div class="ref-annotation">Results from the global May Measurement Month campaign at Ghanaian screening sites. Demonstrates the feasibility and yield of large-scale community blood pressure measurement events in Ghana, providing operational lessons for event-based screening logistics, volunteer coordination, and immediate result communication.</div>
+                <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9434666/" target="_blank">Read the full study &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Operational precedent for community screening events in Ghana. Validates event-based screening as an effective case-finding strategy.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Technology -->
+    <section class="research-section" id="technology">
+        <div class="research-section-inner">
+            <div class="research-section-label">Infrastructure</div>
+            <h2 class="research-section-title">Digital Health Technology</h2>
+            <p class="research-section-desc">GHSI uses the Simple app for patient tracking and 12-month follow-up, an open-source platform purpose-built for hypertension management in low-resource settings.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type tool">Open-Source Platform</span>
+                <h4>Simple: Fast, free software for managing hypertension and diabetes</h4>
+                <div class="ref-authors">Resolve to Save Lives.</div>
+                <div class="ref-annotation">Simple is an open-source, offline-first mobile application designed for community health workers to record blood pressure measurements, track patients over time, and generate population-level dashboards. Deployed across India, Bangladesh, Ethiopia, Sri Lanka, and Nigeria, Simple currently supports the management of over 6 million patients. Its design prioritizes speed, simplicity, and reliable performance without consistent internet connectivity.</div>
+                <div class="ref-link"><a href="https://www.simple.org/" target="_blank">Visit Simple.org &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Simple is our primary patient tracking system, enabling the 12-month closed-loop follow-up that differentiates GHSI from one-time screening programs.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Partnerships and Policy -->
+    <section class="research-section" id="partnerships">
+        <div class="research-section-inner">
+            <div class="research-section-label">Ecosystem</div>
+            <h2 class="research-section-title">Partnerships and Policy Landscape</h2>
+            <p class="research-section-desc">GHSI operates within a network of global and Ghanaian organizations working to address hypertension at community and policy levels.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type roundtable">Stakeholder Proceedings</span>
+                <h4>World Heart Federation / Ghana Society of Cardiology / SASNET Ghana Roundtable</h4>
+                <div class="ref-authors">World Heart Federation et al. Global Heart. 2024.</div>
+                <div class="ref-annotation">Proceedings from a multi-stakeholder roundtable convening the World Heart Federation, Ghana Society of Cardiology, and SASNET-Ghana to assess the state of cardiovascular disease prevention in Ghana. Discusses the current policy landscape, community health worker capacity, and integration of screening programs into existing health infrastructure.</div>
+                <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11465716/" target="_blank">Read the proceedings &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: SASNET-Ghana is our signed education partner. This document maps the stakeholder ecosystem within which GHSI operates.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: Population Research -->
+    <section class="research-section" id="population">
+        <div class="research-section-inner">
+            <div class="research-section-label">Longitudinal Evidence</div>
+            <h2 class="research-section-title">Population-Level Research on Ghanaian Health</h2>
+            <p class="research-section-desc">Emerging longitudinal research on Ghanaian populations provides critical context for understanding hypertension trajectories and the factors that drive blood pressure changes over time.</p>
+
+            <div class="ref-card">
+                <span class="ref-card-type cohort">Prospective Cohort</span>
+                <h4>RODAM-Pros: Blood pressure changes among Ghanaian populations (prospective cohort study)</h4>
+                <div class="ref-authors">RODAM-Pros investigators. 2025.</div>
+                <div class="ref-annotation">A prospective cohort study tracking blood pressure changes among Ghanaians over time. Builds on the original RODAM (Research on Obesity and Diabetes among African Migrants) study by adding longitudinal follow-up. Provides evidence on how blood pressure evolves in Ghanaian populations and the modifiable factors associated with worsening or improving trajectories.</div>
+                <div class="ref-link"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11925589/" target="_blank">Read the full study &rarr;</a></div>
+                <div class="ref-relevance">GHSI relevance: Longitudinal evidence base for understanding blood pressure trajectories in our target population, informing our 12-month follow-up design.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate CTA -->
+    <section class="donate-cta">
+        <h2>Evidence-Based. Community-Driven. Life-Saving.</h2>
+        <p>GHSI translates research into action. Your support funds free blood pressure screenings, health education, and 12-month follow-up for Ghana's most underserved working communities.</p>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="btn btn-gold" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Support GHSI on Ko-fi</a>
+    </section>
+
+    </main>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
+                <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
+                <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma nbo. &mdash; Let your heart beat.</p>
+            </div>
+            <div>
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/approach/">Our Approach</a></li>
+                    <li><a href="/pilot/">The Pilot</a></li>
+                    <li><a href="/team/">Team &amp; Partners</a></li>
+                    <li><a href="/research/">Research</a></li>
+                    <li><a href="/involved/">Get Involved</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
+                    <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support Us on Ko-fi</a></li>
+                    <li><a href="https://ghanabloodpressure.org" target="_blank">ghanabloodpressure.org</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
+            <p 
