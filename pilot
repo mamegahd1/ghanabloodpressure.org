@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GHSI's pilot launches in November 2026 with six screening events across Greater Accra — three at major lorry stations and three church-based health fairs — targeting 1,000 screenings with 12-month follow-up.">
+    <meta property="og:title" content="The GHSI Pilot — Launching 2026">
+    <meta property="og:description" content="GHSI's pilot launches in November 2026 with six screening events across Greater Accra — three at major lorry stations and three church-based health fairs — targeting 1,000 screenings with 12-month follow-up.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ghanabloodpressure.org/pilot/">
+    <meta property="og:site_name" content="Ghana Hypertension Screening Initiative">
+    <link rel="canonical" href="https://ghanabloodpressure.org/pilot/">
+    <title>The Pilot | Ghana Hypertension Screening Initiative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --teal: #1A5F5F;
+    --teal-dark: #134747;
+    --teal-light: #238080;
+    --burgundy-deep: #4A1525;
+    --burgundy: #5D1A2E;
+    --gold: #C9A227;
+    --gold-light: #D4B84A;
+    --gold-pale: #E8D590;
+    --cream: #FDFAF5;
+    --cream-dark: #F5EEE0;
+    --charcoal: #2C2C2C;
+    --charcoal-light: #4A4A4A;
+    --white: #FFFFFF;
+    --green: #2D8B2D;
+    --yellow: #D4A017;
+    --orange: #D97706;
+    --red: #C53030;
+    --darkred: #7B1818;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* === COUNTDOWN BANNER === */
+.countdown-banner {
+    background: var(--teal);
+    color: var(--white);
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1001;
+}
+.countdown-banner a {
+    color: var(--gold-pale);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+.countdown-banner a:hover { color: var(--gold); }
+.countdown-banner strong { color: var(--gold-pale); font-size: 1.05rem; }
+
+/* === NAVIGATION === */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--burgundy-deep);
+    padding: 0.6rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(74, 21, 37, 0.3);
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+.nav-logo-text {
+    color: var(--gold);
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+    align-items: center;
+}
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--gold); }
+.nav-links a.active::after { width: 100%; }
+.nav-donate-btn {
+    background: var(--gold);
+    color: var(--burgundy-deep) !important;
+    padding: 0.45rem 1.1rem;
+    border-radius: 4px;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    text-decoration: none !important;
+}
+.nav-donate-btn:hover {
+    background: var(--gold-light) !important;
+    color: var(--burgundy-deep) !important;
+}
+.nav-donate-btn::after { display: none !important; }
+.nav-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.nav-mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--gold);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* === SECTIONS === */
+section { padding: 5rem 2rem; }
+.section-header { text-align: center; margin-bottom: 3rem; }
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+}
+.section-title {
+    font-size: 2.6rem;
+    color: var(--burgundy-deep);
+    margin-bottom: 1rem;
+}
+.section-intro {
+    font-size: 1.1rem;
+    color: var(--charcoal-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* === BUTTONS === */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.btn-primary {
+    background: var(--teal);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 95, 95, 0.4);
+}
+.btn-secondary {
+    background: transparent;
+    color: var(--teal);
+    border: 2px solid var(--teal);
+}
+.btn-secondary:hover {
+    background: var(--teal);
+    color: var(--white);
+}
+.btn-gold {
+    background: var(--gold);
+    color: var(--burgundy-deep);
+    font-weight: 700;
+}
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+}
+
+/* === STATS BAR === */
+.stats-bar {
+    background: var(--burgundy-deep);
+    padding: 3rem 2rem;
+}
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.stat-item { text-align: center; color: var(--cream); }
+.stat-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.stat-label { font-size: 1rem; font-weight: 500; color: var(--cream); }
+.stat-source { font-size: 0.8rem; color: #C5BBAB; margin-top: 0.5rem; }
+.stat-source a { color: var(--gold-pale); text-decoration: none; }
+.stat-source a:hover { text-decoration: underline; }
+
+/* === CARDS === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--teal);
+    transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-4px); }
+.card h3, .card h4 {
+    color: var(--burgundy-deep);
+    margin-bottom: 0.75rem;
+}
+.card p {
+    color: var(--charcoal-light);
+    line-height: 1.7;
+}
+
+/* === PILLAR CARDS === */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.pillar-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+.pillar-card:hover { transform: translateY(-4px); }
+.pillar-header {
+    background: var(--teal);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+.pillar-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold-pale);
+    margin-bottom: 0.25rem;
+}
+.pillar-title { color: var(--white); font-size: 1.3rem; }
+.pillar-subtitle { font-size: 0.85rem; color: var(--cream-dark); margin-top: 0.25rem; }
+.pillar-content { padding: 1.5rem; }
+.pillar-content p { margin-bottom: 1rem; color: var(--charcoal-light); }
+.pillar-list {
+    list-style: none;
+    padding: 0;
+}
+.pillar-list li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    color: var(--charcoal-light);
+    font-size: 0.95rem;
+}
+.pillar-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+}
+
+/* === IMAGE SECTIONS === */
+.hero-image-section {
+    position: relative;
+    overflow: hidden;
+}
+.hero-image-section img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+.hero-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(74, 21, 37, 0.85));
+    padding: 3rem 2rem 2rem;
+    color: var(--white);
+}
+.hero-image-overlay h1 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+}
+.hero-image-overlay p {
+    font-size: 1.15rem;
+    color: var(--cream);
+    max-width: 700px;
+}
+
+/* === SECTION IMAGE (side by side) === */
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.split-section img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    object-fit: cover;
+    height: 400px;
+}
+.split-section .content h2 {
+    font-size: 2.2rem;
+    color: var(--burgundy-deep);
+    margin-bottom: 1rem;
+}
+.split-section .content p {
+    color: var(--charcoal-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* === BP COLOR SYSTEM === */
+.bp-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+.bp-tier {
+    padding: 1.25rem 0.75rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    font-size: 0.85rem;
+}
+.bp-tier .bp-label {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.bp-tier .bp-range { font-size: 0.8rem; margin-bottom: 0.4rem; }
+.bp-tier .bp-action { font-size: 0.78rem; font-weight: 600; }
+
+/* === CLOSED LOOP VISUAL === */
+.loop-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.loop-item {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+.loop-number {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+.loop-unit { font-size: 0.9rem; color: #E6E0D2; }
+.loop-question { margin-top: 0.75rem; font-size: 0.85rem; }
+
+/* === TIMELINE === */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+.timeline-item {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    padding: 0 0.5rem;
+}
+.timeline-dot {
+    width: 56px;
+    height: 56px;
+    background: var(--teal);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 1;
+    border: 3px solid var(--cream);
+}
+.timeline-label {
+    font-weight: 700;
+    color: var(--burgundy-deep);
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+.timeline-desc {
+    font-size: 0.82rem;
+    color: var(--charcoal-light);
+    max-width: 130px;
+    margin: 0 auto;
+}
+
+/* === TEAM === */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.team-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    border-top: 4px solid var(--teal);
+}
+.team-card h4 {
+    color: var(--burgundy-deep);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+.team-role {
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+.team-location {
+    color: var(--charcoal-light);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+.team-bio {
+    color: var(--charcoal-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* === PARTNER CARDS === */
+.partner-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--gold);
+}
+.partner-card h4 {
+    color: var(--burgundy-deep);
+    font-size: 1.15rem;
+    margin-bottom: 0.25rem;
+}
+.partner-type {
+    color: var(--teal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.partner-card p {
+    color: var(--charcoal-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.partner-card a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+}
+.partner-card a:hover { text-decoration: underline; }
+
+/* === CONTACT FORM === */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-info h3 {
+    color: var(--burgundy-deep);
+    margin-bottom: 1.5rem;
+}
+.contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+.contact-icon { font-size: 1.5rem; }
+.contact-item a { color: var(--teal); text-decoration: none; }
+.contact-item a:hover { text-decoration: underline; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    font-size: 0.95rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+
+/* === FOOTER === */
+.footer {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+.footer-brand p {
+    max-width: 350px;
+    
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+}
+.footer h4 {
+    color: var(--gold);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.footer ul {
+    list-style: none;
+}
+.footer ul li { margin-bottom: 0.5rem; }
+.footer ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    color: #C5BBAB;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+.footer ul li a:hover { color: var(--cream); }
+.footer-bottom {
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #B0A88F;
+}
+
+/* === DARK SECTION === */
+.dark-section {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+}
+.dark-section .section-label { color: var(--gold-pale); }
+.dark-section .section-title { color: var(--gold); }
+.dark-section .section-intro { color: #E6E0D2; }
+
+.teal-section {
+    background: var(--teal);
+    color: var(--white);
+}
+.teal-section .section-label { color: var(--gold-pale); }
+.teal-section .section-title { color: var(--white); }
+.teal-section .section-intro { color: #E6E0D2; }
+
+/* === DONATE CTA === */
+.donate-cta {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--white);
+}
+.donate-cta h2 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+.donate-cta p {
+    color: var(--cream);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: #E6E0D2;
+}
+
+/* === OPEN ROLES === */
+.roles-list { margin-top: 1.5rem; }
+.role-item {
+    background: var(--cream);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.role-item strong { color: var(--burgundy-deep); }
+.role-item span { color: var(--charcoal-light); font-size: 0.9rem; }
+
+/* === RESPONSIVE === */
+
+/* === ACCESSIBILITY: Focus styles === */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+/* === ACCESSIBILITY: Skip navigation === */
+.skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--burgundy-deep);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    z-index: 2000;
+    border-radius: 0 0 6px 6px;
+    text-decoration: none;
+}
+.skip-nav:focus {
+    top: 0;
+}
+
+/* === TOUCH TARGETS: Nav links === */
+.nav-links a {
+    padding: 0.6rem 0.25rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    .split-section { gap: 2rem; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 4rem 2rem; }
+    .section-title { font-size: 2.3rem; }
+    .hero-image-overlay h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--burgundy-deep);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 0.75rem;
+    }
+    .nav-links.active { display: flex; }
+    .nav-mobile-toggle { display: block; }
+    .hero-image-section img { height: 300px; }
+    .hero-image-overlay h1 { font-size: 2rem; }
+    .stats-container { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .split-section { grid-template-columns: 1fr; }
+    .bp-grid { grid-template-columns: repeat(2, 1fr); }
+    .loop-grid { grid-template-columns: repeat(2, 1fr); }
+    .timeline { flex-wrap: wrap; gap: 2rem; }
+    .timeline::before { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .footer-brand p { max-width: none; }
+    section { padding: 3rem 1.5rem; }
+    .section-title { font-size: 2rem; }
+    .team-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-in { animation: fadeInUp 0.5s ease forwards; }
+</style>
+</head>
+<body>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <!-- World Hypertension Day Countdown Banner -->
+    <div class="countdown-banner" id="countdownBanner">
+        <span id="countdownText"></span>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
+    </div>
+    <script>
+    (function() {
+        var target = new Date('2026-05-17T00:00:00').getTime();
+        var now = new Date().getTime();
+        var diff = target - now;
+        var el = document.getElementById('countdownText');
+        if (diff > 0) {
+            var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+            el.innerHTML = '<strong>' + days + ' days</strong> until World Hypertension Day (May 17). Every 5 seconds, someone in Ghana has a blood pressure reading they do not know about.';
+        } else {
+            el.innerHTML = 'Today is <strong>World Hypertension Day</strong>. Hypertension is Ghana\'s silent crisis. Help us change that.';
+        }
+    })();
+    </script>
+
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav-logo">
+            <span class="nav-logo-text">GHSI</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/approach/">Our Approach</a></li>
+            <li><a href="/pilot/" class="active">The Pilot</a></li>
+            <li><a href="/team/">Team & Partners</a></li>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/involved/">Get Involved</a></li>
+            <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="nav-donate-btn">Donate</a></li>
+        </ul>
+        <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <main id="main-content">
+
+    <!-- Hero with Image -->
+    <div class="hero-image-section">
+        <div style="width:100%;height:500px;display:block;position:relative;overflow:hidden;" role="img" aria-label="GHSI health worker screening a trotro driver at a lorry station in Accra, Ghana">
+            <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pilotSky" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#2a8f8f"/><stop offset="50%" stop-color="#1A5F5F"/><stop offset="100%" stop-color="#0d3a3a"/></linearGradient>
+                    <linearGradient id="pilotGlow" x1="0.5" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#C9A227" stop-opacity="0.25"/><stop offset="100%" stop-color="#C9A227" stop-opacity="0"/></linearGradient>
+                </defs>
+                <rect width="1200" height="500" fill="url(#pilotSky)"/>
+                <ellipse cx="600" cy="100" rx="300" ry="200" fill="url(#pilotGlow)"/>
+                <!-- Lorry station canopy -->
+                <rect x="100" y="180" width="500" height="15" rx="3" fill="#C9A227" opacity="0.3"/>
+                <rect x="120" y="195" width="4" height="150" fill="#C9A227" opacity="0.2"/>
+                <rect x="580" y="195" width="4" height="150" fill="#C9A227" opacity="0.2"/>
+                <!-- Multiple trotros -->
+                <rect x="150" y="220" width="180" height="100" rx="14" fill="#C9A227" opacity="0.35"/>
+                <rect x="160" y="230" width="35" height="35" rx="4" fill="#FDFAF5" opacity="0.2"/>
+                <rect x="205" y="230" width="35" height="35" rx="4" fill="#FDFAF5" opacity="0.2"/>
+                <circle cx="190" cy="330" r="14" fill="#134747" opacity="0.5"/>
+                <circle cx="300" cy="330" r="14" fill="#134747" opacity="0.5"/>
+                <rect x="380" y="230" width="180" height="100" rx="14" fill="#E8D590" opacity="0.25"/>
+                <rect x="390" y="240" width="35" height="35" rx="4" fill="#FDFAF5" opacity="0.15"/>
+                <rect x="435" y="240" width="35" height="35" rx="4" fill="#FDFAF5" opacity="0.15"/>
+                <circle cx="420" cy="340" r="14" fill="#134747" opacity="0.4"/>
+                <circle cx="520" cy="340" r="14" fill="#134747" opacity="0.4"/>
+                <!-- Screening activity group -->
+                <g transform="translate(720,200)" opacity="0.45">
+                    <!-- Table -->
+                    <rect x="0" y="80" width="120" height="8" rx="2" fill="#FDFAF5"/>
+                    <rect x="5" y="88" width="4" height="60" fill="#FDFAF5" opacity="0.6"/>
+                    <rect x="110" y="88" width="4" height="60" fill="#FDFAF5" opacity="0.6"/>
+                    <!-- BP device on table -->
+                    <rect x="30" y="60" width="60" height="20" rx="6" fill="#FDFAF5" opacity="0.5"/>
+                    <!-- Health worker -->
+                    <ellipse cx="140" cy="35" rx="16" ry="16" fill="#FDFAF5"/>
+                    <rect x="127" y="51" width="26" height="60" rx="10" fill="#FDFAF5"/>
+                    <!-- Driver being screened -->
+                    <ellipse cx="-20" cy="40" rx="15" ry="15" fill="#E8D590"/>
+                    <rect x="-33" y="55" width="26" height="55" rx="10" fill="#E8D590"/>
+                </g>
+                <!-- People waiting -->
+                <g opacity="0.3">
+                    <ellipse cx="950" cy="260" rx="12" ry="12" fill="#E8D590"/>
+                    <rect x="940" y="272" width="20" height="45" rx="8" fill="#E8D590"/>
+                    <ellipse cx="990" cy="265" rx="11" ry="11" fill="#D4B84A"/>
+                    <rect x="981" y="276" width="18" height="40" rx="7" fill="#D4B84A"/>
+                    <ellipse cx="1030" cy="258" rx="12" ry="12" fill="#E8D590"/>
+                    <rect x="1020" y="270" width="20" height="45" rx="8" fill="#E8D590"/>
+                </g>
+                <!-- Ground -->
+                <rect x="0" y="350" width="1200" height="150" fill="#0d3a3a" opacity="0.5"/>
+                <!-- Map pin icon -->
+                <g transform="translate(1100,70)" opacity="0.3"><path d="M0-25C-12-25-20-15-20-5C-20 8 0 25 0 25C0 25 20 8 20-5C20-15 12-25 0-25Z" fill="#C9A227"/><circle cx="0" cy="-7" r="6" fill="#1A5F5F"/></g>
+            </svg>
+        </div>
+        <div class="hero-image-overlay">
+            <div class="section-label" style="color: var(--gold-pale);">Launching December 2026</div>
+            <h1>The GHSI Pilot</h1>
+            <p>Six screening events across the Greater Accra region — at major transport hubs and church-based community health fairs — with 12-month follow-up through December 2027.</p>
+        </div>
+    </div>
+
+    <!-- Pilot Overview -->
+    <section style="padding: 5rem 2rem;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Pilot Overview</div>
+                <h2 class="section-title">From Planning to Impact</h2>
+                <p class="section-intro">GHSI's pilot will operate across six screening sites in the Greater Accra region, including major transport hubs and church-based community health fairs. The pilot launches December 2026, with 12-month patient follow-up through the Simple app platform.</p>
+            </div>
+
+            <div class="card-grid" style="margin-top: 2rem;">
+                <div class="card">
+                    <h4>Three Lorry Park Screenings</h4>
+                    <p>Community-based blood pressure screening events at major transport hubs where trotro drivers and market women converge — the heart of the transport hub ecosystem.</p>
+                </div>
+                <div class="card">
+                    <h4>Three Church-Based Health Fairs</h4>
+                    <p>Hypertension resource fairs at church communities, leveraging trusted parish networks and existing congregational gatherings to reach additional populations.</p>
+                </div>
+                <div class="card">
+                    <h4>12-Month Closed-Loop Follow-Up</h4>
+                    <p>Every participant identified with elevated blood pressure will be tracked at Days 14, 30, 90, 180, and 365 — measuring who connects to care and whose outcomes improve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Timeline -->
+    <section style="background: var(--cream-dark); padding: 5rem 2rem;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Implementation Phases</div>
+                <h2 class="section-title">Pilot Timeline</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-label">Foundation</div>
+                    <div class="timeline-desc">Partnerships, regulatory clearances, team recruitment</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-label">Training</div>
+                    <div class="timeline-desc">ToT curriculum delivery, volunteer training, Simple app setup</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-label">Dry Run</div>
+                    <div class="timeline-desc">Practice screening events, workflow testing</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: var(--gold); color: var(--burgundy-deep);">4</div>
+                    <div class="timeline-label">Screening</div>
+                    <div class="timeline-desc">December 2026 — Six events across Greater Accra</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">5</div>
+                    <div class="timeline-label">Follow-Up</div>
+                    <div class="timeline-desc">12-month tracking cycle through December 2027</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot">6</div>
+                    <div class="timeline-label">Evaluate</div>
+                    <div class="timeline-desc">Data analysis, outcomes reporting, scale planning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate CTA -->
+    <section class="donate-cta">
+        <h2>Help Us Launch This Pilot</h2>
+        <p>Your contribution directly funds equipment, training, and the 12-month follow-up system that makes GHSI different from one-time screening events.</p>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="btn btn-gold" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Support GHSI on Ko-fi</a>
+    </section>
+
+    </main>
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
+                <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
+                <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma nbo. &mdash; Let your heart beat.</p>
+            </div>
+            <div>
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/approach/">Our Approach</a></li>
+                    <li><a href="/pilot/">The Pilot</a></li>
+                    <li><a href="/team/">Team &amp; Partners</a></li>
+                    <li><a href="/research/">Research</a></li>
+                    <li><a href="/involved/">Get Involved</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
+                    <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support Us on Ko-fi</a></li>
+                    <li><a href="https://ghanabloodpressure.org" target="_blank">ghanabloodpressure.org</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
+            <p 
