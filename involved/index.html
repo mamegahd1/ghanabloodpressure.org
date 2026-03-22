@@ -815,7 +815,7 @@ textarea:focus-visible {
             <li><a href="/involved/" class="active">Get Involved</a></li>
             <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="nav-donate-btn">Donate</a></li>
         </ul>
-        <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+        <button class="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('active'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">
             <span></span><span></span><span></span>
         </button>
     </nav>
