@@ -860,15 +860,34 @@ textarea:focus-visible {
     </div>
     <script>
     (function() {
-        var target = new Date('2026-05-17T00:00:00').getTime();
-        var now = new Date().getTime();
-        var diff = target - now;
+        // Days before World Hypertension Day (May 17) to start showing the countdown. Adjust to widen/narrow the window.
+        var LEAD_UP_WINDOW_DAYS = 14;
+        var banner = document.getElementById('countdownBanner');
         var el = document.getElementById('countdownText');
-        if (diff > 0) {
-            var days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-            el.innerHTML = '<strong>' + days + ' days</strong> until World Hypertension Day (May 17). Every 5 seconds, someone in Ghana has a blood pressure reading they do not know about.';
-        } else {
+
+        // Resolve "today" in Ghana time (Africa/Accra) so the date check is the same for every visitor.
+        var accraParts = new Intl.DateTimeFormat('en-CA', {
+            timeZone: 'Africa/Accra', year: 'numeric', month: '2-digit', day: '2-digit'
+        }).formatToParts(new Date());
+        var part = function(type) {
+            for (var i = 0; i < accraParts.length; i++) {
+                if (accraParts[i].type === type) { return parseInt(accraParts[i].value, 10); }
+            }
+        };
+
+        // Compare UTC midnights so the gap is a whole number of days; target always rolls to May 17 of the current year.
+        var dayMs = 24 * 60 * 60 * 1000;
+        var today = Date.UTC(part('year'), part('month') - 1, part('day'));
+        var target = Date.UTC(part('year'), 4, 17);
+        var daysUntil = Math.round((target - today) / dayMs);
+
+        if (daysUntil === 0) {
             el.innerHTML = 'Today is <strong>World Hypertension Day</strong>. Hypertension is Ghana\'s silent crisis. Help us change that.';
+        } else if (daysUntil >= 1 && daysUntil <= LEAD_UP_WINDOW_DAYS) {
+            var unit = daysUntil === 1 ? 'day' : 'days';
+            el.innerHTML = '<strong>' + daysUntil + ' ' + unit + '</strong> until World Hypertension Day (May 17). Every 5 seconds, someone in Ghana has a blood pressure reading they do not know about.';
+        } else {
+            banner.style.display = 'none';
         }
     })();
     </script>
