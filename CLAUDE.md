@@ -49,3 +49,7 @@ CSS custom properties defined in `:root` on every page:
 - **SVG graphics are inline**: Hero sections contain large inline SVGs with gradients and custom illustrations (Adinkra-inspired patterns, healthcare scenes).
 - **External links**: Ko-fi for donations, research papers on PLOS ONE and Frontiers in Public Health.
 - **Accessibility**: Skip-nav link, ARIA labels, semantic HTML, focus-visible outlines, 44px minimum touch targets.
+
+## Adding images
+
+See the "How to add an image" section in [`WEBSITE_OPS.md`](WEBSITE_OPS.md) for the standard image workflow: `/images/` folder, `.ghsi-figure` pattern, kebab-case naming, and size guidance. All site images live in `/images/` and use the shared `.ghsi-figure` class defined inline on every page.

@@ -60,3 +60,26 @@ The script checks:
 - Form endpoint: formspree.io/f/xjgvlazg
 - Do not modify existing page content unless explicitly instructed
 - Do not remove any existing functionality or inline SVG illustrations
+
+
+## How to add an image
+
+The site uses a single `/images/` folder and a shared `.ghsi-figure` CSS pattern defined inline on every page. Follow these four steps:
+
+1. **Optimize the photo first.** Resize so the long edge is at most **~1600px** and compress until the file is **under ~400 KB**. Save as optimized JPG, or WebP when appropriate. Recommended tools: [Squoosh](https://squoosh.app), `sips` on macOS, or any image editor's "Save for web" export.
+2. **Save it in `/images/`** with a lowercase-kebab-case name, e.g. `screening-event-accra.jpg`. No spaces, no capitals, no generic names like `img1.jpg`.
+3. **Paste this snippet** where you want the image to appear and fill in `src`, `alt`, and the caption. Root-relative paths starting with `/images/` work the same from any page folder (`/team/`, `/pilot/`, etc.):
+
+   ```html
+   <figure class="ghsi-figure">
+     <img src="/images/your-photo.jpg"
+          alt="Plain-language description for screen readers"
+          loading="lazy">
+     <figcaption>Optional caption.</figcaption>
+   </figure>
+   ```
+
+   **Alt text is required.** Never leave it blank — describe the image in plain language for screen readers.
+4. **Commit and push to `main`.** GitHub Pages redeploys automatically.
+
+The `.ghsi-figure` class is defined inline in every page's `<style>` block and uses the site's existing design tokens (`--charcoal-light`, the 12px card border-radius, the standard card shadow). Images are responsive (max-width 100%, height auto), block-displayed, and lazy-loaded.
