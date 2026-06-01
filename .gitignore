@@ -1,0 +1,18 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Local working files (drafts, archives, saved pages) — keep these on your machine, not in the public repo
+*.zip
+*.docx
+*.doc
+*.txt
+!robots.txt
+!images/README.md
+*.bak
+*.tmp
+*~
+
+# Editor scratch
+.idea/
+.vscode/
