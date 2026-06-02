@@ -819,7 +819,22 @@ textarea:focus-visible {
 .two-col-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 1.5rem;padding-left:0;margin-bottom:0}
 .two-col-list li{position:relative;padding-left:1.25rem;line-height:1.6}
 .two-col-list li::before{content:'\2022';position:absolute;left:0;color:var(--teal);font-weight:700}
-@media(max-width:768px){.two-col-list{grid-template-columns:1fr}}</style>
+@media(max-width:768px){.two-col-list{grid-template-columns:1fr}}
+/* === EQUAL-HEIGHT SPLIT === */
+.split-equal{align-items:stretch}
+.split-equal img{height:100%;min-height:100%}
+@media(max-width:760px){.split-equal img{height:320px;min-height:320px}}
+/* === ACCORDION === */
+.accordion{border-top:1px solid rgba(74,21,37,0.15)}
+.accordion details{border-bottom:1px solid rgba(74,21,37,0.15)}
+.accordion summary{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.15rem;color:var(--burgundy-deep);cursor:pointer;list-style:none;padding:0.9rem 0;display:flex;align-items:baseline;gap:0.6rem}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion summary::before{content:'\25B8';color:var(--gold);font-size:0.85em;flex-shrink:0}
+.accordion details[open] summary::before{content:'\25BE'}
+.accordion .acc-body{padding:0 0 1.1rem 1.45rem;color:var(--charcoal-light);line-height:1.7}
+.accordion .acc-body p{margin-bottom:0.6rem}
+.accordion .acc-body p:last-child{margin-bottom:0}
+.accordion .acc-body strong{color:var(--charcoal)}</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -893,11 +908,11 @@ textarea:focus-visible {
 
     <!-- Transport Hub Ecosystem -->
     <section style="padding: 3.5rem 2rem;">
-        <div class="split-section">
+        <div class="split-section split-equal">
             <img src="/images/ghana-market-produce-seller.jpg"
                  alt="A woman selling produce and fish at a market in Ghana."
                  loading="lazy"
-                 style="object-position: 50% 35%;">
+                 style="object-position: 50% 38%;">
             <div class="content">
                 <div class="section-label">Target Population</div>
                 <h2>The Transport Hub Ecosystem</h2>
@@ -1047,38 +1062,10 @@ textarea:focus-visible {
     <!-- Five-Tier BP Classification -->
     <section style="padding: 3.5rem 2rem;">
         <div class="container">
-            <div class="split-section">
-                <div class="content">
-                    <div class="section-label">Clinical Protocol</div>
-                    <h2>Five-Tier Blood Pressure Classification</h2>
-                    <p>GHSI uses a five-tier color classification system aligned with ACC/AHA clinical guidelines. Each tier determines the participant's pathway, from education-only to emergency referral, ensuring every individual receives the appropriate level of response.</p>
-                </div>
-                <div style="width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12);overflow:hidden;height:400px;" role="img" aria-label="GHSI health worker with blood pressure monitor and classification chart at a screening event">
-                    <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="clinicBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A5F5F"/><stop offset="100%" stop-color="#0d3a3a"/></linearGradient>
-                        </defs>
-                        <rect width="600" height="400" fill="url(#clinicBg)"/>
-                        <!-- BP Monitor device -->
-                        <rect x="200" y="80" width="200" height="160" rx="20" fill="#FDFAF5" opacity="0.15"/>
-                        <rect x="220" y="100" width="160" height="80" rx="10" fill="#134747" opacity="0.5"/>
-                        <text x="300" y="145" fill="#2D8B2D" font-family="Arial" font-size="36" text-anchor="middle" font-weight="bold" opacity="0.7">120/80</text>
-                        <circle cx="300" cy="210" r="12" fill="#C9A227" opacity="0.4"/>
-                        <!-- BP arm cuff -->
-                        <rect x="160" y="260" width="280" height="30" rx="15" fill="#E8D590" opacity="0.25"/>
-                        <rect x="180" y="255" width="50" height="40" rx="8" fill="#C9A227" opacity="0.3"/>
-                        <!-- Color classification bars -->
-                        <g transform="translate(60,310)">
-                            <rect x="0" y="0" width="90" height="30" rx="4" fill="#2D8B2D" opacity="0.6"/>
-                            <rect x="100" y="0" width="90" height="30" rx="4" fill="#D4A017" opacity="0.6"/>
-                            <rect x="200" y="0" width="90" height="30" rx="4" fill="#D97706" opacity="0.6"/>
-                            <rect x="300" y="0" width="90" height="30" rx="4" fill="#C53030" opacity="0.6"/>
-                            <rect x="400" y="0" width="90" height="30" rx="4" fill="#7B1818" opacity="0.6"/>
-                        </g>
-                        <!-- Heart pulse line -->
-                        <polyline points="50,60 100,60 120,30 140,90 160,60 500,60" fill="none" stroke="#C9A227" stroke-width="2" opacity="0.3"/>
-                    </svg>
-                </div>
+            <div class="section-header">
+                <div class="section-label">Clinical Protocol</div>
+                <h2 class="section-title">Five-Tier Blood Pressure Classification</h2>
+                <p class="section-intro">GHSI uses a five-tier color classification system aligned with ACC/AHA clinical guidelines. Each tier determines the participant's pathway, from education-only to emergency referral, ensuring every individual receives the appropriate level of response.</p>
             </div>
             <div class="bp-grid">
                 <div class="bp-tier" style="background: var(--green);">
@@ -1146,12 +1133,24 @@ textarea:focus-visible {
                 <p style="margin-bottom: 1.5rem;">Ghana's hypertension space already includes important and longstanding work by Healthy Heart Africa, the Akomapa project, ADHINCRA, TASSH, the Ghana Heart Initiative, the Ghanaian Society of Cardiology, the World Heart Federation, May Measurement Month Ghana, and others. GHSI is one contribution to a shared field, not a replacement for any of it.</p>
                 <p style="margin-bottom: 1.5rem;">In Ghana, stroke is widely attributed to spiritual forces, and many families respond with prayer rather than medical care. GHSI partners with religious institutions because faith communities have long been health communities. We do not ask people to choose between faith and care. We build with both.</p>
                 <p style="margin-bottom: 1rem;">What we contribute that is distinct:</p>
-                <ul class="two-col-list">
-                    <li><strong>Faith-anchored community trust.</strong> Religious institutions across Greater Accra are central to our model.</li>
-                    <li><strong>Informal sector workers as the design population.</strong> Trotro drivers and market women are our first audience, not an afterthought, not an extension.</li>
-                    <li><strong>Twelve-month closed-loop follow-up tied to outcomes,</strong> not encounters.</li>
-                    <li><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</li>
-                </ul>
+                <div class="accordion">
+                    <details>
+                        <summary>Faith-anchored community trust.</summary>
+                        <div class="acc-body">Religious institutions across Greater Accra are central to our model.</div>
+                    </details>
+                    <details>
+                        <summary>Informal sector workers as the design population.</summary>
+                        <div class="acc-body">Trotro drivers and market women are our first audience, not an afterthought, not an extension.</div>
+                    </details>
+                    <details>
+                        <summary>Twelve-month closed-loop follow-up tied to outcomes,</summary>
+                        <div class="acc-body">not encounters.</div>
+                    </details>
+                    <details>
+                        <summary>Diaspora and homeland in partnership.</summary>
+                        <div class="acc-body">Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</div>
+                    </details>
+                </div>
             </div>
         </div>
     </section>
@@ -1160,18 +1159,30 @@ textarea:focus-visible {
     <section style="padding: 4rem 2rem; background: var(--cream-dark);">
         <div class="container" style="max-width: 820px;">
             <div class="section-label" style="margin-bottom: 1.5rem;">Vision, Mission &amp; Values</div>
-            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.4rem;">Vision</h3>
-            <p style="font-weight: 600; color: var(--charcoal); margin-bottom: 0.4rem;">A Ghana Where Informal Sector Workers Receive Continuity of Care</p>
-            <p style="line-height: 1.7; color: var(--charcoal-light); margin-bottom: 1.5rem;">A Ghana where informal sector workers (trotro drivers, market women, traders) receive the same twelve months of continuous hypertension care as anyone in the formal sector. By 2031, GHSI's closed-loop care architecture operates as a depth-layer of Ghana's Free Primary Healthcare Programme in Greater Accra, with informal sector treatment continuity approaching parity with the formal sector.</p>
-            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.4rem;">Mission</h3>
-            <p style="line-height: 1.7; color: var(--charcoal-light); margin-bottom: 1.5rem;">GHSI builds community-level infrastructure for hypertension screening, education, and twelve months of follow-up. The infrastructure is co-deployed with Ghana's Free Primary Healthcare Programme, designed in partnership with religious institutions, transport unions, and market communities across Greater Accra, and continuously refined through outcomes feedback. Screening is the beginning of care, not the end of an encounter.</p>
-            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.6rem;">Values</h3>
-            <div style="font-size: 1rem; line-height: 1.7; color: var(--charcoal);">
-                <p style="margin-bottom: 0.6rem;"><strong>Nothing About Us Without Us.</strong> Programs are co-designed with the people they serve. Trotro drivers and market women are the design population, not subjects of intervention.</p>
-                <p style="margin-bottom: 0.6rem;"><strong>Closed-loop accountability.</strong> A screening is not care until follow-up sustains it. Twelve months. Five touchpoints. Outcomes, not encounters.</p>
-                <p style="margin-bottom: 0.6rem;"><strong>Faith-rooted, community-trusted.</strong> Faith communities have long been health communities in Ghana. We honor that, and build with it.</p>
-                <p style="margin-bottom: 0.6rem;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture.</p>
-                <p style="margin-bottom: 0;"><strong>Aligned with the system.</strong> We work with Ghana's national priorities, not around them.</p>
+            <div class="accordion">
+                <details>
+                    <summary>Vision</summary>
+                    <div class="acc-body">
+                        <p style="font-weight: 600; color: var(--charcoal);">A Ghana Where Informal Sector Workers Receive Continuity of Care</p>
+                        <p>A Ghana where informal sector workers (trotro drivers, market women, traders) receive the same twelve months of continuous hypertension care as anyone in the formal sector. By 2031, GHSI's closed-loop care architecture operates as a depth-layer of Ghana's Free Primary Healthcare Programme in Greater Accra, with informal sector treatment continuity approaching parity with the formal sector.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Mission</summary>
+                    <div class="acc-body">
+                        <p>GHSI builds community-level infrastructure for hypertension screening, education, and twelve months of follow-up. The infrastructure is co-deployed with Ghana's Free Primary Healthcare Programme, designed in partnership with religious institutions, transport unions, and market communities across Greater Accra, and continuously refined through outcomes feedback. Screening is the beginning of care, not the end of an encounter.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Values</summary>
+                    <div class="acc-body">
+                        <p><strong>Nothing About Us Without Us.</strong> Programs are co-designed with the people they serve. Trotro drivers and market women are the design population, not subjects of intervention.</p>
+                        <p><strong>Closed-loop accountability.</strong> A screening is not care until follow-up sustains it. Twelve months. Five touchpoints. Outcomes, not encounters.</p>
+                        <p><strong>Faith-rooted, community-trusted.</strong> Faith communities have long been health communities in Ghana. We honor that, and build with it.</p>
+                        <p><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture.</p>
+                        <p><strong>Aligned with the system.</strong> We work with Ghana's national priorities, not around them.</p>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
