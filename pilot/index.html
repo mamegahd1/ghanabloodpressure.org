@@ -222,9 +222,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .step-name{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.05rem;color:var(--burgundy-deep);margin-bottom:0.3rem}
 .step-desc{font-size:0.85rem;color:var(--charcoal-light);line-height:1.45;max-width:150px;margin:0 auto}
 @media(max-width:768px){.stepper{grid-template-columns:1fr;gap:0;max-width:420px}.stepper::before{top:0;bottom:0;left:24px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,var(--teal),var(--gold))}.step{display:grid;grid-template-columns:48px 1fr;gap:0.85rem;align-items:center;text-align:left;padding:0.6rem 0}.step-node{margin:0}.step-desc{max-width:none}}</style>
+<style>
+/* ===== Phase 2 shared shell ===== */
+.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
+.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
+.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
+.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
+.utilbar a{color:#cfeaea;text-decoration:none}
+.utilbar a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
+.nav-logo-img{height:46px;width:auto;display:block}
+.nav-links a{color:var(--teal-dark)}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal)}
+.nav-mobile-toggle span{background:var(--teal-dark)}
+@media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
+.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+/* Fast Facts band (Global Hubs pattern) */
+.fastfacts{background:var(--teal);padding:2.6rem 2rem}
+.ff-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
+.ff-num{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2.8rem;font-weight:800;color:var(--gold-light);line-height:1}
+.ff-lab{margin-top:.4rem;color:#eaf4f4;font-size:.95rem;font-weight:500}
+.ff+.ff{border-left:1px solid rgba(255,255,255,.15)}
+.ff-note{text-align:center;max-width:62ch;margin:.9rem auto 0;color:var(--charcoal-light);font-size:.95rem}
+.ff-note strong{color:var(--teal-dark)}
+/* site cards: gateway hover */
+.card-grid .card{transition:transform .22s,box-shadow .22s}
+.card-grid .card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(19,71,71,.14)}
+/* scroll reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.ff-wrap{grid-template-columns:1fr 1fr;gap:1.4rem}.ff+.ff{border-left:none}}
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <div class="utilbar"><div class="uwrap">
+        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
+        <span class="ulinks">
+            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+            <a href="/involved/">Get Involved</a>
+        </span>
+    </div></div>
+
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
         <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
@@ -263,7 +307,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     })();
     </script>
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo"><span class="nav-logo-text">GHSI</span></a>
+        <a href="/" class="nav-logo" aria-label="GHSI home"><img src="/images/ghsi-logo.png" alt="Ghana Hypertension Screening Initiative" class="nav-logo-img"></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/approach/">Our Approach</a></li>
@@ -329,14 +373,25 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
             <p>Six screening events across the Greater Accra region, at major transport hubs and church-based community health fairs, with 12-month follow-up through December 2027.</p>
         </div>
     </div>
+    <!-- Fast Facts (Global Hubs pattern) -->
+    <section class="fastfacts reveal" aria-label="The pilot at a glance">
+      <div class="ff-wrap">
+        <div class="ff"><div class="ff-num" data-count="1000" data-comma="1" data-suffix="+">1,000+</div><div class="ff-lab">screenings targeted</div></div>
+        <div class="ff"><div class="ff-num" data-count="6">6</div><div class="ff-lab">screening sites</div></div>
+        <div class="ff"><div class="ff-num" data-count="12">12</div><div class="ff-lab">months of follow-up</div></div>
+        <div class="ff"><div class="ff-num" data-count="5">5</div><div class="ff-lab">follow-up touchpoints</div></div>
+      </div>
+    </section>
+
     <section style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Pilot Overview</div>
                 <h2 class="section-title">From Planning to Impact</h2>
                 <p class="section-intro">GHSI's pilot will operate across six screening sites in the Greater Accra region, including major transport hubs and church-based community health fairs. The pilot launches December 2026, with 12-month patient follow-up through a purpose-built digital tracking system.</p>
+                <p class="ff-note"><strong>Exact locations</strong> across Greater Accra will be announced closer to launch.</p>
             </div>
-            <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card-grid reveal" style="margin-top: 2rem;">
                 <div class="card">
                     <h4>Three Lorry Park Screenings</h4>
                     <p>Community-based blood pressure screening events at major transport hubs where trotro drivers and market women converge, the heart of the transport hub ecosystem.</p>
@@ -359,7 +414,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
                 <div class="section-label">Implementation Phases</div>
                 <h2 class="section-title">Pilot Timeline</h2>
             </div>
-            <div class="stepper">
+            <div class="stepper reveal">
                 <div class="step">
                     <div class="step-node">1</div>
                     <div class="step-text">
@@ -435,6 +490,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
@@ -466,5 +522,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
             <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
+<script>
+(function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}})();
+(function(){var els=document.querySelectorAll('.reveal');if(!els.length)return;if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+(function(){var nums=document.querySelectorAll('.ff-num[data-count]');if(!nums.length)return;var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;function fmt(v,comma){return comma?v.toLocaleString('en-US'):(''+v)}function setF(el){el.textContent=fmt(+el.getAttribute('data-count'),el.getAttribute('data-comma'))+(el.getAttribute('data-suffix')||'')}if(RM){nums.forEach(setF);return}function run(el){var target=+el.getAttribute('data-count'),suf=el.getAttribute('data-suffix')||'',comma=el.getAttribute('data-comma'),dur=1400,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);el.textContent=fmt(Math.round(target*p),comma)+suf;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}if(!('IntersectionObserver'in window)){nums.forEach(run);return}var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io2.unobserve(e.target)}})},{threshold:.5});nums.forEach(function(e){io2.observe(e)})})();
+</script>
 </body>
 </html>
