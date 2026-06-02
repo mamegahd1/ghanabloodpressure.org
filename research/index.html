@@ -965,11 +965,51 @@ textarea:focus-visible {
     .research-nav { top: 0; position: relative; }
     .research-nav-inner { gap: 0.3rem 0.75rem; }
 }
-.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}</style>
+.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}
+/* ===== Phase 2 shared shell ===== */
+.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
+.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
+.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
+.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
+.utilbar a{color:#cfeaea;text-decoration:none}
+.utilbar a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
+.nav-logo-img{height:46px;width:auto;display:block}
+.nav-links a{color:var(--teal-dark)}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal)}
+.nav-mobile-toggle span{background:var(--teal-dark)}
+@media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
+.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} .research-section.show{animation:none} }
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+/* research: theme tab bar + tab panels + GHSI-relevance callout */
+html{scroll-behavior:auto}
+.research-nav{top:65px}
+.research-nav-inner a{padding:.45rem .95rem;border-radius:999px}
+.research-nav-inner a.active{color:#fff;background:var(--teal);font-weight:700}
+.research-section{background:var(--cream-dark);scroll-margin-top:140px}
+.research-section[hidden]{display:none}
+@keyframes fadeInPanel{from{opacity:0}to{opacity:1}}
+.research-section.show{animation:fadeInPanel .3s ease both}
+.ref-card .ref-relevance{font-size:.85rem;color:var(--teal-dark);font-weight:600;margin-top:.9rem;padding:.7rem .9rem;border-top:none;background:rgba(26,95,95,.06);border-left:3px solid var(--teal);border-radius:0 6px 6px 0;line-height:1.55}
+@media(max-width:760px){.research-nav{top:0}}
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
     <!-- World Hypertension Day Countdown Banner -->
+    <div class="utilbar"><div class="uwrap">
+        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
+        <span class="ulinks">
+            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+            <a href="/involved/">Get Involved</a>
+        </span>
+    </div></div>
+
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
         <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
@@ -1009,9 +1049,7 @@ textarea:focus-visible {
     </script>
 
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo">
-            <span class="nav-logo-text">GHSI</span>
-        </a>
+        <a href="/" class="nav-logo" aria-label="GHSI home"><img src="/images/ghsi-logo.png" alt="Ghana Hypertension Screening Initiative" class="nav-logo-img"></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/approach/">Our Approach</a></li>
@@ -1283,6 +1321,7 @@ textarea:focus-visible {
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
@@ -1314,5 +1353,35 @@ textarea:focus-visible {
             <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
+<script>
+(function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}})();
+(function(){
+var bar=document.querySelector('.research-nav-inner');if(!bar)return;
+var links=[].slice.call(bar.querySelectorAll('a[href^="#"]'));
+var panels=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+if(!links.length||panels.indexOf(null)!==-1)return;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+bar.setAttribute('role','tablist');
+links.forEach(function(a,i){a.setAttribute('role','tab');if(!a.id)a.id='rtab-'+i;panels[i].setAttribute('role','tabpanel');panels[i].setAttribute('aria-labelledby',a.id);});
+function navH(){var n=document.querySelector('.nav');return n?n.offsetHeight:0;}
+function tabBarTop(){var rn=document.querySelector('.research-nav');return rn?Math.max(0,rn.offsetTop-navH()):0;}
+function activate(idx,doScroll){
+links.forEach(function(a,i){
+var on=(i===idx),p=panels[i];
+a.classList.toggle('active',on);
+a.setAttribute('aria-selected',on?'true':'false');
+a.tabIndex=on?0:-1;
+if(on){p.hidden=false;p.classList.remove('show');void p.offsetWidth;if(!reduce)p.classList.add('show');}else{p.hidden=true;}
+});
+if(doScroll)window.scrollTo(0,tabBarTop());
+}
+links.forEach(function(a,i){
+a.addEventListener('click',function(e){e.preventDefault();activate(i,true);if(history.replaceState)history.replaceState(null,'','#'+a.getAttribute('href').slice(1));});
+a.addEventListener('keydown',function(e){var n=null;if(e.key==='ArrowRight'||e.key==='ArrowDown')n=(i+1)%links.length;else if(e.key==='ArrowLeft'||e.key==='ArrowUp')n=(i-1+links.length)%links.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=links.length-1;if(n!==null){e.preventDefault();activate(n,true);links[n].focus();if(history.replaceState)history.replaceState(null,'','#'+links[n].getAttribute('href').slice(1));}});
+});
+var start=0,h=location.hash.slice(1);if(h){for(var i=0;i<links.length;i++){if(links[i].getAttribute('href').slice(1)===h){start=i;break;}}}
+activate(start,false);
+})();
+</script>
 </body>
 </html>
