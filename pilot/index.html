@@ -212,7 +212,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .band{position:relative;min-height:60vh;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(74,21,37,.82),rgba(74,21,37,.22) 52%,rgba(74,21,37,.04)),url('/images/ghana-trotro-worker.jpg') 50% 42%/cover}
 .band .bandtext{padding:50px 56px}
 .band .bandtext .k{color:#E9C765;font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;display:block;margin-bottom:10px}
-.band .bandtext .line{font-family:"Playfair Display",serif;color:#fff;font-size:34px;font-weight:700;max-width:640px;line-height:1.16}</style>
+.band .bandtext .line{font-family:"Playfair Display",serif;color:#fff;font-size:34px;font-weight:700;max-width:640px;line-height:1.16}
+/* === HORIZONTAL TIMELINE === */
+.stepper{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;max-width:1000px;margin:0 auto}
+.stepper::before{content:'';position:absolute;top:24px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:2px;z-index:0}
+.step{position:relative;z-index:1;text-align:center}
+.step-node{width:48px;height:48px;border-radius:50%;margin:0 auto 0.75rem;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.15rem;color:var(--white);background:var(--teal);border:3px solid var(--cream-dark)}
+.step:last-child .step-node{background:var(--gold);color:var(--burgundy-deep)}
+.step-name{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.05rem;color:var(--burgundy-deep);margin-bottom:0.3rem}
+.step-desc{font-size:0.85rem;color:var(--charcoal-light);line-height:1.45;max-width:150px;margin:0 auto}
+@media(max-width:768px){.stepper{grid-template-columns:1fr;gap:0;max-width:420px}.stepper::before{top:0;bottom:0;left:24px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,var(--teal),var(--gold))}.step{display:grid;grid-template-columns:48px 1fr;gap:0.85rem;align-items:center;text-align:left;padding:0.6rem 0}.step-node{margin:0}.step-desc{max-width:none}}</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -320,7 +329,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
             <p>Six screening events across the Greater Accra region, at major transport hubs and church-based community health fairs, with 12-month follow-up through December 2027.</p>
         </div>
     </div>
-    <section style="padding: 5rem 2rem;">
+    <section style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Pilot Overview</div>
@@ -344,47 +353,59 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
         </div>
     </section>
     <section class="band"><div class="bandtext"><span class="k">LORRY STATION • ACCRA</span><div class="line">the heart of the transport hub ecosystem</div></div></section>
-    <section style="background: var(--cream-dark); padding: 5rem 2rem;">
+    <section style="background: var(--cream-dark); padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Implementation Phases</div>
                 <h2 class="section-title">Pilot Timeline</h2>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot">1</div>
-                    <div class="timeline-label">Foundation</div>
-                    <div class="timeline-desc">Partnerships, regulatory clearances, team recruitment</div>
+            <div class="stepper">
+                <div class="step">
+                    <div class="step-node">1</div>
+                    <div class="step-text">
+                        <div class="step-name">Foundation</div>
+                        <div class="step-desc">Partnerships, regulatory clearances, team recruitment</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">2</div>
-                    <div class="timeline-label">Training</div>
-                    <div class="timeline-desc">ToT curriculum delivery, volunteer training, data system setup</div>
+                <div class="step">
+                    <div class="step-node">2</div>
+                    <div class="step-text">
+                        <div class="step-name">Training</div>
+                        <div class="step-desc">ToT curriculum delivery, volunteer training, data system setup</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">3</div>
-                    <div class="timeline-label">Dry Run</div>
-                    <div class="timeline-desc">Practice screening events, workflow testing</div>
+                <div class="step">
+                    <div class="step-node">3</div>
+                    <div class="step-text">
+                        <div class="step-name">Dry Run</div>
+                        <div class="step-desc">Practice screening events, workflow testing</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot" style="background: var(--gold); color: var(--burgundy-deep);">4</div>
-                    <div class="timeline-label">Screening</div>
-                    <div class="timeline-desc">December 2026: six events across Greater Accra</div>
+                <div class="step">
+                    <div class="step-node">4</div>
+                    <div class="step-text">
+                        <div class="step-name">Screening</div>
+                        <div class="step-desc">December 2026: six events across Greater Accra</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">5</div>
-                    <div class="timeline-label">Follow-Up</div>
-                    <div class="timeline-desc">12-month tracking cycle through December 2027</div>
+                <div class="step">
+                    <div class="step-node">5</div>
+                    <div class="step-text">
+                        <div class="step-name">Follow-Up</div>
+                        <div class="step-desc">12-month tracking cycle through December 2027</div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot">6</div>
-                    <div class="timeline-label">Evaluate</div>
-                    <div class="timeline-desc">Data analysis, outcomes reporting, scale planning</div>
+                <div class="step">
+                    <div class="step-node">6</div>
+                    <div class="step-text">
+                        <div class="step-name">Evaluate</div>
+                        <div class="step-desc">Data analysis, outcomes reporting, scale planning</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section style="padding: 5rem 2rem;">
+    <section style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Beyond December 2026</div>
