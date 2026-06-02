@@ -783,7 +783,13 @@ textarea:focus-visible {
     to { opacity: 1; transform: translateY(0); }
 }
 .animate-in { animation: fadeInUp 0.5s ease forwards; }
-.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}</style>
+.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}
+/* === FOUNDER STORY EXPANDER === */
+.founder-details{border-top:1px solid rgba(74,21,37,0.15);padding-top:1.5rem}
+.founder-details summary{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.35rem;color:var(--burgundy-deep);cursor:pointer;list-style:none}
+.founder-details summary::-webkit-details-marker{display:none}
+.founder-details summary::before{content:'\25B8\00a0\00a0';color:var(--gold)}
+.founder-details[open] summary::before{content:'\25BE\00a0\00a0';color:var(--gold)}</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -855,67 +861,6 @@ textarea:focus-visible {
         </div>
     </section>
 
-    <!-- Vision, Mission, Values -->
-    <section style="padding: 5rem 2rem;">
-        <div class="container" style="max-width: 820px;">
-            <div class="section-header">
-                <div class="section-label">Vision</div>
-                <h2 class="section-title">A Ghana Where Informal Sector Workers Receive Continuity of Care</h2>
-                <p class="section-intro">A Ghana where informal sector workers (trotro drivers, market women, traders) receive the same twelve months of continuous hypertension care as anyone in the formal sector. By 2031, GHSI's closed-loop care architecture operates as a depth-layer of Ghana's Free Primary Healthcare Programme in Greater Accra, with informal sector treatment continuity approaching parity with the formal sector.</p>
-            </div>
-            <div style="margin-top: 3rem;">
-                <div class="section-label">Mission</div>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--charcoal); margin-top: 0.75rem;">GHSI builds community-level infrastructure for hypertension screening, education, and twelve months of follow-up. The infrastructure is co-deployed with Ghana's Free Primary Healthcare Programme, designed in partnership with religious institutions, transport unions, and market communities across Greater Accra, and continuously refined through outcomes feedback. Screening is the beginning of care, not the end of an encounter.</p>
-            </div>
-            <div style="margin-top: 3rem;">
-                <div class="section-label">Values</div>
-                <div style="margin-top: 1rem; font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
-                    <p style="margin-bottom: 1.25rem;"><strong>Nothing About Us Without Us.</strong> Programs are co-designed with the people they serve. Trotro drivers and market women are the design population, not subjects of intervention.</p>
-                    <p style="margin-bottom: 1.25rem;"><strong>Closed-loop accountability.</strong> A screening is not care until follow-up sustains it. Twelve months. Five touchpoints. Outcomes, not encounters.</p>
-                    <p style="margin-bottom: 1.25rem;"><strong>Faith-rooted, community-trusted.</strong> Faith communities have long been health communities in Ghana. We honor that, and build with it.</p>
-                    <p style="margin-bottom: 1.25rem;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture.</p>
-                    <p style="margin-bottom: 0;"><strong>Aligned with the system.</strong> We work with Ghana's national priorities, not around them.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Story -->
-    <section style="padding: 5rem 2rem; background: var(--cream-dark);">
-        <div class="container" style="max-width: 760px;">
-            <div class="section-header">
-                <div class="section-label">Our Story</div>
-            </div>
-            <div style="font-size: 1.1rem; line-height: 1.8; color: var(--charcoal);">
-                <p style="margin-bottom: 1.25rem;">On January 13, 2019, my father died of a stroke.</p>
-                <p style="margin-bottom: 1.25rem;">In the years that followed, I kept hearing the same story from Ghanaian families. Breadwinners and loved ones lost to what people called sudden stroke. But stroke is not sudden. It is the end of years of undetected hypertension. The signs were there. Screening came late.</p>
-                <p style="margin-bottom: 1.25rem;">GHSI focuses on trotro drivers and market women in Greater Accra for a specific reason. They are the economic backbone of urban Ghana. Trotro drivers sit ten to twelve hours a day in traffic, under chronic stress, often consuming salt-heavy street food, often without health coverage. Market women stand for hours in the heat, relying on processed foods high in sodium. Both groups face elevated cardiovascular risk and are excluded from a clinical system that only serves people who walk through its doors. When a driver or market woman has a stroke, an entire family loses its primary income. This is a health crisis and an economic one.</p>
-                <p style="margin-bottom: 1.25rem;">In Ghana, stroke is widely attributed to spiritual forces, and many families respond with prayer rather than medical care. GHSI partners with religious institutions because faith communities have long been health communities. We do not ask people to choose between faith and care. We build with both.</p>
-                <p style="margin-bottom: 0; font-style: italic; color: var(--charcoal-light);">Mavis Amegah-Dorr, Founder</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How We Work -->
-    <section style="padding: 5rem 2rem;">
-        <div class="container" style="max-width: 820px;">
-            <div class="section-header">
-                <div class="section-label">How We Work</div>
-                <h2 class="section-title">One Contribution to a Shared Field</h2>
-            </div>
-            <div style="font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
-                <p style="margin-bottom: 1.5rem;">Ghana's hypertension space already includes important and longstanding work by Healthy Heart Africa, the Akomapa project, ADHINCRA, TASSH, the Ghana Heart Initiative, the Ghanaian Society of Cardiology, the World Heart Federation, May Measurement Month Ghana, and others. GHSI is one contribution to a shared field, not a replacement for any of it.</p>
-                <p style="margin-bottom: 1rem;">What we contribute that is distinct:</p>
-                <ul style="padding-left: 1.5rem; margin-bottom: 0;">
-                    <li style="margin-bottom: 0.85rem;"><strong>Faith-anchored community trust.</strong> Religious institutions across Greater Accra are central to our model.</li>
-                    <li style="margin-bottom: 0.85rem;"><strong>Informal sector workers as the design population.</strong> Trotro drivers and market women are our first audience, not an afterthought, not an extension.</li>
-                    <li style="margin-bottom: 0.85rem;"><strong>Twelve-month closed-loop follow-up tied to outcomes,</strong> not encounters.</li>
-                    <li style="margin-bottom: 0;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Transport Hub Ecosystem -->
     <section style="padding: 5rem 2rem;">
         <div class="split-section">
@@ -928,6 +873,7 @@ textarea:focus-visible {
                 <h2>The Transport Hub Ecosystem</h2>
                 <p>GHSI does not target two separate populations. We serve one integrated economic community: the transport hub ecosystem. Trotro drivers and market women work in the same physical space, share the same risk factors, and face the same barriers to preventive care.</p>
                 <p>By screening where they already gather, at lorry stations and major markets, GHSI reaches an entire economic community in a single intervention point. This is how we maximize impact per screening event.</p>
+                <p>GHSI focuses on trotro drivers and market women in Greater Accra for a specific reason. They are the economic backbone of urban Ghana. Trotro drivers sit ten to twelve hours a day in traffic, under chronic stress, often consuming salt-heavy street food, often without health coverage. Market women stand for hours in the heat, relying on processed foods high in sodium. Both groups face elevated cardiovascular risk and are excluded from a clinical system that only serves people who walk through its doors. When a driver or market woman has a stroke, an entire family loses its primary income. This is a health crisis and an economic one.</p>
             </div>
         </div>
     </section>
@@ -1126,6 +1072,61 @@ textarea:focus-visible {
                     <p>Designed for interoperability with Ghana's national health information system so that pilot data contributes to national surveillance.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section style="padding: 5rem 2rem;">
+        <div class="container" style="max-width: 820px;">
+            <div class="section-header">
+                <div class="section-label">How We Work</div>
+                <h2 class="section-title">One Contribution to a Shared Field</h2>
+            </div>
+            <div style="font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
+                <p style="margin-bottom: 1.5rem;">Ghana's hypertension space already includes important and longstanding work by Healthy Heart Africa, the Akomapa project, ADHINCRA, TASSH, the Ghana Heart Initiative, the Ghanaian Society of Cardiology, the World Heart Federation, May Measurement Month Ghana, and others. GHSI is one contribution to a shared field, not a replacement for any of it.</p>
+                <p style="margin-bottom: 1.5rem;">In Ghana, stroke is widely attributed to spiritual forces, and many families respond with prayer rather than medical care. GHSI partners with religious institutions because faith communities have long been health communities. We do not ask people to choose between faith and care. We build with both.</p>
+                <p style="margin-bottom: 1rem;">What we contribute that is distinct:</p>
+                <ul style="padding-left: 1.5rem; margin-bottom: 0;">
+                    <li style="margin-bottom: 0.85rem;"><strong>Faith-anchored community trust.</strong> Religious institutions across Greater Accra are central to our model.</li>
+                    <li style="margin-bottom: 0.85rem;"><strong>Informal sector workers as the design population.</strong> Trotro drivers and market women are our first audience, not an afterthought, not an extension.</li>
+                    <li style="margin-bottom: 0.85rem;"><strong>Twelve-month closed-loop follow-up tied to outcomes,</strong> not encounters.</li>
+                    <li style="margin-bottom: 0;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision, Mission, Values (compressed) -->
+    <section style="padding: 4rem 2rem; background: var(--cream-dark);">
+        <div class="container" style="max-width: 820px;">
+            <div class="section-label" style="margin-bottom: 1.5rem;">Vision, Mission &amp; Values</div>
+            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.4rem;">Vision</h3>
+            <p style="font-weight: 600; color: var(--charcoal); margin-bottom: 0.4rem;">A Ghana Where Informal Sector Workers Receive Continuity of Care</p>
+            <p style="line-height: 1.7; color: var(--charcoal-light); margin-bottom: 1.5rem;">A Ghana where informal sector workers (trotro drivers, market women, traders) receive the same twelve months of continuous hypertension care as anyone in the formal sector. By 2031, GHSI's closed-loop care architecture operates as a depth-layer of Ghana's Free Primary Healthcare Programme in Greater Accra, with informal sector treatment continuity approaching parity with the formal sector.</p>
+            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.4rem;">Mission</h3>
+            <p style="line-height: 1.7; color: var(--charcoal-light); margin-bottom: 1.5rem;">GHSI builds community-level infrastructure for hypertension screening, education, and twelve months of follow-up. The infrastructure is co-deployed with Ghana's Free Primary Healthcare Programme, designed in partnership with religious institutions, transport unions, and market communities across Greater Accra, and continuously refined through outcomes feedback. Screening is the beginning of care, not the end of an encounter.</p>
+            <h3 style="color: var(--burgundy-deep); font-size: 1.2rem; margin-bottom: 0.6rem;">Values</h3>
+            <div style="font-size: 1rem; line-height: 1.7; color: var(--charcoal);">
+                <p style="margin-bottom: 0.6rem;"><strong>Nothing About Us Without Us.</strong> Programs are co-designed with the people they serve. Trotro drivers and market women are the design population, not subjects of intervention.</p>
+                <p style="margin-bottom: 0.6rem;"><strong>Closed-loop accountability.</strong> A screening is not care until follow-up sustains it. Twelve months. Five touchpoints. Outcomes, not encounters.</p>
+                <p style="margin-bottom: 0.6rem;"><strong>Faith-rooted, community-trusted.</strong> Faith communities have long been health communities in Ghana. We honor that, and build with it.</p>
+                <p style="margin-bottom: 0.6rem;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture.</p>
+                <p style="margin-bottom: 0;"><strong>Aligned with the system.</strong> We work with Ghana's national priorities, not around them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Story (collapsed) -->
+    <section style="padding: 4rem 2rem;">
+        <div class="container" style="max-width: 760px;">
+            <details class="founder-details">
+                <summary>Read the founder's story</summary>
+                <div style="font-size: 1.1rem; line-height: 1.8; color: var(--charcoal); margin-top: 1.5rem;">
+                    <p style="margin-bottom: 1.25rem;">On January 13, 2019, my father died of a stroke.</p>
+                    <p style="margin-bottom: 1.25rem;">In the years that followed, I kept hearing the same story from Ghanaian families. Breadwinners and loved ones lost to what people called sudden stroke. But stroke is not sudden. It is the end of years of undetected hypertension. The signs were there. Screening came late.</p>
+                    <p style="margin-bottom: 0; font-style: italic; color: var(--charcoal-light);">Mavis Amegah-Dorr, Founder</p>
+                </div>
+            </details>
         </div>
     </section>
 

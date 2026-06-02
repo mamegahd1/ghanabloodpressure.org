@@ -945,6 +945,20 @@ textarea:focus-visible {
     (function(){var s=document.querySelector('.hero-stage'),img=document.getElementById('heroImg'),c=document.getElementById('heroCopy'),sc=document.getElementById('heroScrim');if(!s)return;var SY=22,EY=100,PD=.72,TG=.40,t=false;function f(){var tot=s.offsetHeight-innerHeight,sd=Math.min(Math.max(-s.getBoundingClientRect().top,0),tot),p=tot>0?sd/tot:0,pp=Math.min(p/PD,1);img.style.backgroundPositionY=(SY+(EY-SY)*pp)+'%';var fd=Math.min(p/TG,1);c.style.transform='translateY('+(-fd*120)+'px)';c.style.opacity=1-fd;sc.style.opacity=1-fd*.8;t=false}addEventListener('scroll',function(){if(!t){requestAnimationFrame(f);t=true}},{passive:true});addEventListener('resize',f,{passive:true});f()})();
     </script>
 
+    <!-- The Crisis (condensed) -->
+    <section style="padding: 5rem 2rem;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Challenge</div>
+                <h2 class="section-title">Ghana Stands at a Critical Crossroads</h2>
+                <p class="section-intro">Hypertension is the leading cause of cardiovascular death in Ghana. Among informal sector workers (trotro drivers, market women, and their families), access to preventive healthcare is nearly nonexistent. Most will never know their blood pressure until a crisis strikes.</p>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="/approach/" class="btn btn-primary">Learn About Our Approach</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Bar -->
     <section class="stats-bar">
         <div class="stats-container">
@@ -1141,24 +1155,10 @@ textarea:focus-visible {
             </div>
             <div style="font-size: 1.1rem; line-height: 1.8; color: var(--charcoal);">
                 <p style="margin-bottom: 1.25rem;">On January 13, 2019, my father died of a stroke.</p>
-                <p style="margin-bottom: 1.25rem;">In the years that followed, I kept hearing the same story from Ghanaian families. Breadwinners and loved ones lost to what people called sudden stroke. But stroke is not sudden. It is the end of years of undetected hypertension. The signs were there. Screening came late.</p>
+                <p style="margin-bottom: 1.25rem;">Stroke is not sudden. It is the end of years of undetected hypertension.</p>
                 <p style="margin-bottom: 1.25rem;">GHSI exists to change that.</p>
                 <p style="margin-bottom: 1.5rem; font-style: italic; color: var(--charcoal-light);">Mavis Amegah-Dorr, Founder</p>
-                <p><a href="/approach/" style="color: var(--teal); font-weight: 600;">Read more →</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Crisis (condensed) -->
-    <section style="padding: 5rem 2rem;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">The Challenge</div>
-                <h2 class="section-title">Ghana Stands at a Critical Crossroads</h2>
-                <p class="section-intro">Hypertension is the leading cause of cardiovascular death in Ghana. Among informal sector workers (trotro drivers, market women, and their families), access to preventive healthcare is nearly nonexistent. Most will never know their blood pressure until a crisis strikes.</p>
-            </div>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="/approach/" class="btn btn-primary">Learn About Our Approach</a>
+                <p><a href="/approach/" style="color: var(--teal); font-weight: 600;">Read our story →</a></p>
             </div>
         </div>
     </section>
