@@ -22,10 +22,80 @@
     <style>
 :root{--teal:#1A5F5F;--teal-dark:#134747;--teal-light:#238080;--burgundy-deep:#4A1525;--burgundy:#5D1A2E;--gold:#C9A227;--gold-light:#D4B84A;--gold-pale:#E8D590;--cream:#FDFAF5;--cream-dark:#F5EEE0;--charcoal:#2C2C2C;--charcoal-light:#4A4A4A;--white:#FFFFFF;--green:#2D8B2D;--yellow:#D4A017;--orange:#D97706;--red:#C53030;--darkred:#7B1818}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,sans-serif;background-color:var(--cream);color:var(--charcoal);line-height:1.7;font-size:17px}h1,h2,h3,h4,h5{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;line-height:1.2}.container{max-width:1100px;margin:0 auto}.countdown-banner{background:var(--teal);color:var(--white);text-align:center;padding:0.65rem 1rem;font-size:0.92rem;font-weight:500;letter-spacing:0.01em;position:relative;z-index:1001}.countdown-banner a{color:var(--gold-pale);font-weight:700;text-decoration:underline;margin-left:0.5rem}.countdown-banner a:hover{color:var(--gold)}.countdown-banner strong{color:var(--gold-pale);font-size:1.05rem}.nav{position:sticky;top:0;z-index:1000;background:var(--burgundy-deep);padding:0.6rem 2rem;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(74,21,37,0.3)}.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}.nav-logo-text{color:var(--gold);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.1rem;font-weight:700;letter-spacing:0.02em}.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}.nav-links a{color:var(--cream);text-decoration:none;font-size:0.9rem;font-weight:500;letter-spacing:0.03em;transition:color 0.3s ease;position:relative}.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width 0.3s ease}.nav-links a:hover{color:var(--gold)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--gold)}.nav-links a.active::after{width:100%}.nav-donate-btn{background:var(--gold);color:var(--burgundy-deep)!important;padding:0.45rem 1.1rem;border-radius:4px;font-weight:700!important;font-size:0.85rem!important;text-decoration:none!important}.nav-donate-btn:hover{background:var(--gold-light)!important;color:var(--burgundy-deep)!important}.nav-donate-btn::after{display:none!important}.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem}.nav-mobile-toggle span{display:block;width:25px;height:2px;background:var(--gold);margin:5px 0;transition:0.3s}section{padding:5rem 2rem}.section-header{text-align:center;margin-bottom:3rem}.section-label{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:var(--teal);margin-bottom:0.75rem}.section-title{font-size:2.6rem;color:var(--burgundy-deep);margin-bottom:1rem}.section-intro{font-size:1.1rem;color:var(--charcoal-light);max-width:700px;margin:0 auto;line-height:1.8}.btn{display:inline-block;padding:0.9rem 2rem;font-size:1rem;font-weight:600;text-decoration:none;border-radius:4px;transition:all 0.3s ease;cursor:pointer;border:none}.btn-primary{background:var(--teal);color:var(--white)}.btn-primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 4px 15px rgba(26,95,95,0.4)}.btn-secondary{background:transparent;color:var(--teal);border:2px solid var(--teal)}.btn-secondary:hover{background:var(--teal);color:var(--white)}.btn-gold{background:var(--gold);color:var(--burgundy-deep);font-weight:700}.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 4px 15px rgba(201,162,39,0.4)}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:var(--white);padding:2rem;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-top:4px solid var(--teal);transition:transform 0.3s ease}.card:hover{transform:translateY(-4px)}.card h3,.card h4{color:var(--burgundy-deep);margin-bottom:0.75rem}.card p{color:var(--charcoal-light);line-height:1.7}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:1000px;margin:0 auto}.contact-info h3{color:var(--burgundy-deep);margin-bottom:1.5rem}.contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}.contact-icon{font-size:1.5rem}.contact-item a{color:var(--teal);text-decoration:none}.contact-item a:hover{text-decoration:underline}.form-group{margin-bottom:1.25rem}.form-group label{display:block;margin-bottom:0.4rem;font-weight:600;color:var(--charcoal);font-size:0.95rem}.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem;border:1px solid #ddd;border-radius:6px;font-family:inherit;font-size:1rem;transition:border-color 0.3s}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal)}.footer{background:var(--burgundy-deep);color:var(--cream);padding:3rem 2rem 1.5rem}.footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}.footer-brand p{max-width:350px;font-size:0.95rem;line-height:1.6;margin-top:0.75rem}.footer h4{color:var(--gold);font-size:1rem;margin-bottom:1rem}.footer ul{list-style:none}.footer ul li{margin-bottom:0.5rem}.footer ul li a{color:var(--cream);text-decoration:none;color:#C5BBAB;font-size:0.9rem;transition:color 0.3s}.footer ul li a:hover{color:var(--cream)}.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15);text-align:center;font-size:0.85rem;color:#B0A88F}.donate-cta{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);padding:4rem 2rem;text-align:center;color:var(--white)}.donate-cta h2{color:var(--white);font-size:2.2rem;margin-bottom:1rem}.donate-cta p{color:var(--cream);max-width:600px;margin:0 auto 2rem;font-size:1.1rem;color:#E6E0D2}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}.skip-nav{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--burgundy-deep);padding:0.75rem 1.5rem;font-weight:700;font-size:0.95rem;z-index:2000;border-radius:0 0 6px 6px;text-decoration:none}.skip-nav:focus{top:0}.nav-links a{padding:0.6rem 0.25rem;min-height:44px;display:inline-flex;align-items:center}@media(max-width:1024px) and (min-width:769px){.card-grid{grid-template-columns:repeat(2,1fr)}section{padding:4rem 2rem}.section-title{font-size:2.3rem}}@media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--burgundy-deep);flex-direction:column;padding:1rem 2rem;gap:0.75rem}.nav-links.active{display:flex}.nav-mobile-toggle{display:block}.contact-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}.footer-brand p{max-width:none}section{padding:3rem 1.5rem}.section-title{font-size:2rem}}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.animate-in{animation:fadeInUp 0.5s ease forwards}
 .ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}
-.two-col-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 1.5rem;padding-left:0;margin-bottom:1rem}.two-col-list li{position:relative;padding-left:1.25rem;line-height:1.6}.two-col-list li::before{content:'\2022';position:absolute;left:0;color:var(--teal);font-weight:700}@media(max-width:768px){.two-col-list{grid-template-columns:1fr}}</style>
+.two-col-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 1.5rem;padding-left:0;margin-bottom:1rem}.two-col-list li{position:relative;padding-left:1.25rem;line-height:1.6}.two-col-list li::before{content:'\2022';position:absolute;left:0;color:var(--teal);font-weight:700}@media(max-width:768px){.two-col-list{grid-template-columns:1fr}}
+/* ===== Phase 2 shared shell ===== */
+.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
+.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
+.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
+.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
+.utilbar a{color:#cfeaea;text-decoration:none}
+.utilbar a:hover{color:#fff}
+.nav{background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
+.nav-logo-img{height:46px;width:auto;display:block}
+.nav-links a{color:var(--teal-dark)}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal)}
+.nav-mobile-toggle span{background:var(--teal-dark)}
+@media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
+.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+/* quick-link tiles (Bursar pattern) */
+.qlinks{max-width:1000px;margin:1.5rem auto 0;padding:0 1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.qtile{display:flex;flex-direction:column;gap:.25rem;background:var(--white);border:1px solid var(--cream-dark);border-radius:12px;padding:1.1rem 1.2rem;text-decoration:none;box-shadow:0 4px 18px rgba(0,0,0,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.qtile:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(19,71,71,.12);border-color:var(--gold)}
+.qtile .qt-title{font-family:'Playfair Display',Georgia,'Times New Roman',serif;color:var(--burgundy-deep);font-weight:700;font-size:1.05rem}
+.qtile .qt-sub{color:var(--charcoal-light);font-size:.85rem;line-height:1.4}
+.qtile .qt-arrow{color:var(--teal);font-weight:700;font-size:.85rem;margin-top:.15rem}
+@media(max-width:760px){.qlinks{grid-template-columns:1fr 1fr}}
+/* audience columns (Hubs pattern) */
+.giv-col .giv-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);margin-bottom:.4rem}
+.giv-col h3{color:var(--burgundy-deep);font-size:1.25rem;margin-bottom:.5rem}
+.giv-col ul{list-style:none;padding:0;margin:.5rem 0 1rem}
+.giv-col ul li{position:relative;padding-left:1.25rem;margin-bottom:.4rem;font-size:.92rem;color:var(--charcoal-light);line-height:1.5}
+.giv-col ul li::before{content:'\2713';position:absolute;left:0;color:var(--teal);font-weight:700}
+.giv-col .giv-cta{display:inline-block;color:var(--teal);font-weight:700;font-size:.9rem;text-decoration:none;margin-top:.35rem}
+.giv-col .giv-cta:hover{text-decoration:underline}
+/* audience tabs (compact interaction) */
+.giv-tablist{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.25rem;max-width:920px;margin-left:auto;margin-right:auto}
+.giv-tab{flex:1 1 auto;min-width:130px;background:var(--white);border:1px solid rgba(74,21,37,.15);border-radius:999px;padding:.65rem 1.1rem;cursor:pointer;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1rem;color:var(--burgundy-deep);transition:background .25s ease,color .25s ease,border-color .25s ease}
+.giv-tab:hover{border-color:var(--gold)}
+.giv-tab[aria-selected="true"]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.giv-panel{max-width:920px;margin:0 auto;background:var(--white);border-radius:14px;box-shadow:0 4px 22px rgba(0,0,0,.06);padding:1.9rem 2rem}
+.giv-panel[hidden]{display:none}
+.giv-panel h3{color:var(--burgundy-deep);font-size:1.3rem;margin-bottom:.5rem}
+.giv-panel>p{color:var(--charcoal-light);line-height:1.7;margin-bottom:.9rem}
+.giv-panel ul{list-style:none;padding:0;margin:.5rem 0 1rem;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1.5rem}
+.giv-panel ul li{position:relative;padding-left:1.3rem;font-size:.92rem;color:var(--charcoal-light);line-height:1.5}
+.giv-panel ul li::before{content:'\2713';position:absolute;left:0;color:var(--teal);font-weight:700}
+.giv-panel .giv-cta{display:inline-block;color:var(--teal);font-weight:700;font-size:.92rem;text-decoration:none;margin-top:.35rem;margin-right:1.5rem}
+.giv-panel .giv-cta:hover{text-decoration:underline}
+@keyframes givFade{from{opacity:0}to{opacity:1}}
+.giv-panel.show{animation:givFade .25s ease both}
+@media(max-width:600px){.giv-tab{flex:1 1 100%}.giv-panel ul{grid-template-columns:1fr}}
+/* merged connect (upcoming + contact + form) */
+.connect-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.5rem;align-items:start}
+.connect-h{color:var(--burgundy-deep);font-size:1.2rem;margin-bottom:.75rem}
+.connect-aside .event{border-left:3px solid var(--teal);padding:.1rem 0 .1rem .85rem;margin-bottom:1rem}
+.connect-aside .event h4{color:var(--burgundy-deep);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.05rem;margin-bottom:.2rem}
+.connect-aside .event p{color:var(--charcoal-light);font-size:.9rem;line-height:1.5;margin-bottom:.3rem}
+.connect-aside .contact-item{margin-bottom:1rem}
+@media(max-width:768px){.connect-grid{grid-template-columns:1fr;gap:1.75rem}}
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <div class="utilbar"><div class="uwrap">
+        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
+        <span class="ulinks">
+            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+            <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">Donate</a>
+        </span>
+    </div></div>
+
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
         <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
@@ -64,7 +134,7 @@
     })();
     </script>
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo"><span class="nav-logo-text">GHSI</span></a>
+        <a href="/" class="nav-logo" aria-label="GHSI home"><img src="/images/ghsi-logo.png" alt="Ghana Hypertension Screening Initiative" class="nav-logo-img"></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/approach/">Our Approach</a></li>
@@ -87,6 +157,13 @@
             <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem;">Every contribution, whether financial, professional, or material, directly supports free blood pressure screenings for Ghana's working communities.</p>
         </div>
     </section>
+    <div class="qlinks reveal">
+        <a class="qtile" href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener"><span class="qt-title">Donate</span><span class="qt-sub">Fund free screenings via Ko-fi</span><span class="qt-arrow">Give now →</span></a>
+        <a class="qtile" href="#contact-form-volunteer"><span class="qt-title">Volunteer</span><span class="qt-sub">Lend your clinical or community skills</span><span class="qt-arrow">Volunteer →</span></a>
+        <a class="qtile" href="#contact-form-partnership"><span class="qt-title">Partner</span><span class="qt-sub">Join the pilot or adopt the curriculum</span><span class="qt-arrow">Partner →</span></a>
+        <a class="qtile" href="mailto:info@ghanabloodpressure.org"><span class="qt-title">Contact</span><span class="qt-sub">Email us directly</span><span class="qt-arrow">Email →</span></a>
+    </div>
+
     <section class="donate-cta" style="padding-top: 3rem; padding-bottom: 2.5rem;">
         <h2>Support Our Work</h2>
         <p>GHSI's approach keeps overhead low so your funding goes directly toward the work: screenings, training, equipment, and the twelve-month follow-up system.</p>
@@ -102,7 +179,7 @@
                 <h2 class="section-title">How Your Support Is Used</h2>
                 <p class="section-intro">Every contribution directly funds the tools and logistics needed to bring free screenings to communities in need.</p>
             </div>
-            <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card-grid reveal" style="margin-top: 2rem;">
                 <div class="card">
                     <h4>Screening Equipment</h4>
                     <p>Validated digital blood pressure monitors, Android devices for community-level data collection, and supplies for each screening event.</p>
@@ -118,117 +195,95 @@
             </div>
         </div>
     </section>
-    <section style="padding: 3rem 2rem; background: var(--cream-dark);">
-        <div class="container" style="max-width: 820px;">
-            <div class="section-header" style="margin-bottom: 1.25rem;">
-                <div class="section-label">Join the Work</div>
-                <h2 class="section-title">Volunteer</h2>
+    <section style="padding: 3.5rem 2rem; background: var(--cream-dark);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <div class="section-label">Find Your Way In</div>
+                <h2 class="section-title">Ways to Get Involved</h2>
+                <p class="section-intro">Whoever you are, there is a place for you in this work.</p>
             </div>
-            <div style="font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
-                <p style="margin-bottom: 0.75rem;">We welcome inquiries from practitioners with relevant experience in:</p>
-                <ul class="two-col-list">
+            <div class="giv-tablist" id="giv-tablist" role="tablist" aria-label="Ways to get involved">
+                <button class="giv-tab" role="tab" id="gtab-vol" aria-selected="true" aria-controls="gpanel-vol">Volunteers</button>
+                <button class="giv-tab" role="tab" id="gtab-par" aria-selected="false" tabindex="-1" aria-controls="gpanel-par">Partners</button>
+                <button class="giv-tab" role="tab" id="gtab-fun" aria-selected="false" tabindex="-1" aria-controls="gpanel-fun">Funders &amp; Donors</button>
+                <button class="giv-tab" role="tab" id="gtab-res" aria-selected="false" tabindex="-1" aria-controls="gpanel-res">Researchers</button>
+            </div>
+            <div class="giv-panel show" id="gpanel-vol" role="tabpanel" aria-labelledby="gtab-vol">
+                <h3>Lend your skills</h3>
+                <p>We welcome practitioners with relevant experience in:</p>
+                <ul>
                     <li>Clinical care (cardiology, internal medicine, family medicine, nursing)</li>
                     <li>Public health, epidemiology, or implementation research</li>
                     <li>Community engagement and health communication</li>
-                    <li>Design, data systems, or digital health (with particular interest in DHIMS-2 integration and Ghana-based digital health builders)</li>
+                    <li>Design, data systems, or digital health (DHIMS-2 integration, Ghana-based builders)</li>
                     <li>Communications, content, and donor outreach</li>
                 </ul>
-                <p style="margin-bottom: 1rem;">All current roles are volunteer-stage. We are transparent about this on first contact.</p>
-                <p><a href="#contact-form-volunteer" class="btn btn-secondary" style="font-size: 0.95rem; padding: 0.75rem 1.5rem;">Volunteer inquiry →</a></p>
+                <p style="font-size: 0.92rem;">All current roles are volunteer-stage. We are transparent about this on first contact.</p>
+                <a class="giv-cta" href="#contact-form-volunteer">Volunteer inquiry →</a>
             </div>
-        </div>
-    </section>
-    <section style="padding: 2.5rem 2rem;">
-        <div class="container" style="max-width: 820px;">
-            <div class="section-header" style="margin-bottom: 1rem;">
-                <div class="section-label">Build With Us</div>
-                <h2 class="section-title" style="font-size: 1.8rem;">Partner With Us</h2>
-            </div>
-            <div style="font-size: 1rem; line-height: 1.7; color: var(--charcoal-light);">
-                <p style="margin-bottom: 0.75rem;">GHSI is open to partnership with implementation organizations, research institutions, religious institutions, and community-based organizations interested in:</p>
-                <ul class="two-col-list">
+            <div class="giv-panel" id="gpanel-par" role="tabpanel" aria-labelledby="gtab-par" hidden>
+                <h3>Build with us</h3>
+                <p>We partner with implementation, research, religious, and community-based organizations on:</p>
+                <ul>
                     <li>Adopting or adapting the GHSI volunteer training curriculum for other Ghanaian regions</li>
                     <li>Joining the December 2026 pilot as a screening or referral site</li>
                     <li>Research collaboration on community-level hypertension screening and twelve-month follow-up</li>
                     <li>Faith-based health partnership across Greater Accra</li>
                 </ul>
-                <p><a href="#contact-form-partnership" class="btn btn-secondary" style="font-size: 0.95rem; padding: 0.75rem 1.5rem;">Partnership inquiry →</a></p>
+                <a class="giv-cta" href="#contact-form-partnership">Partnership inquiry →</a>
+            </div>
+            <div class="giv-panel" id="gpanel-fun" role="tabpanel" aria-labelledby="gtab-fun" hidden>
+                <h3>Fund the work</h3>
+                <p>We keep overhead low so contributions go directly to the work: screenings, training, equipment, and the twelve-month follow-up system. See "How Your Support Is Used" above for the breakdown.</p>
+                <a class="giv-cta" href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">Donate on Ko-fi →</a>
+            </div>
+            <div class="giv-panel" id="gpanel-res" role="tabpanel" aria-labelledby="gtab-res" hidden>
+                <h3>Explore the evidence</h3>
+                <p>Review the peer-reviewed evidence base behind our model, then collaborate on community-level hypertension screening and twelve-month follow-up.</p>
+                <a class="giv-cta" href="/research/">See our research →</a>
+                <a class="giv-cta" href="#contact-form-partnership">Send a collaboration inquiry →</a>
             </div>
         </div>
     </section>
-    <section id="upcoming-events" style="padding: 3rem 2rem; background: var(--cream-dark);">
-        <div class="container" style="max-width: 820px;">
-            <div class="section-header" style="margin-bottom: 1.25rem;">
-                <div class="section-label">Mark Your Calendar</div>
-                <h2 class="section-title">Upcoming</h2>
-            </div>
-            <div style="font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
-                <div class="event" data-until="2026-05-17">
-                    <h3 style="font-family:'Playfair Display',Georgia,serif; color: var(--burgundy-deep); font-size: 1.3rem; margin-bottom: 0.5rem;">World Hypertension Day, May 17, 2026</h3>
-                    <p style="margin-bottom: 0.75rem;">We honor the work of Life from 30 Foundation, Ghana's national coordinator for the International Society of Hypertension's May Measurement Month campaign, which has led blood pressure awareness and community screening across Ghana since 2017. If you are in Ghana and want to know your number, find a screening event near you.</p>
-                    <p style="margin-bottom: 1.5rem;"><a href="https://www.facebook.com/betty.baah.1" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">Follow Betty Twumasi-Ankrah, Life from 30's Founder, on Facebook →</a></p>
-                </div>
-                <div class="event" data-until="2026-05-31">
-                    <h3 style="font-family:'Playfair Display',Georgia,serif; color: var(--burgundy-deep); font-size: 1.3rem; margin-bottom: 0.5rem;">Ithaca Festival, May 30 to 31, 2026</h3>
-                    <p style="margin-bottom: 1.5rem;">Ithaca Commons. Stop by the GHSI table.</p>
-                </div>
-                <div class="event" data-until="2026-12-31">
-                    <h3 style="font-family:'Playfair Display',Georgia,serif; color: var(--burgundy-deep); font-size: 1.3rem; margin-bottom: 0.5rem;">December 2026 Pilot Launch</h3>
-                    <p style="margin-bottom: 0;">Greater Accra.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
-    (function(){
-        var section = document.getElementById('upcoming-events');
-        if (!section) { return; }
-        var items = section.querySelectorAll('.event');
-        var now = Date.now();
-        var visible = 0;
-        for (var i = 0; i < items.length; i++) {
-            var until = items[i].dataset.until;
-            if (until && now > new Date(until + "T23:59:59").getTime()) {
-                items[i].style.display = 'none';
-            } else {
-                visible++;
-            }
-        }
-        if (visible === 0) { section.style.display = 'none'; }
-    })();
-    </script>
-    <section id="contact-form" style="background: var(--cream-dark); padding: 3rem 2rem;">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 1.5rem;">
+        <section id="contact-form" style="background: var(--cream-dark); padding: 3.5rem 2rem;">
+        <div class="container" style="max-width: 1040px;">
+            <div class="section-header" style="margin-bottom: 2rem;">
                 <div class="section-label">Contact Us</div>
                 <h2 class="section-title">Let's Connect</h2>
             </div>
-            <div class="contact-grid" style="gap: 2rem;">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
+            <div class="connect-grid reveal">
+                <aside class="connect-aside">
+                    <div id="upcoming-events">
+                        <h3 class="connect-h">Upcoming</h3>
+                        <div class="event" data-until="2026-05-17">
+                            <h4>World Hypertension Day, May 17, 2026</h4>
+                            <p>We honor the work of Life from 30 Foundation, Ghana's national coordinator for the International Society of Hypertension's May Measurement Month campaign, which has led blood pressure awareness and community screening across Ghana since 2017. If you are in Ghana and want to know your number, find a screening event near you.</p>
+                            <p><a href="https://www.facebook.com/betty.baah.1" target="_blank" rel="noopener" style="color: var(--teal); font-weight: 600;">Follow Betty Twumasi-Ankrah, Life from 30's Founder, on Facebook &rarr;</a></p>
+                        </div>
+                        <div class="event" data-until="2026-05-31">
+                            <h4>Ithaca Festival, May 30 to 31, 2026</h4>
+                            <p>Ithaca Commons. Stop by the GHSI table.</p>
+                        </div>
+                        <div class="event" data-until="2026-12-31">
+                            <h4>December 2026 Pilot Launch</h4>
+                            <p>Greater Accra.</p>
+                        </div>
+                    </div>
+                    <h3 class="connect-h" style="margin-top: 1.75rem;">Get in Touch</h3>
                     <div class="contact-item">
                         <div class="contact-icon">&#9993;</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
-                        </div>
+                        <div><strong>Email</strong><br><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">&#127760;</div>
-                        <div>
-                            <strong>Website</strong><br>
-                            <a href="https://ghanabloodpressure.org" target="_blank">ghanabloodpressure.org</a>
-                        </div>
+                        <div><strong>Website</strong><br><a href="https://ghanabloodpressure.org" target="_blank" rel="noopener">ghanabloodpressure.org</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">&#10084;</div>
-                        <div>
-                            <strong>Support</strong><br>
-                            <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Ko-fi: ghanahealthscreening</a>
-                        </div>
+                        <div><strong>Support</strong><br><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">Ko-fi: ghanahealthscreening</a></div>
                     </div>
-                </div>
-                <div>
+                </aside>
+                <div class="connect-main">
                     <form action="https://formspree.io/f/xjgvlazg" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -256,33 +311,52 @@
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
-                    <script>
-                    (function(){
-                        function applyHash(){
-                            var h = (window.location.hash || '').toLowerCase();
-                            var sel = document.getElementById('interest');
-                            if (!sel) return;
-                            var matched = false;
-                            if (h === '#contact-form-volunteer') { sel.value = 'volunteer'; matched = true; }
-                            else if (h === '#contact-form-partnership') { sel.value = 'partnership'; matched = true; }
-                            else if (h === '#contact-form-press') { sel.value = 'press'; matched = true; }
-                            if (matched) {
-                                var section = document.getElementById('contact-form');
-                                if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
-                        }
-                        applyHash();
-                        window.addEventListener('hashchange', applyHash);
-                    })();
-                    </script>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+    (function(){
+        var section = document.getElementById('upcoming-events');
+        if (!section) { return; }
+        var items = section.querySelectorAll('.event');
+        var now = Date.now();
+        var visible = 0;
+        for (var i = 0; i < items.length; i++) {
+            var until = items[i].dataset.until;
+            if (until && now > new Date(until + "T23:59:59").getTime()) {
+                items[i].style.display = 'none';
+            } else {
+                visible++;
+            }
+        }
+        if (visible === 0) { section.style.display = 'none'; }
+    })();
+    </script>
+    <script>
+    (function(){
+        function applyHash(){
+            var h = (window.location.hash || '').toLowerCase();
+            var sel = document.getElementById('interest');
+            if (!sel) return;
+            var matched = false;
+            if (h === '#contact-form-volunteer') { sel.value = 'volunteer'; matched = true; }
+            else if (h === '#contact-form-partnership') { sel.value = 'partnership'; matched = true; }
+            else if (h === '#contact-form-press') { sel.value = 'press'; matched = true; }
+            if (matched) {
+                var section = document.getElementById('contact-form');
+                if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+        applyHash();
+        window.addEventListener('hashchange', applyHash);
+    })();
+    </script>
     </main>
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
@@ -314,5 +388,10 @@
             <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
+<script>
+(function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}})();
+(function(){var els=document.querySelectorAll('.reveal');if(els.length){if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')})}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}}})();
+(function(){var tl=document.getElementById('giv-tablist');if(!tl)return;var tabs=tl.querySelectorAll('[role="tab"]');function sel(tab){for(var i=0;i<tabs.length;i++){var on=(tabs[i]===tab);tabs[i].setAttribute('aria-selected',on?'true':'false');tabs[i].tabIndex=on?0:-1;var p=document.getElementById(tabs[i].getAttribute('aria-controls'));if(p){if(on){p.hidden=false;p.classList.remove('show');void p.offsetWidth;p.classList.add('show');}else{p.hidden=true;}}}}for(var i=0;i<tabs.length;i++){tabs[i].addEventListener('click',function(e){sel(e.currentTarget);});tabs[i].addEventListener('keydown',function(e){var idx=Array.prototype.indexOf.call(tabs,e.currentTarget);if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();var n=tabs[(idx+1)%tabs.length];sel(n);n.focus();}else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();var pv=tabs[(idx-1+tabs.length)%tabs.length];sel(pv);pv.focus();}});}})();
+</script>
 </body>
 </html>
