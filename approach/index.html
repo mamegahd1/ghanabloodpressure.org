@@ -789,7 +789,37 @@ textarea:focus-visible {
 .founder-details summary{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.35rem;color:var(--burgundy-deep);cursor:pointer;list-style:none}
 .founder-details summary::-webkit-details-marker{display:none}
 .founder-details summary::before{content:'\25B8\00a0\00a0';color:var(--gold)}
-.founder-details[open] summary::before{content:'\25BE\00a0\00a0';color:var(--gold)}</style>
+.founder-details[open] summary::before{content:'\25BE\00a0\00a0';color:var(--gold)}
+/* === PILLAR TABS === */
+.pillar-tabs{max-width:1000px;margin:0 auto}
+.pillar-tablist{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.pillar-tab{flex:1 1 0;min-width:150px;display:flex;align-items:center;gap:0.6rem;background:var(--white);border:1px solid rgba(74,21,37,0.15);border-radius:10px;padding:0.85rem 1rem;cursor:pointer;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.05rem;font-weight:700;color:var(--burgundy-deep);transition:background 0.25s ease,border-color 0.25s ease,color 0.25s ease}
+.pillar-tab:hover{border-color:var(--gold)}
+.pillar-tab[aria-selected="true"]{background:var(--burgundy-deep);color:var(--white);border-color:var(--burgundy-deep)}
+.pillar-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--burgundy-deep);font-size:0.95rem;font-weight:700;flex-shrink:0}
+.pillar-panel{background:var(--white);border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);padding:1.75rem}
+.pillar-panel[hidden]{display:none}
+.pillar-panel-title{color:var(--burgundy-deep);font-size:1.4rem;margin-bottom:0.25rem}
+.pillar-panel .pillar-subtitle{color:var(--teal);font-weight:600;font-size:0.95rem;margin-bottom:0.85rem}
+.pillar-panel>p{color:var(--charcoal-light);line-height:1.7;margin-bottom:1.25rem}
+.pillar-panel .pillar-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.35rem 1.5rem}
+.pillar-panel .pillar-list li{padding:0.35rem 0 0.35rem 1.5rem;position:relative;color:var(--charcoal-light);font-size:0.95rem}
+.pillar-panel .pillar-list li::before{content:'\2713';position:absolute;left:0;color:var(--teal);font-weight:700}
+@media(max-width:768px){.pillar-tab{flex:1 1 100%}.pillar-panel .pillar-list{grid-template-columns:1fr}}
+/* === CLOSED-LOOP STEPPER === */
+.stepper{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:1000px;margin:0 auto}
+.stepper::before{content:'';position:absolute;top:24px;left:10%;right:10%;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:2px;z-index:0}
+.step{position:relative;z-index:1;text-align:center}
+.step-node{width:48px;height:48px;border-radius:50%;margin:0 auto 0.75rem;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.15rem;color:var(--white);background:var(--teal);border:3px solid rgba(255,255,255,0.3)}
+.step:last-child .step-node{background:var(--gold);color:var(--burgundy-deep)}
+.step-unit{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:#E6E0D2;margin-bottom:0.3rem}
+.step-question{font-size:0.9rem;color:var(--white);line-height:1.4}
+@media(max-width:768px){.stepper{grid-template-columns:1fr;gap:0;max-width:380px}.stepper::before{top:0;bottom:0;left:24px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,var(--teal),var(--gold))}.step{display:grid;grid-template-columns:48px 1fr;gap:0.85rem;align-items:center;text-align:left;padding:0.5rem 0}.step-node{margin:0}}
+/* === TWO-COLUMN LIST === */
+.two-col-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 1.5rem;padding-left:0;margin-bottom:0}
+.two-col-list li{position:relative;padding-left:1.25rem;line-height:1.6}
+.two-col-list li::before{content:'\2022';position:absolute;left:0;color:var(--teal);font-weight:700}
+@media(max-width:768px){.two-col-list{grid-template-columns:1fr}}</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -853,7 +883,7 @@ textarea:focus-visible {
     <main id="main-content">
 
     <!-- Hero -->
-    <section style="background: var(--burgundy-deep); color: var(--cream); padding: 4rem 2rem; text-align: center;">
+    <section style="background: var(--burgundy-deep); color: var(--cream); padding: 3rem 2rem; text-align: center;">
         <div class="container">
             <div class="section-label" style="color: var(--gold-pale);">Our Approach</div>
             <h1 style="color: var(--gold); font-size: 2.8rem; margin-bottom: 1rem;">How GHSI Is Designed to Work</h1>
@@ -862,7 +892,7 @@ textarea:focus-visible {
     </section>
 
     <!-- Transport Hub Ecosystem -->
-    <section style="padding: 5rem 2rem;">
+    <section style="padding: 3.5rem 2rem;">
         <div class="split-section">
             <img src="/images/ghana-market-produce-seller.jpg"
                  alt="A woman selling produce and fish at a market in Ghana."
@@ -879,113 +909,143 @@ textarea:focus-visible {
     </section>
 
     <!-- Three Pillars Detail -->
-    <section style="background: var(--cream-dark); padding: 5rem 2rem;">
+    <section style="background: var(--cream-dark); padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">The Framework</div>
                 <h2 class="section-title">Three Pillars of Community Health</h2>
                 <p class="section-intro">Every element of GHSI's model is designed to work as an integrated system, not isolated activities.</p>
             </div>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">1</div>
-                        <h3 class="pillar-title">Education</h3>
-                        <p class="pillar-subtitle">Knowledge Is Protection</p>
-                    </div>
-                    <div class="pillar-content">
-                        <p>Before screening, GHSI will deliver accessible health education through trained peer educators using a two-track curriculum: Training of Trainers (ToT) and Community Volunteer Training. The curriculum draws on the Cohen 2025 religious-leader hypertension education framework (Mwanza, Tanzania), peer-reviewed methodology validating community religious networks as effective health educators, adapted from Dr. Jennifer Downs's NIH-funded Tanzania Religious Engagement in Health work at Weill Cornell Medicine. It also integrates Dr. Monika Safford's Patient Activated Learning System (PALS), delivered through MedExplain Health.</p>
-                        <ul class="pillar-list">
-                            <li>What hypertension is and why it matters</li>
-                            <li>Warning signs to watch for</li>
-                            <li>Connection between hypertension and stroke</li>
-                            <li>Understanding symptoms as medical, not spiritual</li>
-                            <li>The BE-FAST method for stroke recognition</li>
-                        </ul>
-                    </div>
+            <div class="pillar-tabs">
+                <div class="pillar-tablist" id="pillar-tablist" role="tablist" aria-label="Three pillars of community health">
+                    <button class="pillar-tab" role="tab" id="tab-education" aria-selected="true" aria-controls="panel-education">
+                        <span class="pillar-badge">1</span> Education
+                    </button>
+                    <button class="pillar-tab" role="tab" id="tab-screening" aria-selected="false" tabindex="-1" aria-controls="panel-screening">
+                        <span class="pillar-badge">2</span> Screening
+                    </button>
+                    <button class="pillar-tab" role="tab" id="tab-followup" aria-selected="false" tabindex="-1" aria-controls="panel-followup">
+                        <span class="pillar-badge">3</span> Follow-up
+                    </button>
                 </div>
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">2</div>
-                        <h3 class="pillar-title">Screening</h3>
-                        <p class="pillar-subtitle">Simple, Accessible, Life-Saving</p>
-                    </div>
-                    <div class="pillar-content">
-                        <p>GHSI's screening process will follow an 8-station workflow designed for community field settings, using WHO-protocol blood pressure measurement.</p>
-                        <ul class="pillar-list">
-                            <li>Brief registration and health history intake</li>
-                            <li>Rest period for accurate readings</li>
-                            <li>WHO-protocol blood pressure measurement</li>
-                            <li>Five-tier color classification for clear results</li>
-                            <li>Personalized risk counseling</li>
-                            <li>Resource packet for every participant</li>
-                        </ul>
-                    </div>
+                <div class="pillar-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
+                    <h3 class="pillar-panel-title">Education</h3>
+                    <p class="pillar-subtitle">Knowledge Is Protection</p>
+                    <p>Before screening, GHSI will deliver accessible health education through trained peer educators using a two-track curriculum: Training of Trainers (ToT) and Community Volunteer Training. The curriculum draws on the Cohen 2025 religious-leader hypertension education framework (Mwanza, Tanzania), peer-reviewed methodology validating community religious networks as effective health educators, adapted from Dr. Jennifer Downs's NIH-funded Tanzania Religious Engagement in Health work at Weill Cornell Medicine. It also integrates Dr. Monika Safford's Patient Activated Learning System (PALS), delivered through MedExplain Health.</p>
+                    <ul class="pillar-list">
+                        <li>What hypertension is and why it matters</li>
+                        <li>Warning signs to watch for</li>
+                        <li>Connection between hypertension and stroke</li>
+                        <li>Understanding symptoms as medical, not spiritual</li>
+                        <li>The BE-FAST method for stroke recognition</li>
+                    </ul>
                 </div>
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">3</div>
-                        <h3 class="pillar-title">Referral &amp; Follow-up</h3>
-                        <p class="pillar-subtitle">The Closed Loop</p>
-                    </div>
-                    <div class="pillar-content">
-                        <p>Screening events are necessary. Sustained follow-through is harder. GHSI is designed to do the longitudinal work, tracking participants for 12 months at Days 14, 30, 90, 180, and 365. Referrals route through Ghana's existing care infrastructure: NHIS-enrolled clinics, FPHC primary care, partnered pharmacies, and faith-based facilities operated by the Christian Health Association of Ghana (CHAG, the Ministry of Health's agency partner across 16 regions) and the Catholic Health Service Trust.</p>
-                        <ul class="pillar-list">
-                            <li>Referral to practitioner network</li>
-                            <li>Follow-up at 14, 30, 90, 180, and 365 days</li>
-                            <li>Track who connects to care and stays in care</li>
-                            <li>Measure blood pressure outcomes over time</li>
-                            <li>The closed loop is the intervention</li>
-                        </ul>
-                    </div>
+                <div class="pillar-panel" id="panel-screening" role="tabpanel" aria-labelledby="tab-screening" tabindex="0" hidden>
+                    <h3 class="pillar-panel-title">Screening</h3>
+                    <p class="pillar-subtitle">Simple, Accessible, Life-Saving</p>
+                    <p>GHSI's screening process will follow an 8-station workflow designed for community field settings, using WHO-protocol blood pressure measurement.</p>
+                    <ul class="pillar-list">
+                        <li>Brief registration and health history intake</li>
+                        <li>Rest period for accurate readings</li>
+                        <li>WHO-protocol blood pressure measurement</li>
+                        <li>Five-tier color classification for clear results</li>
+                        <li>Personalized risk counseling</li>
+                        <li>Resource packet for every participant</li>
+                    </ul>
+                </div>
+                <div class="pillar-panel" id="panel-followup" role="tabpanel" aria-labelledby="tab-followup" tabindex="0" hidden>
+                    <h3 class="pillar-panel-title">Referral &amp; Follow-up</h3>
+                    <p class="pillar-subtitle">The Closed Loop</p>
+                    <p>Screening events are necessary. Sustained follow-through is harder. GHSI is designed to do the longitudinal work, tracking participants for 12 months at Days 14, 30, 90, 180, and 365. Referrals route through Ghana's existing care infrastructure: NHIS-enrolled clinics, FPHC primary care, partnered pharmacies, and faith-based facilities operated by the Christian Health Association of Ghana (CHAG, the Ministry of Health's agency partner across 16 regions) and the Catholic Health Service Trust.</p>
+                    <ul class="pillar-list">
+                        <li>Referral to practitioner network</li>
+                        <li>Follow-up at 14, 30, 90, 180, and 365 days</li>
+                        <li>Track who connects to care and stays in care</li>
+                        <li>Measure blood pressure outcomes over time</li>
+                        <li>The closed loop is the intervention</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+    (function(){
+        var tablist = document.getElementById('pillar-tablist');
+        if (!tablist) { return; }
+        var tabs = tablist.querySelectorAll('[role="tab"]');
+        function select(tab){
+            for (var i = 0; i < tabs.length; i++) {
+                var isSel = (tabs[i] === tab);
+                tabs[i].setAttribute('aria-selected', isSel ? 'true' : 'false');
+                tabs[i].tabIndex = isSel ? 0 : -1;
+                var panel = document.getElementById(tabs[i].getAttribute('aria-controls'));
+                if (panel) { panel.hidden = !isSel; }
+            }
+        }
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', function(e){ select(e.currentTarget); });
+            tabs[i].addEventListener('keydown', function(e){
+                var idx = Array.prototype.indexOf.call(tabs, e.currentTarget);
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); var n = tabs[(idx + 1) % tabs.length]; select(n); n.focus(); }
+                else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); var p = tabs[(idx - 1 + tabs.length) % tabs.length]; select(p); p.focus(); }
+            });
+        }
+    })();
+    </script>
 
     <!-- Closed Loop Section -->
-    <section class="dark-section" style="padding: 5rem 2rem;">
+    <section class="dark-section" style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">What We Build For</div>
                 <h2 class="section-title">The Closed-Loop Framework: 12-Month Patient Tracking</h2>
                 <p class="section-intro">Screening finds hypertension. The harder work begins after. GHSI is designed to track what happens next: measuring not just who was screened, but who made it to a provider, who stayed in care, and whose blood pressure improved.</p>
             </div>
-            <div class="loop-grid">
-                <div class="loop-item">
-                    <div class="loop-number">14</div>
-                    <div class="loop-unit">days</div>
-                    <div class="loop-question">Initial follow-up completed?</div>
+            <div class="stepper">
+                <div class="step">
+                    <div class="step-node">14</div>
+                    <div class="step-text">
+                        <div class="step-unit">Days</div>
+                        <div class="step-question">Initial follow-up completed?</div>
+                    </div>
                 </div>
-                <div class="loop-item">
-                    <div class="loop-number">30</div>
-                    <div class="loop-unit">days</div>
-                    <div class="loop-question">Confirmed in care?</div>
+                <div class="step">
+                    <div class="step-node">30</div>
+                    <div class="step-text">
+                        <div class="step-unit">Days</div>
+                        <div class="step-question">Confirmed in care?</div>
+                    </div>
                 </div>
-                <div class="loop-item">
-                    <div class="loop-number">90</div>
-                    <div class="loop-unit">days</div>
-                    <div class="loop-question">Retained in care?</div>
+                <div class="step">
+                    <div class="step-node">90</div>
+                    <div class="step-text">
+                        <div class="step-unit">Days</div>
+                        <div class="step-question">Retained in care?</div>
+                    </div>
                 </div>
-                <div class="loop-item">
-                    <div class="loop-number">180</div>
-                    <div class="loop-unit">days</div>
-                    <div class="loop-question">BP status tracked?</div>
+                <div class="step">
+                    <div class="step-node">180</div>
+                    <div class="step-text">
+                        <div class="step-unit">Days</div>
+                        <div class="step-question">BP status tracked?</div>
+                    </div>
                 </div>
-                <div class="loop-item">
-                    <div class="loop-number">365</div>
-                    <div class="loop-unit">days</div>
-                    <div class="loop-question">BP controlled?</div>
+                <div class="step">
+                    <div class="step-node">365</div>
+                    <div class="step-text">
+                        <div class="step-unit">Days</div>
+                        <div class="step-question">BP controlled?</div>
+                    </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
+            <div style="text-align: center; margin-top: 1.75rem;">
                 <p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.5rem; font-style: italic; color: var(--gold-pale);">"The closed loop is the intervention."</p>
             </div>
         </div>
     </section>
 
     <!-- Five-Tier BP Classification -->
-    <section style="padding: 5rem 2rem;">
+    <section style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="split-section">
                 <div class="content">
@@ -1051,7 +1111,7 @@ textarea:focus-visible {
     </section>
 
     <!-- Technology -->
-    <section class="teal-section" style="padding: 5rem 2rem;">
+    <section class="teal-section" style="padding: 3.5rem 2rem;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Technology</div>
@@ -1076,7 +1136,7 @@ textarea:focus-visible {
     </section>
 
     <!-- How We Work -->
-    <section style="padding: 5rem 2rem;">
+    <section style="padding: 3.5rem 2rem;">
         <div class="container" style="max-width: 820px;">
             <div class="section-header">
                 <div class="section-label">How We Work</div>
@@ -1086,11 +1146,11 @@ textarea:focus-visible {
                 <p style="margin-bottom: 1.5rem;">Ghana's hypertension space already includes important and longstanding work by Healthy Heart Africa, the Akomapa project, ADHINCRA, TASSH, the Ghana Heart Initiative, the Ghanaian Society of Cardiology, the World Heart Federation, May Measurement Month Ghana, and others. GHSI is one contribution to a shared field, not a replacement for any of it.</p>
                 <p style="margin-bottom: 1.5rem;">In Ghana, stroke is widely attributed to spiritual forces, and many families respond with prayer rather than medical care. GHSI partners with religious institutions because faith communities have long been health communities. We do not ask people to choose between faith and care. We build with both.</p>
                 <p style="margin-bottom: 1rem;">What we contribute that is distinct:</p>
-                <ul style="padding-left: 1.5rem; margin-bottom: 0;">
-                    <li style="margin-bottom: 0.85rem;"><strong>Faith-anchored community trust.</strong> Religious institutions across Greater Accra are central to our model.</li>
-                    <li style="margin-bottom: 0.85rem;"><strong>Informal sector workers as the design population.</strong> Trotro drivers and market women are our first audience, not an afterthought, not an extension.</li>
-                    <li style="margin-bottom: 0.85rem;"><strong>Twelve-month closed-loop follow-up tied to outcomes,</strong> not encounters.</li>
-                    <li style="margin-bottom: 0;"><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</li>
+                <ul class="two-col-list">
+                    <li><strong>Faith-anchored community trust.</strong> Religious institutions across Greater Accra are central to our model.</li>
+                    <li><strong>Informal sector workers as the design population.</strong> Trotro drivers and market women are our first audience, not an afterthought, not an extension.</li>
+                    <li><strong>Twelve-month closed-loop follow-up tied to outcomes,</strong> not encounters.</li>
+                    <li><strong>Diaspora and homeland in partnership.</strong> Ghanaian-led implementation, diaspora-supported architecture. Not extractive research, not a foreign-NGO model.</li>
                 </ul>
             </div>
         </div>
