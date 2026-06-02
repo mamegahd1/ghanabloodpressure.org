@@ -828,11 +828,40 @@ textarea:focus-visible {
 .accordion .acc-body{padding:0 0 1.1rem 1.45rem;color:var(--charcoal-light);line-height:1.7}
 .accordion .acc-body p{margin-bottom:0.6rem}
 .accordion .acc-body p:last-child{margin-bottom:0}
-.accordion .acc-body strong{color:var(--charcoal)}</style>
+.accordion .acc-body strong{color:var(--charcoal)}
+/* ===== Phase 2 shared shell ===== */
+.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
+.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
+.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
+.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
+.utilbar a{color:#cfeaea;text-decoration:none}
+.utilbar a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
+.nav-logo-img{height:46px;width:auto;display:block}
+.nav-links a{color:var(--teal-dark)}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal)}
+.nav-mobile-toggle span{background:var(--teal-dark)}
+@media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
+.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
     <!-- World Hypertension Day Countdown Banner -->
+    <div class="utilbar"><div class="uwrap">
+        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
+        <span class="ulinks">
+            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+            <a href="/involved/">Get Involved</a>
+        </span>
+    </div></div>
+
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
         <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
@@ -872,9 +901,7 @@ textarea:focus-visible {
     </script>
 
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo">
-            <span class="nav-logo-text">GHSI</span>
-        </a>
+        <a href="/" class="nav-logo" aria-label="GHSI home"><img src="/images/ghsi-logo.png" alt="Ghana Hypertension Screening Initiative" class="nav-logo-img"></a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/approach/" class="active">Our Approach</a></li>
@@ -902,7 +929,7 @@ textarea:focus-visible {
 
     <!-- Transport Hub Ecosystem -->
     <section style="padding: 3.5rem 2rem;">
-        <div class="split-section split-equal">
+        <div class="split-section split-equal reveal">
             <img src="/images/ghana-market-produce-seller.jpg"
                  alt="A woman selling produce and fish at a market in Ghana."
                  loading="lazy"
@@ -925,7 +952,7 @@ textarea:focus-visible {
                 <h2 class="section-title">Three Pillars of Community Health</h2>
                 <p class="section-intro">Every element of GHSI's model is designed to work as an integrated system, not isolated activities.</p>
             </div>
-            <div class="pillar-tabs">
+            <div class="pillar-tabs reveal">
                 <div class="pillar-tablist" id="pillar-tablist" role="tablist" aria-label="Three pillars of community health">
                     <button class="pillar-tab" role="tab" id="tab-education" aria-selected="true" aria-controls="panel-education">
                         <span class="pillar-badge">1</span> Education
@@ -1010,7 +1037,7 @@ textarea:focus-visible {
                 <h2 class="section-title">The Closed-Loop Framework: 12-Month Patient Tracking</h2>
                 <p class="section-intro">Screening finds hypertension. The harder work begins after. GHSI is designed to track what happens next: measuring not just who was screened, but who made it to a provider, who stayed in care, and whose blood pressure improved.</p>
             </div>
-            <div class="stepper">
+            <div class="stepper reveal">
                 <div class="step">
                     <div class="step-node">14</div>
                     <div class="step-text">
@@ -1061,7 +1088,7 @@ textarea:focus-visible {
                 <h2 class="section-title">Five-Tier Blood Pressure Classification</h2>
                 <p class="section-intro">GHSI uses a five-tier color classification system aligned with ACC/AHA clinical guidelines. Each tier determines the participant's pathway, from education-only to emergency referral, ensuring every individual receives the appropriate level of response.</p>
             </div>
-            <div class="bp-grid">
+            <div class="bp-grid reveal">
                 <div class="bp-tier" style="background: var(--green);">
                     <div class="bp-label">Green</div>
                     <div class="bp-range">&lt;120 / &lt;80</div>
@@ -1099,7 +1126,7 @@ textarea:focus-visible {
                 <h2 class="section-title">Built for Ghana's Connectivity Reality</h2>
                 <p class="section-intro">GHSI's twelve-month closed-loop tracking runs on a purpose-built digital tool designed for Ghana's context. The tool is offline-first, supports the structured follow-up cadence at Days 14, 30, 90, 180, and 365, and is being designed to integrate with the national DHIMS-2 platform.</p>
             </div>
-            <div class="card-grid" style="margin-top: 2rem;">
+            <div class="card-grid reveal" style="margin-top: 2rem;">
                 <div class="card" style="border-top-color: var(--gold);">
                     <h4>Offline-First Design</h4>
                     <p>Built to work in low-connectivity environments, essential for screening at busy lorry stations and open-air markets in Greater Accra.</p>
@@ -1185,6 +1212,7 @@ textarea:focus-visible {
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
@@ -1216,5 +1244,9 @@ textarea:focus-visible {
             <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
+<script>
+(function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}})();
+(function(){var els=document.querySelectorAll('.reveal');if(!els.length)return;if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
+</script>
 </body>
 </html>
