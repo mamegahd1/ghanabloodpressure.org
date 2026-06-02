@@ -207,7 +207,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .animate-in { animation: fadeInUp 0.5s ease forwards; }
-.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}</style>
+.ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}
+/* === FULL-BLEED BAND === */
+.band{position:relative;min-height:60vh;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(74,21,37,.82),rgba(74,21,37,.22) 52%,rgba(74,21,37,.04)),url('/images/ghana-trotro-worker.jpg') 50% 42%/cover}
+.band .bandtext{padding:50px 56px}
+.band .bandtext .k{color:#E9C765;font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;display:block;margin-bottom:10px}
+.band .bandtext .line{font-family:"Playfair Display",serif;color:#fff;font-size:34px;font-weight:700;max-width:640px;line-height:1.16}</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -338,34 +343,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
             </div>
         </div>
     </section>
-    <section style="padding: 5rem 2rem;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Greater Accra</div>
-                <h2 class="section-title">The Communities the Pilot Will Serve</h2>
-            </div>
-            <figure class="ghsi-figure">
-                <img src="/images/ghana-trotro-worker.jpg"
-                     alt="A transport worker beside a trotro minibus at a station in Ghana."
-                     loading="lazy">
-                <figcaption>A transport worker at a trotro station.</figcaption>
-            </figure>
-            <div class="ghsi-figure-pair">
-                <figure class="ghsi-figure">
-                    <img src="/images/ghana-market-produce-seller.jpg"
-                         alt="A woman selling produce and fish at a market in Ghana."
-                         loading="lazy">
-                    <figcaption>A market trader at her stall.</figcaption>
-                </figure>
-                <figure class="ghsi-figure">
-                    <img src="/images/ghana-coconut-vendor.jpg"
-                         alt="A man preparing coconuts to sell at a market in Ghana."
-                         loading="lazy">
-                    <figcaption>A vendor at work.</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
+    <section class="band"><div class="bandtext"><span class="k">LORRY STATION • ACCRA</span><div class="line">the heart of the transport hub ecosystem</div></div></section>
     <section style="background: var(--cream-dark); padding: 5rem 2rem;">
         <div class="container">
             <div class="section-header">
