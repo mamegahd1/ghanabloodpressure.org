@@ -13,6 +13,9 @@
 *.tmp
 *~
 
+# Design previews and mockups (keep on local disk, do not ship)
+preview-*.png
+
 # Editor scratch
 .idea/
 .vscode/
