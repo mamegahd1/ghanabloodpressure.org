@@ -864,9 +864,114 @@ textarea:focus-visible {
 .hero-copy .btn-gold{background:#C9A227;color:#4A1525;font-weight:700;padding:13px 24px;border-radius:9px;text-decoration:none;font-size:15px}
 .hero-copy .btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.55);padding:12px 22px;border-radius:9px;text-decoration:none;font-size:15px;font-weight:600}
 @media(max-width:760px){.hero-copy h1{font-size:34px}.hero-copy .wrap{padding:0 28px}}</style>
+<style>
+/* ===== PHASE 1 ADDITIONS (Global Hubs + Bursar patterns) ===== */
+/* utility bar */
+.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
+.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
+.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
+.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
+.utilbar a{color:#cfeaea;text-decoration:none}
+.utilbar a:hover{color:#fff}
+/* sticky nav + logo */
+.nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
+.nav-logo-img{height:46px;width:auto;display:block}
+.nav-links a{color:var(--teal-dark)}
+.nav-links a:hover{color:var(--teal)}
+.nav-links a.active{color:var(--teal)}
+.nav-mobile-toggle span{background:var(--teal-dark)}
+@media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
+/* quick-action tiles */
+.quick{max-width:1100px;margin:2.5rem auto 1rem;padding:0 1.5rem}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.qtile{background:#fff;border-radius:14px;padding:1.4rem 1.2rem;box-shadow:0 10px 30px rgba(19,71,71,.10);border-top:3px solid var(--gold);transition:.22s;display:flex;flex-direction:column;gap:.55rem;text-decoration:none;color:inherit}
+.qtile:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(19,71,71,.16)}
+.qtile .ic{width:42px;height:42px;border-radius:11px;background:var(--cream-dark);display:grid;place-items:center;color:var(--teal)}
+.qtile .ic svg{width:22px;height:22px}
+.qtile h3{font-size:1.12rem;color:var(--teal-dark);margin:0;font-family:'Playfair Display',Georgia,serif}
+.qtile p{font-size:.88rem;color:var(--charcoal-light);line-height:1.5;margin:0;flex:1}
+.qtile .go{font-size:.85rem;font-weight:600;color:var(--teal)}
+/* hub-grid pillars */
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
+.hub{position:relative;border-radius:16px;overflow:hidden;min-height:312px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;box-shadow:0 10px 30px rgba(19,71,71,.14);transition:.3s;text-decoration:none;background:linear-gradient(150deg,var(--teal-dark),var(--burgundy))}
+.hub::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:16px 16px;opacity:.5;pointer-events:none}
+.hub:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(19,71,71,.22)}
+.hub-ic{position:absolute;top:1.5rem;left:1.7rem;width:52px;height:52px;border-radius:13px;background:rgba(255,255,255,.12);display:grid;place-items:center;color:var(--gold-light);z-index:2}
+.hub-ic svg{width:28px;height:28px}
+.hub-body{position:relative;z-index:2;padding:1.7rem}
+.hub .pill{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--gold);color:var(--burgundy-deep);padding:.26rem .6rem;border-radius:20px;margin-bottom:.7rem}
+.hub h3{font-size:1.5rem;margin:0 0 .15rem;color:#fff}
+.hub .sub{font-style:italic;color:var(--gold-pale);font-size:.95rem;margin-bottom:.5rem}
+.hub p{font-size:.92rem;color:#e8f3f3;margin:0 0 .6rem}
+.hub .go{font-size:.85rem;font-weight:600;color:var(--gold-light)}
+/* closed-loop timeline */
+.loop-sec{padding:4rem 2rem;background:var(--cream-dark)}
+.loop-wrap{max-width:1100px;margin:0 auto}
+.loopline{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.6rem}
+.loopline::before{content:"";position:absolute;top:21px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold),var(--teal));z-index:0}
+.lnode{position:relative;z-index:1;text-align:center}
+.lnode .dot{width:44px;height:44px;border-radius:50%;background:#fff;border:3px solid var(--teal);color:var(--teal);font-weight:700;display:grid;place-items:center;margin:0 auto .85rem;box-shadow:0 2px 10px rgba(19,71,71,.1);font-family:'Playfair Display',Georgia,serif;transition:.25s}
+.lnode:hover .dot{background:var(--teal);color:#fff;transform:scale(1.08)}
+.lnode .d{font-weight:700;color:var(--teal-dark);font-size:1rem}
+.lnode .t{font-size:.85rem;color:var(--charcoal-light);margin-top:.2rem}
+/* who we serve */
+.serve{padding:4rem 2rem}
+.serve-wrap{max-width:1100px;margin:0 auto}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.person{border-radius:14px;overflow:hidden;box-shadow:0 2px 14px rgba(19,71,71,.08);background:#fff;margin:0}
+.person img{width:100%;height:240px;object-fit:cover;display:block}
+.person .cap{padding:1rem 1.1rem}
+.person h4{font-size:1.05rem;color:var(--teal-dark);margin:0 0 .2rem;font-family:'Playfair Display',Georgia,serif}
+.person p{font-size:.82rem;color:var(--charcoal-light);margin:0}
+/* footer logo */
+.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:980px){ .quick-grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:760px){
+  .utilbar .ulinks{display:none}
+  .quick-grid{grid-template-columns:1fr}
+  .hub-grid{grid-template-columns:1fr}
+  .people{grid-template-columns:1fr}
+  .loopline{grid-template-columns:1fr;gap:0}
+  .loopline::before{top:8%;bottom:8%;left:21px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,var(--teal),var(--gold),var(--teal))}
+  .lnode{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:1rem;text-align:left;padding:.6rem 0}
+  .lnode .dot{margin:0}
+  .nav-logo-img{height:40px}
+}
+/* === animation + a11y polish (Phase 1) === */
+@media (hover:hover){
+  .hub p{max-height:0;opacity:0;overflow:hidden;margin:0;transition:max-height .35s ease,opacity .3s ease,margin .35s ease}
+  .hub:hover p{max-height:170px;opacity:1;margin:0 0 .6rem}
+  .hub-ic{transition:transform .3s}
+  .hub:hover .hub-ic{transform:scale(1.08)}
+  .qtile .go,.hub .go{transition:letter-spacing .2s}
+  .qtile:hover .go,.hub:hover .go{letter-spacing:.03em}
+}
+.serve-close{max-width:62ch;margin:2.4rem auto 0;text-align:center;font-size:1.05rem;color:var(--charcoal-light);line-height:1.7}
+.serve-close strong{color:var(--teal-dark);font-weight:700}
+.qtile:focus-visible,.hub:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .hub p{max-height:none!important;opacity:1!important;margin:0 0 .6rem!important}
+}
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
+    <!-- Utility Bar -->
+    <div class="utilbar"><div class="uwrap">
+        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
+        <span class="ulinks">
+            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
+            <a href="/involved/">Get Involved</a>
+        </span>
+    </div></div>
+
     <!-- World Hypertension Day Countdown Banner -->
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
@@ -907,8 +1012,8 @@ textarea:focus-visible {
     </script>
 
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo">
-            <span class="nav-logo-text">GHSI</span>
+        <a href="/" class="nav-logo" aria-label="GHSI home">
+            <img src="/images/ghsi-logo.png" alt="Ghana Hypertension Screening Initiative" class="nav-logo-img">
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/" class="active">Home</a></li>
@@ -945,6 +1050,36 @@ textarea:focus-visible {
     (function(){var s=document.querySelector('.hero-stage'),img=document.getElementById('heroImg'),c=document.getElementById('heroCopy'),sc=document.getElementById('heroScrim');if(!s)return;var SY=22,EY=100,PD=.72,TG=.40,t=false;function f(){var tot=s.offsetHeight-innerHeight,sd=Math.min(Math.max(-s.getBoundingClientRect().top,0),tot),p=tot>0?sd/tot:0,pp=Math.min(p/PD,1);img.style.backgroundPositionY=(SY+(EY-SY)*pp)+'%';var fd=Math.min(p/TG,1);c.style.transform='translateY('+(-fd*120)+'px)';c.style.opacity=1-fd;sc.style.opacity=1-fd*.8;t=false}addEventListener('scroll',function(){if(!t){requestAnimationFrame(f);t=true}},{passive:true});addEventListener('resize',f,{passive:true});f()})();
     </script>
 
+    <!-- Quick-Action Tiles -->
+    <section class="quick reveal" aria-label="Quick links">
+      <div class="quick-grid">
+        <a class="qtile" href="/pilot/">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <h3>Where We'll Screen</h3>
+          <p>Free screening reaches Greater Accra in December 2026. Exact sites announced soon.</p>
+          <span class="go">See the plan &rarr;</span>
+        </a>
+        <a class="qtile" href="/involved/">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Partner With Us</h3>
+          <p>Clinics, faith communities, and associations co-building the pilot on the ground.</p>
+          <span class="go">Explore partnership &rarr;</span>
+        </a>
+        <a class="qtile" href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3>Support the Pilot</h3>
+          <p>Fund the follow-up that keeps people in care, not just the one-time screening.</p>
+          <span class="go">Give on Ko-fi &rarr;</span>
+        </a>
+        <a class="qtile" href="/research/">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></span>
+          <h3>For Researchers</h3>
+          <p>Our protocol, evidence base, and 12-month closed-loop methodology.</p>
+          <span class="go">Read the research &rarr;</span>
+        </a>
+      </div>
+    </section>
+
     <!-- The Crisis (condensed) -->
     <section style="padding: 2rem 2rem 3.5rem;">
         <div class="container">
@@ -963,12 +1098,12 @@ textarea:focus-visible {
     <section class="stats-bar">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">1 in 3</div>
+                <div class="stat-number" data-count="3" data-start="1" data-prefix="1 in ">1 in 3</div>
                 <div class="stat-label">Ghanaian adults have hypertension</div>
                 <div class="stat-source"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0248137" target="_blank">PLOS ONE Meta-analysis, 2021</a></div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">65%</div>
+                <div class="stat-number" data-count="65" data-suffix="%">65%</div>
                 <div class="stat-label">are unaware of their condition</div>
                 <div class="stat-source">Only 22% receive treatment; just 6% are controlled</div>
             </div>
@@ -1171,42 +1306,77 @@ textarea:focus-visible {
                 <p class="section-intro">GHSI is designed to deliver a comprehensive community health intervention, not just one-time screenings, but sustained care.</p>
             </div>
 
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">1</div>
-                        <h3 class="pillar-title">Education</h3>
-                        <p class="pillar-subtitle">Knowledge Is Protection</p>
-                    </div>
-                    <div class="pillar-content">
+            <div class="hub-grid">
+                <a class="hub reveal" href="/approach/">
+                    <span class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+                    <div class="hub-body">
+                        <span class="pill">Pillar 01</span>
+                        <h3>Education</h3>
+                        <div class="sub">Knowledge Is Protection</div>
                         <p>Before screening, GHSI will deliver accessible health education on hypertension, its connection to stroke, and warning signs to watch for.</p>
+                        <span class="go">Explore the pillar &rarr;</span>
                     </div>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">2</div>
-                        <h3 class="pillar-title">Screening</h3>
-                        <p class="pillar-subtitle">Simple, Accessible, Life-Saving</p>
-                    </div>
-                    <div class="pillar-content">
+                </a>
+                <a class="hub reveal" href="/approach/">
+                    <span class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></span>
+                    <div class="hub-body">
+                        <span class="pill">Pillar 02</span>
+                        <h3>Screening</h3>
+                        <div class="sub">Simple, Accessible, Life-Saving</div>
                         <p>Community-based blood pressure measurement using WHO-protocol methods, available where people already gather, at lorry stations and markets.</p>
+                        <span class="go">Explore the pillar &rarr;</span>
                     </div>
-                </div>
-                <div class="pillar-card">
-                    <div class="pillar-header">
-                        <div class="pillar-number">3</div>
-                        <h3 class="pillar-title">Referral &amp; Follow-up</h3>
-                        <p class="pillar-subtitle">The Closed Loop</p>
-                    </div>
-                    <div class="pillar-content">
+                </a>
+                <a class="hub reveal" href="/approach/">
+                    <span class="hub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v5h-5"/></svg></span>
+                    <div class="hub-body">
+                        <span class="pill">Pillar 03</span>
+                        <h3>Referral &amp; Follow-up</h3>
+                        <div class="sub">The Closed Loop</div>
                         <p>GHSI will track participants for 12 months: measuring not just who was screened, but who connected to care and whose blood pressure improved.</p>
+                        <span class="go">Explore the pillar &rarr;</span>
                     </div>
-                </div>
+                </a>
             </div>
             <div style="text-align: center; margin-top: 2.5rem;">
                 <a href="/approach/" class="btn btn-secondary">Explore Our Full Approach</a>
             </div>
         </div>
+    </section>
+
+    <!-- Closed-Loop Timeline -->
+    <section class="loop-sec">
+      <div class="loop-wrap">
+        <div class="section-header reveal">
+          <div class="section-label">Referral &amp; Follow-Up</div>
+          <h2 class="section-title">A 12-Month Closed Loop</h2>
+          <p class="section-intro">Screening is the entry point, not the finish line. Every participant flagged with elevated blood pressure is tracked across a full year, at five follow-up points that measure who connects to care and whose blood pressure comes under control.</p>
+        </div>
+        <div class="loopline reveal">
+          <div class="lnode"><div class="dot">14</div><div class="d">Day 14</div><div class="t">Confirmation</div></div>
+          <div class="lnode"><div class="dot">30</div><div class="d">Day 30</div><div class="t">Linkage to care</div></div>
+          <div class="lnode"><div class="dot">90</div><div class="d">Day 90</div><div class="t">Adherence check</div></div>
+          <div class="lnode"><div class="dot">180</div><div class="d">Day 180</div><div class="t">Mid-point review</div></div>
+          <div class="lnode"><div class="dot">365</div><div class="d">Day 365</div><div class="t">12-month outcome</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="serve">
+      <div class="serve-wrap">
+        <div class="section-header reveal">
+          <div class="section-label">Who We Serve</div>
+          <h2 class="section-title">The Heartbeat of the Economy</h2>
+          <p class="section-intro">The informal sector workers most often missed by facility-based care.</p>
+        </div>
+        <div class="people">
+          <figure class="person reveal"><img src="/images/ghana-trotro-worker.jpg" alt="A trotro station worker at an Accra lorry park" loading="lazy"><figcaption class="cap"><h4>Transport Workers</h4><p>A trotro station worker, Accra</p></figcaption></figure>
+          <figure class="person reveal"><img src="/images/ghana-coconut-vendor.jpg" alt="A coconut vendor at a roadside stall in Accra" loading="lazy"><figcaption class="cap"><h4>Vendors</h4><p>A coconut vendor at a roadside stall</p></figcaption></figure>
+          <figure class="person reveal"><img src="/images/ghana-market-produce-seller.jpg" alt="A produce seller at a neighbourhood market in Accra" loading="lazy"><figcaption class="cap"><h4>Produce Sellers</h4><p>A produce seller at a neighbourhood market</p></figcaption></figure>
+        </div>
+        <p class="serve-close reveal">And the <strong>customers and families</strong> who pass through with them. A market stall or lorry station is a community's crossroads, so screening there reaches far beyond the workers alone: the buyers, the riders, and the households whose lives run through the same places.</p>
+      </div>
     </section>
 
     <!-- Donate CTA -->
@@ -1221,6 +1391,7 @@ textarea:focus-visible {
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
+                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Ghana Hypertension Screening Initiative</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
@@ -1252,5 +1423,12 @@ textarea:focus-visible {
             <p>&copy; 2026 Ghana Hypertension Screening Initiative. All rights reserved.</p>
         </div>
     </footer>
+<script>
+/* Phase 1: sticky-nav shadow + scroll reveal */
+(function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true});}})();
+(function(){var els=document.querySelectorAll('.reveal');if(!els.length)return;if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});})();
+/* Phase 1: stat count-up (matches mockup) */
+(function(){var nums=document.querySelectorAll('.stat-number[data-count]');if(!nums.length)return;var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;function setFinal(el){var t=+el.getAttribute('data-count'),pre=el.getAttribute('data-prefix')||'',suf=el.getAttribute('data-suffix')||'';el.textContent=pre+t+suf}if(RM){nums.forEach(setFinal);return}function run(el){var target=+el.getAttribute('data-count'),start=+(el.getAttribute('data-start')||0),pre=el.getAttribute('data-prefix')||'',suf=el.getAttribute('data-suffix')||'',dur=1400,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var v=Math.round(start+(target-start)*p);el.textContent=pre+v+suf;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}if(!('IntersectionObserver'in window)){nums.forEach(run);return}var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){run(e.target);io2.unobserve(e.target)}})},{threshold:.5});nums.forEach(function(e){io2.observe(e)})})();
+</script>
 </body>
 </html>
