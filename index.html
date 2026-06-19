@@ -862,6 +862,20 @@ textarea:focus-visible {
 .hero-copy p{color:#f0e4e7;font-size:18px;max-width:560px;margin-bottom:26px}
 .hero-copy .btnrow{display:flex;gap:14px;flex-wrap:wrap}
 .hero-copy .btn-gold{background:#C9A227;color:#4A1525;font-weight:700;padding:13px 24px;border-radius:9px;text-decoration:none;font-size:15px}
+.builtwith{background:#4A1525;padding:5rem 2rem}
+.builtwith .bw-head{text-align:center;max-width:720px;margin:0 auto 3rem}
+.builtwith .bw-label{font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.15em;color:#E8D590;margin-bottom:0.75rem}
+.builtwith .bw-title{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:2.6rem;font-weight:700;line-height:1.2;color:#C9A227;margin-bottom:1rem}
+.builtwith .bw-intro{font-size:1.1rem;line-height:1.8;color:#E6E0D2}
+.builtwith .bw-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;max-width:1000px;margin:0 auto}
+.builtwith .bw-card{background:#FFFFFF;padding:2rem;border-radius:12px;border-left:4px solid #C9A227;box-shadow:0 6px 24px rgba(0,0,0,0.22)}
+.builtwith .bw-card h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;color:#4A1525;font-size:1.15rem;font-weight:700;margin-bottom:0.25rem}
+.builtwith .bw-type{color:#1A5F5F;font-weight:600;font-size:0.9rem;margin-bottom:0.9rem}
+.builtwith .bw-card p{color:#4A4A4A;font-size:0.95rem;line-height:1.7}
+.builtwith .bw-cta{text-align:center;margin-top:2.6rem}
+.builtwith .bw-cta a{display:inline-block;color:#E8D590;font-weight:700;text-decoration:none;font-size:1rem;border-bottom:2px solid #C9A227;padding-bottom:3px}
+.builtwith .bw-cta a:hover{color:#D4B84A}
+@media(max-width:760px){.builtwith{padding:3.5rem 1.5rem}.builtwith .bw-title{font-size:2rem}.builtwith .bw-grid{grid-template-columns:1fr}}
 .hero-copy .btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.55);padding:12px 22px;border-radius:9px;text-decoration:none;font-size:15px;font-weight:600}
 @media(max-width:760px){.hero-stage{height:88svh}.hero-pin{position:relative;height:88svh}.hero-copy{height:88svh}.hero-copy h1{font-size:34px}.hero-copy .wrap{padding:0 28px}}</style>
 <style>
@@ -1380,6 +1394,20 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     </section>
 
     <!-- Donate CTA -->
+    <section class="builtwith">
+        <div class="bw-head reveal">
+            <div class="bw-label">Built With Ghana</div>
+            <h2 class="bw-title">Coordinated From the Diaspora, Run in Ghana</h2>
+            <p class="bw-intro">GHSI is coordinated from the diaspora and run in Ghana. Ghanaian clinicians deliver the screening, Ghanaian institutions anchor the trust, and Ghanaian researchers lead the evidence.</p>
+        </div>
+        <div class="bw-grid">
+            <div class="bw-card reveal"><h4>Akoma+ Foundation</h4><div class="bw-type">Screening Delivery</div><p>Akoma+'s Ghanaian clinicians and trained volunteers run every screening event on the ground.</p></div>
+            <div class="bw-card reveal"><h4>PHAIG</h4><div class="bw-type">Community Engagement</div><p>Leads community engagement, mobilization, and stakeholder coordination across Greater Accra.</p></div>
+            <div class="bw-card reveal"><h4>Archdiocese of Accra</h4><div class="bw-type">Faith Partnership</div><p>A network of four Catholic health facilities and 62 parishes anchors trust in the communities we serve.</p></div>
+            <div class="bw-card reveal"><h4>Ghanaian Research Leadership</h4><div class="bw-type">Evidence and Evaluation</div><p>Outcomes research is led by Ghanaian academics, keeping the data and the evidence in Ghanaian hands.</p></div>
+        </div>
+        <div class="bw-cta reveal"><a href="/team/">Meet the full team &rarr;</a></div>
+    </section>
     <section class="donate-cta">
         <h2>Fund the Staying</h2>
         <p>Hypertension is detected in seconds. Care continues for years. Your contribution funds the systems that ensure a blood pressure diagnosis leads to care, retention, and control: twelve months of structured follow-up, training and supervision for community health workers, and the data discipline that turns each screening into outcomes evidence.</p>
