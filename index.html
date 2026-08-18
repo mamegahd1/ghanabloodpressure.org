@@ -16,6 +16,10 @@
     <meta property="og:url" content="https://ghanabloodpressure.org/">
     <meta property="og:title" content="Ghana Hypertension Screening Initiative">
     <meta property="og:description" content="Bringing accessible blood pressure screening and 12-month follow-up care to Ghana's transport hub communities. Community-driven. Evidence-based. Diaspora-led.">
+    <meta property="og:image" content="https://ghanabloodpressure.org/images/bre-painting-hero.jpg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1324">
+    <meta property="og:image:alt" content="Ma wo koma mmo, the original GHSI painting">
     <meta property="og:site_name" content="Ghana Hypertension Screening Initiative">
     <meta property="og:locale" content="en_US">
     <!-- Twitter -->
@@ -23,6 +27,7 @@
     <meta property="twitter:url" content="https://ghanabloodpressure.org/">
     <meta property="twitter:title" content="Ghana Hypertension Screening Initiative">
     <meta property="twitter:description" content="Bringing accessible blood pressure screening and 12-month follow-up care to Ghana's transport hub communities. Community-driven. Evidence-based. Diaspora-led.">
+    <meta property="twitter:image" content="https://ghanabloodpressure.org/images/bre-painting-hero.jpg">
     <!-- Geo Tags -->
     <meta name="geo.region" content="GH-AA">
     <meta name="geo.placename" content="Accra, Greater Accra Region, Ghana">
@@ -30,10 +35,11 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "NonprofitType",
+      "@type": "Organization",
       "@id": "https://ghanabloodpressure.org",
       "name": "Ghana Hypertension Screening Initiative",
       "alternateName": "GHSI",
+      "logo": "https://ghanabloodpressure.org/images/ghsi-logo.png",
       "url": "https://ghanabloodpressure.org",
       "description": "A diaspora-led community health initiative bringing free blood pressure screening, culturally adapted health education, and 12-month closed-loop follow-up to informal sector workers at urban transport hubs in Greater Accra, Ghana.",
       "founder": {
@@ -82,6 +88,8 @@
       }
     }
     </script>
+    <link rel="icon" type="image/png" href="/images/ghsi-logo.png">
+    <link rel="apple-touch-icon" href="/images/ghsi-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -950,9 +958,10 @@ textarea:focus-visible {
   .hub-grid{grid-template-columns:1fr}
   .people{grid-template-columns:1fr}
   .loopline{grid-template-columns:1fr;gap:0}
-  .loopline::before{top:8%;bottom:8%;left:21px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,var(--teal),var(--gold),var(--teal))}
-  .lnode{display:grid;grid-template-columns:44px 1fr;align-items:center;gap:1rem;text-align:left;padding:.6rem 0}
-  .lnode .dot{margin:0}
+  .loopline::before{display:none}
+  .lnode{position:relative;display:grid;grid-template-columns:44px 1fr;align-items:center;gap:1rem;text-align:left;padding:.6rem 0}
+  .lnode:not(:last-child)::after{content:'';position:absolute;left:20.5px;top:50%;height:100%;width:3px;background:var(--teal);z-index:0}
+  .lnode .dot{margin:0;position:relative;z-index:1}
   .nav-logo-img{height:40px}
 }
 /* === animation + a11y polish (Phase 1) === */
@@ -989,7 +998,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     <!-- World Hypertension Day Countdown Banner -->
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
-        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support GHSI on Ko-fi &rarr;</a>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">Support GHSI on Ko-fi &rarr;</a>
     </div>
     <script>
     (function() {
@@ -1037,7 +1046,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
             <li><a href="/research/">Research</a></li>
             <li><a href="/involved/">Get Involved</a></li>
             <li><a href="https://ghanabloodpressure.org/blog/">Updates</a></li>
-            <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="nav-donate-btn">Donate</a></li>
+            <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener" class="nav-donate-btn">Donate</a></li>
         </ul>
         <button class="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('active'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">
             <span></span><span></span><span></span>
@@ -1114,7 +1123,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
             <div class="stat-item">
                 <div class="stat-number" data-count="3" data-start="1" data-prefix="1 in ">1 in 3</div>
                 <div class="stat-label">Ghanaian adults have hypertension</div>
-                <div class="stat-source"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0248137" target="_blank">PLOS ONE Meta-analysis, 2021</a></div>
+                <div class="stat-source"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0248137" target="_blank" rel="noopener">PLOS ONE Meta-analysis, 2021</a></div>
             </div>
             <div class="stat-item">
                 <div class="stat-number" data-count="65" data-suffix="%">65%</div>
@@ -1124,7 +1133,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
             <div class="stat-item">
                 <div class="stat-number">#1</div>
                 <div class="stat-label">preventable cause of death</div>
-                <div class="stat-source"><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1330708/full" target="_blank">Ghana Heart Initiative, 2024</a></div>
+                <div class="stat-source"><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1330708/full" target="_blank" rel="noopener">Ghana Heart Initiative, 2024</a></div>
             </div>
         </div>
     </section>
@@ -1412,7 +1421,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
         <h2>Fund the Staying</h2>
         <p>Hypertension is detected in seconds. Care continues for years. Your contribution funds the systems that ensure a blood pressure diagnosis leads to care, retention, and control: twelve months of structured follow-up, training and supervision for community health workers, and the data discipline that turns each screening into outcomes evidence.</p>
         <p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: var(--gold-pale); font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">When you give to GHSI, you fund the staying.</p>
-        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" class="btn btn-gold" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Support GHSI on Ko-fi</a>
+        <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener" class="btn btn-gold" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Support GHSI on Ko-fi</a>
     </section>
 
     </main>
@@ -1439,8 +1448,8 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
                 <h4>Connect</h4>
                 <ul>
                     <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
-                    <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank">Support Us on Ko-fi</a></li>
-                    <li><a href="https://ghanabloodpressure.org" target="_blank">ghanabloodpressure.org</a></li>
+                    <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener">Support Us on Ko-fi</a></li>
+                    <li><a href="https://ghanabloodpressure.org" target="_blank" rel="noopener">ghanabloodpressure.org</a></li>
                 </ul>
             </div>
         </div>
