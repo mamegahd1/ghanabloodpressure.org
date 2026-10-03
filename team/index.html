@@ -42,9 +42,8 @@
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-text{max-width:15rem;font-size:1rem} }
-@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 /* partner + team cards: gateway hover (Global Hubs pattern) */
 .partner-card{transition:transform .22s,box-shadow .22s}
 .partner-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(19,71,71,.14)}

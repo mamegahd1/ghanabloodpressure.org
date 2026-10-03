@@ -850,7 +850,7 @@ textarea:focus-visible {
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
 @media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-text{max-width:15rem;font-size:1rem} }
-@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 /* text home link: keep nav on one row at mid widths */
@@ -912,7 +912,7 @@ textarea:focus-visible {
             <li><a href="/">Home</a></li>
             <li><a href="/approach/" class="active">Our Approach</a></li>
             <li><a href="/pilot/">The Pilot</a></li>
-            <li><a href="/team/">Team & Partners</a></li>
+            <li><a href="/team/">Team &amp; Partners</a></li>
             <li><a href="/research/">Research</a></li>
             <li><a href="/involved/">Get Involved</a></li>
             <li><a href="https://ghanabloodpressure.org/blog/">Updates</a></li>

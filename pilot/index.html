@@ -243,9 +243,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-text{max-width:15rem;font-size:1rem} }
-@media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 /* Fast Facts band (Global Hubs pattern) */
 .fastfacts{background:var(--teal);padding:2.6rem 2rem}
 .ff-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center}
