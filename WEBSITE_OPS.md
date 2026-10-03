@@ -1,4 +1,4 @@
-# GHSI Website Operations Guide
+# Community Hypertension Initiative in Ghana Website Operations Guide
 
 ## Ownership
 

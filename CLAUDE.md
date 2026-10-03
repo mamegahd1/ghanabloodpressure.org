@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static HTML/CSS website for the Ghana Hypertension Screening Initiative (GHSI), hosted on GitHub Pages at **ghanabloodpressure.org**. No build tools, frameworks, or backend — pure HTML served directly.
+Static HTML/CSS website for the Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI), a program of Blessed Health Foundation LBG, hosted on GitHub Pages at **ghanabloodpressure.org**. No build tools, frameworks, or backend — pure HTML served directly.
 
 ## Deployment
 
@@ -20,10 +20,12 @@ Push to `main` branch → GitHub Pages serves automatically. The `CNAME` file ma
 - `team/index.html` — Team & Partners
 - `research/index.html` — Research
 - `involved/index.html` — Get Involved
+- `foundation/index.html` — About the Foundation (Blessed Health Foundation LBG). Same inline CSS shell, nav and footer; linked from the name-change banner and the footer bridge line, not from the main nav.
 
 **Shared structure across all pages:**
 1. Countdown banner (World Hypertension Day — May 17) with Ko-fi donation link
 2. Sticky navigation bar with mobile hamburger toggle
+   - Name-change banner (`<div role="note">`) directly after the nav: exactly one per page, including blog posts, until 3 Oct 2027
 3. Page-specific main content
 4. Footer with links and contact info
 

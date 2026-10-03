@@ -1,2 +1,2 @@
 # ghanabloodpressure.org
-Ghana Hypertension Screening Initiative - Community health screening website
+Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI) - Community health screening website
