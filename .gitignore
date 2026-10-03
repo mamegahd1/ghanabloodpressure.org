@@ -8,7 +8,6 @@
 *.doc
 *.txt
 !robots.txt
-!images/README.md
 *.bak
 *.tmp
 *~
@@ -20,3 +19,11 @@ preview-*.png
 .idea/
 .vscode/
 !38b228baf2e5dcbaecb5b558bebf2718.txt
+
+# Internal files: kept on this Mac, never committed (public repo, served by GitHub Pages)
+CLAUDE.md
+WEBSITE_OPS.md
+scripts/
+images/README.md
+WEBSITE_AUDIT_*.md
+.claude/
