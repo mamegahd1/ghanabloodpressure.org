@@ -21,8 +21,6 @@
     <meta property="twitter:title" content="The Initiative's Pilot: 1,000 Screenings in Greater Accra">
     <meta property="twitter:description" content="Targeting 1,000 screenings at transport hubs in Accra with 12-month follow-up.">
     <meta property="twitter:image" content="https://ghanabloodpressure.org/images/bre-painting-hero.jpg">
-    <link rel="icon" type="image/png" href="/images/ghsi-logo.png">
-    <link rel="apple-touch-icon" href="/images/ghsi-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -239,15 +237,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .utilbar a:hover{color:#fff}
 .nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
 .nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
-.nav-logo-img{height:46px;width:auto;display:block}
+.nav-logo-text{flex:0 1 auto;min-width:0;max-width:17rem;min-height:44px;margin-right:1.25rem;color:var(--teal);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.1rem;font-weight:700;line-height:1.2;letter-spacing:0.01em;text-decoration:none}.nav-logo-text:hover{color:var(--teal-dark)}
 .nav-links a{color:var(--teal-dark)}
 .nav-links a:hover{color:var(--teal)}
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-.footer-logo-img{height:54px;width:auto;display:block;margin-bottom:.8rem}
 a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-text{max-width:15rem;font-size:1rem} }
 @media (prefers-reduced-motion: reduce){ *,*::before,*::after{transition-duration:.001ms!important} .reveal{opacity:1!important;transform:none!important} }
 /* Fast Facts band (Global Hubs pattern) */
 .fastfacts{background:var(--teal);padding:2.6rem 2rem}
@@ -264,6 +261,8 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media(max-width:760px){.ff-wrap{grid-template-columns:1fr 1fr;gap:1.4rem}.ff+.ff{border-left:none}}
+/* text home link: keep nav on one row at mid widths */
+@media(min-width:769px) and (max-width:1260px){.nav-logo-text{font-size:.9rem;max-width:11.25rem;margin-right:.5rem}.nav-links{gap:.5rem}}
 </style>
 </head>
 <body>
@@ -314,7 +313,7 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     })();
     </script>
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav-logo" aria-label="GHSI home"><img src="/images/ghsi-logo.png" alt="Community Hypertension Initiative in Ghana" class="nav-logo-img"></a>
+        <a href="/" class="nav-logo nav-logo-text" aria-label="Community Hypertension Initiative in Ghana home">Community Hypertension Initiative in Ghana</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="/">Home</a></li>
             <li><a href="/approach/">Our Approach</a></li>
@@ -499,7 +498,6 @@ a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="/images/ghsi-logo.png" alt="GHSI" class="footer-logo-img">
                 <strong style="color: var(--gold); font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 1.2rem;">Community Hypertension Initiative in Ghana</strong>
                 <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
                 <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
