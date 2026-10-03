@@ -166,7 +166,7 @@
     </section>
     <div class="qlinks reveal">
         <a class="qtile" href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer"><span class="qt-title">Donate</span><span class="qt-sub">Fund free screenings via Ko-fi</span><span class="qt-arrow">Give now →</span></a>
-        <a class="qtile" href="#contact-form-volunteer"><span class="qt-title">Volunteer</span><span class="qt-sub">Lend your clinical or community skills</span><span class="qt-arrow">Volunteer →</span></a>
+        <a class="qtile" href="#contact-form-volunteer"><span class="qt-title">Express Interest</span><span class="qt-sub">Tell us how you would like to be involved</span><span class="qt-arrow">Express interest →</span></a>
         <a class="qtile" href="#contact-form-partnership"><span class="qt-title">Partner</span><span class="qt-sub">Join the pilot or adopt the curriculum</span><span class="qt-arrow">Partner →</span></a>
         <a class="qtile" href="mailto:info@ghanabloodpressure.org"><span class="qt-title">Contact</span><span class="qt-sub">Email us directly</span><span class="qt-arrow">Email →</span></a>
     </div>
@@ -216,7 +216,7 @@
                 <button class="giv-tab" role="tab" id="gtab-res" aria-selected="false" tabindex="-1" aria-controls="gpanel-res">Researchers</button>
             </div>
             <div class="giv-panel show" id="gpanel-vol" role="tabpanel" aria-labelledby="gtab-vol">
-                <h3>Lend your skills</h3>
+                <h3>Work with us</h3>
                 <p>Would you like to collaborate with the Initiative? Whether you would like to volunteer, partner, or contribute your expertise, tell us a little about yourself and how you would like to be involved.</p>
                 <a class="giv-cta" href="#contact-form-volunteer">Submit an interest form →</a>
             </div>
@@ -340,7 +340,7 @@
             var sel = document.getElementById('interest');
             if (!sel) return;
             var matched = false;
-            if (h === '#contact-form-volunteer') { sel.value = 'volunteer'; matched = true; }
+            if (h === '#contact-form-volunteer') { sel.value = 'general'; matched = true; }
             else if (h === '#contact-form-partnership') { sel.value = 'partnership'; matched = true; }
             else if (h === '#contact-form-press') { sel.value = 'press'; matched = true; }
             if (matched) {
