@@ -65,5 +65,9 @@
   <!-- BODY CONTENT HERE -->
 </main>
 <!-- PASTE SAME FOOTER AS blog/index.html -->
+<script>
+/* menu: Escape closes the open menu and returns focus to the menu button; focus moving out of the nav closes it */
+(function(){var l=document.getElementById('navLinks'),b=document.querySelector('.nav-mobile-toggle'),n=document.querySelector('.nav');if(!l||!b||!n)return;function shut(f){l.classList.remove('active');b.setAttribute('aria-expanded','false');if(f)b.focus();}document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('active'))shut(true);});document.addEventListener('focusin',function(e){if(l.classList.contains('active')&&!n.contains(e.target))shut(false);});})();
+</script>
 </body>
 </html>

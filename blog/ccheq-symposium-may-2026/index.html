@@ -45,7 +45,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-
 .nav-donate-btn:hover{background:var(--gold-light)!important}
 .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
 .nav-mobile-toggle span{display:block;width:25px;height:2px;background:var(--teal-dark);margin:5px 0;transition:.3s}
-@media(max-width:1000px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--burgundy-deep);flex-direction:column;padding:1rem 2rem;gap:.75rem}.nav-links.active{display:flex}.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-mobile-toggle{display:block}}
+@media(max-width:63.75em),(max-width:1020px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--burgundy-deep);flex-direction:column;padding:1rem 2rem;gap:.75rem}.nav-links.active{display:flex}.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-mobile-toggle{display:block}.nav-links{max-height:calc(100vh - 6.2rem);max-height:calc(100dvh - 6.2rem);overflow-y:auto;scroll-padding-block:.5rem}.nav .nav-links{gap:.75rem}.nav-mobile-toggle{padding:calc(.5rem + 1px) calc(.5rem + 1.5px);margin:-1px -1.5px;min-width:44px;min-height:44px}.nav-mobile-toggle span{margin-left:auto;margin-right:auto}}
 .article{max-width:760px;margin:0 auto;padding:3.5rem 2rem}
 .article .back{display:inline-block;color:var(--teal);font-weight:700;font-size:.88rem;text-decoration:none;margin-bottom:1.75rem}
 .article .back:hover{text-decoration:underline}
@@ -68,7 +68,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media(max-width:760px){.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.footer-logo-img{margin:0 auto}}
 /* mid widths: the header logo may shrink so the nav fits without sideways scroll */
-@media(min-width:1001px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
+@media(min-width:63.75em) and (min-width:1020px) and (max-width:78.75em){.nav-logo{flex:0 1 auto;min-width:0;min-height:44px}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
 /* === SHORT FOOTER AND PHONE TAP TARGETS (RUN 2026-10-04) === */
 .footer-row{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:2rem}
 .footer-side{text-align:right}
@@ -76,7 +76,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .footer-links{display:flex;justify-content:flex-end;flex-wrap:wrap;column-gap:1.5rem;margin:0}
 .footer-links a{color:#C5BBAB;text-decoration:none;font-size:.9rem;display:inline-flex;align-items:center;min-height:44px;transition:color .3s}
 .footer-links a:hover{color:var(--cream)}
-.nav-mobile-toggle{min-width:44px;min-height:44px}
 @media(max-width:768px){.footer{padding:2.25rem 1.25rem 1.25rem}.footer-bottom{margin-top:1.25rem;padding-top:1.1rem;font-size:.8rem}.footer-logo-img{height:72px}.footer-row{flex-direction:column;gap:.5rem;text-align:center}.footer-side{text-align:center}.footer-links{flex-direction:column;align-items:center}.footer-logo-img{margin:0 auto}.nav-links .nav-donate-btn{min-height:44px!important}div[role=note]>a{padding:12px 0}.footer-bottom a{padding:14px 0}main p a,main li a,main h2 a{padding-top:12px;padding-bottom:12px}.loop-link a,.partner-link a{padding-top:0;padding-bottom:0}.article .back,.bre-feature .backlink{display:inline-flex;align-items:center;vertical-align:top;min-height:44px;margin-bottom:calc(1.75rem - 16px)}}
 </style>
 </head>
@@ -84,6 +83,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 <a class="skip-nav" href="#main">Skip to content</a>
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Community Hypertension Initiative in Ghana home"><img src="/images/logo-header.svg" alt="Community Hypertension Initiative in Ghana" class="nav-logo-img"></a>
+  <button class="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('active'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li><a href="/approach/">Our Approach</a></li>
@@ -94,9 +96,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
     <li><a href="/blog/" class="active">Updates</a></li>
     <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer" class="nav-donate-btn">Donate</a></li>
   </ul>
-  <button class="nav-mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('active'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 <div role="note" style="background:#1A5F5F;color:#fff;text-align:center;padding:.6rem 1rem;font-size:.95rem;line-height:1.5;">The Ghana Hypertension Screening Initiative (GHSI) is now the <strong>Community Hypertension Initiative in Ghana</strong>, a program of <a href="/foundation/" style="color:#E8D590;text-decoration:underline;">Blessed Health Foundation LBG</a>.</div>
 <main id="main">
@@ -132,6 +131,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 </footer>
 <script>
 (function(){var n=document.querySelector('.nav');if(n){addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>10)},{passive:true})}})();
+</script>
+<script>
+/* menu: Escape closes the open menu and returns focus to the menu button; focus moving out of the nav closes it */
+(function(){var l=document.getElementById('navLinks'),b=document.querySelector('.nav-mobile-toggle'),n=document.querySelector('.nav');if(!l||!b||!n)return;function shut(f){l.classList.remove('active');b.setAttribute('aria-expanded','false');if(f)b.focus();}document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('active'))shut(true);});document.addEventListener('focusin',function(e){if(l.classList.contains('active')&&!n.contains(e.target))shut(false);});})();
 </script>
 </body>
 </html>
