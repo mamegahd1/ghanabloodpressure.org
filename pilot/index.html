@@ -91,7 +91,7 @@ section { padding: 5rem 2rem; }
 .stat-source { font-size: 0.8rem; color: #C5BBAB; margin-top: 0.5rem; }
 .stat-source a { color: var(--gold-pale); text-decoration: none; }
 .stat-source a:hover { text-decoration: underline; }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 2rem; }
 .card { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-top: 4px solid var(--teal); transition: transform 0.3s ease; }
 .card:hover { transform: translateY(-4px); }
 .card h3, .card h4 { color: var(--burgundy-deep); margin-bottom: 0.75rem; }
@@ -246,7 +246,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0} }
 @media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 /* Fast Facts band (Global Hubs pattern) */
 .fastfacts{background:var(--teal);padding:2.6rem 2rem}

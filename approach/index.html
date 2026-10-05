@@ -260,7 +260,7 @@ section { padding: 5rem 2rem; }
 /* === CARDS === */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 2rem;
 }
 .card {
@@ -846,7 +846,7 @@ textarea:focus-visible {
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px} }
+@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0} }
 @media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}

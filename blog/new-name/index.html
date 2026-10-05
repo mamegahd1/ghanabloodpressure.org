@@ -76,7 +76,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-
 .nav-donate-btn:hover{background:var(--gold-light)!important}
 .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
 .nav-mobile-toggle span{display:block;width:25px;height:2px;background:var(--teal-dark);margin:5px 0;transition:.3s}
-@media(max-width:768px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--burgundy-deep);flex-direction:column;padding:1rem 2rem;gap:.75rem}.nav-links.active{display:flex}.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-mobile-toggle{display:block}}
+@media(max-width:1000px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--burgundy-deep);flex-direction:column;padding:1rem 2rem;gap:.75rem}.nav-links.active{display:flex}.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}.nav-mobile-toggle{display:block}}
 /* article container */
 main.article{max-width:760px;margin:0 auto;padding:3.5rem 2rem}
 /* feature content (scoped) */
@@ -104,9 +104,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important}.reveal{opacity:1!important;transform:none!important}}
-@media(max-width:760px){.utilbar .ulinks{display:none}.nav-logo-img{height:40px}.footer-content{grid-template-columns:1fr;text-align:center}.footer-logo-img{margin:0 auto}.footer-brand p{max-width:none}}
+@media(max-width:760px){.utilbar .ulinks{display:none}.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.footer-content{grid-template-columns:1fr;text-align:center}.footer-logo-img{margin:0 auto}.footer-brand p{max-width:none}}
 /* mid widths: the header logo may shrink so the nav fits without sideways scroll */
-@media(min-width:769px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
+@media(min-width:1001px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
 </style>
 </head>
 <body>
