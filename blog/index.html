@@ -35,12 +35,6 @@ body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ox
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;line-height:1.2}
 .skip-nav{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--burgundy-deep);padding:.75rem 1.5rem;font-weight:700;font-size:.95rem;z-index:2000;border-radius:0 0 6px 6px;text-decoration:none}
 .skip-nav:focus{top:0}
-.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
-.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
-.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
-.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
-.utilbar a{color:#cfeaea;text-decoration:none}
-.utilbar a:hover{color:#fff}
 .nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--cream-dark);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:box-shadow .3s,background .3s}
 .nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
@@ -68,44 +62,64 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-
 .feat h2 a{color:inherit;text-decoration:none}
 .feat h2 a:hover{color:var(--teal)}
 .feat p{color:var(--charcoal-light);margin-bottom:1rem}
-.post-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.post-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:14px;padding:1.85rem;transition:transform .25s ease,box-shadow .25s ease;border-top:4px solid var(--teal)}
-.post-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(19,71,71,.1)}
 .post-date{font-size:.78rem;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.4rem}
 .post-title{font-size:1.25rem;margin-bottom:.6rem}
-.post-title a{color:var(--burgundy-deep);text-decoration:none}
-.post-title a:hover{color:var(--teal)}
-.post-excerpt{color:var(--charcoal-light);font-size:.95rem;line-height:1.6;margin-bottom:1rem}
 .read-more{color:var(--teal);text-decoration:none;font-weight:700;font-size:.88rem}
 .read-more:hover{text-decoration:underline}
 .footer{background:var(--burgundy-deep);color:var(--cream);padding:3rem 2rem 1.5rem;margin-top:3rem}
-.footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
-.footer-brand strong{color:var(--gold);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.2rem}
-.footer-brand p{max-width:350px;font-size:.95rem;line-height:1.6;margin-top:.75rem}
-.footer h4{color:var(--gold);font-size:1rem;margin-bottom:1rem}
-.footer ul{list-style:none}
-.footer ul li{margin-bottom:.5rem}
-.footer ul li a{color:#C5BBAB;text-decoration:none;font-size:.9rem;transition:color .3s}
-.footer ul li a:hover{color:var(--cream)}
 .footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:.85rem;color:#B0A88F}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{transition-duration:.001ms!important}.reveal{opacity:1!important;transform:none!important}}
-@media(max-width:760px){.utilbar .ulinks{display:none}.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.post-grid{grid-template-columns:1fr}.footer-content{grid-template-columns:1fr;text-align:center}.footer-logo-img{margin:0 auto}.footer-brand p{max-width:none}}
+@media(max-width:760px){.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.footer-logo-img{margin:0 auto}}
 /* mid widths: the header logo may shrink so the nav fits without sideways scroll */
 @media(min-width:1001px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
+/* === UPDATES (RUN 2026-10-04) === */
+.posts{padding:2.5rem 2rem 0}
+.feat-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem;align-items:stretch}
+.feat-row .feat{margin:0;padding:1.75rem}
+.feat-row .feat h2{font-size:1.5rem}
+.feat-img{display:grid;grid-template-columns:210px 1fr;gap:1.4rem;align-items:stretch}
+.feat-pic{width:210px;height:100%;min-height:200px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.post-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(74,21,37,.14)}
+.post-list li{border-bottom:1px solid rgba(74,21,37,.14)}
+.post-list a{display:flex;align-items:baseline;gap:1.25rem;min-height:44px;padding:.8rem .25rem;text-decoration:none;color:var(--burgundy-deep)}
+.post-list a::after{content:'\2192';margin-left:auto;padding-left:1rem;color:var(--teal);font-weight:700}
+.post-list a:hover .post-title{color:var(--teal)}
+.post-list .post-date{flex:0 0 8.5rem;margin:0}
+.post-list .post-title{margin:0;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.08rem;line-height:1.35}
+@media(max-width:768px){
+  .blog-hero{padding:2.25rem 1.25rem}
+  .blog-hero h1{font-size:2.1rem}
+  .posts{padding:1.75rem 1.25rem 0}
+  .feat-row{grid-template-columns:1fr;gap:1rem;margin-bottom:1.5rem}
+  .feat-row .feat{padding:1.25rem 1.25rem 1rem}
+  .feat-row .feat h2{font-size:1.35rem}
+  .feat-row .feat p{font-size:.95rem;line-height:1.6;margin-bottom:.4rem}
+  .blog-hero p{font-size:1rem;line-height:1.6}
+  .footer{margin-top:2rem}
+  .feat-img{grid-template-columns:1fr;gap:1rem}
+  .feat-pic{width:100%;height:200px;min-height:0;max-height:200px}
+  .post-list a{flex-direction:column;align-items:flex-start;gap:.1rem;padding:.65rem 0}
+  .post-list a::after{display:none}
+  .post-list .post-date{flex:none}
+  .post-list .post-title{font-size:1rem}
+  .read-more{display:inline-flex;align-items:center;min-height:44px}
+}
+/* === SHORT FOOTER AND PHONE TAP TARGETS (RUN 2026-10-04) === */
+.footer-row{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.footer-side{text-align:right}
+.footer-tag{font-style:italic;color:var(--gold-pale);font-size:.95rem;line-height:1.6;margin:0}
+.footer-links{display:flex;justify-content:flex-end;flex-wrap:wrap;column-gap:1.5rem;margin:0}
+.footer-links a{color:#C5BBAB;text-decoration:none;font-size:.9rem;display:inline-flex;align-items:center;min-height:44px;transition:color .3s}
+.footer-links a:hover{color:var(--cream)}
+.nav-mobile-toggle{min-width:44px;min-height:44px}
+@media(max-width:768px){.footer{padding:2.25rem 1.25rem 1.25rem}.footer-bottom{margin-top:1.25rem;padding-top:1.1rem;font-size:.8rem}.footer-logo-img{height:72px}.footer-row{flex-direction:column;gap:.5rem;text-align:center}.footer-side{text-align:center}.footer-links{flex-direction:column;align-items:center}.footer-logo-img{margin:0 auto}.nav-links .nav-donate-btn{min-height:44px!important}div[role=note]>a{padding:12px 0}.footer-bottom a{padding:14px 0}main p a,main li a,main h2 a{padding-top:12px;padding-bottom:12px}.loop-link a,.partner-link a{padding-top:0;padding-bottom:0}.article .back,.bre-feature .backlink{display:inline-flex;align-items:center;vertical-align:top;min-height:44px;margin-bottom:calc(1.75rem - 16px)}}
 </style>
 </head>
 <body>
 <a class="skip-nav" href="#main">Skip to content</a>
-<div class="utilbar"><div class="uwrap">
-  <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
-  <span class="ulinks">
-    <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
-    <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Donate</a>
-  </span>
-</div></div>
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Community Hypertension Initiative in Ghana home"><img src="/images/logo-header.svg" alt="Community Hypertension Initiative in Ghana" class="nav-logo-img"></a>
   <ul class="nav-links" id="navLinks">
@@ -130,95 +144,42 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 </section>
 <main id="main">
 <div class="posts">
-  <article class="feat reveal">
+  <div class="feat-row">
+  <article class="feat">
     <span class="feat-tag">Latest</span>
     <div class="post-date">October 2026</div>
     <h2><a href="/blog/new-name/">A new name. The same promise.</a></h2>
     <p>The Ghana Hypertension Screening Initiative (GHSI) is now the Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation LBG.</p>
     <a href="/blog/new-name/" class="read-more">Read more &rarr;</a>
   </article>
-  <article class="feat reveal">
-    <img src="/images/bre-painting-hero.jpg" alt="Painting of a Ghanaian woman in profile carrying a basket of produce on her head, a child held close at her side, with the Twi words Ma wo koma mmɔ lettered beside her." style="width:100%;border-radius:10px;margin-bottom:1.5rem;display:block;box-shadow:0 6px 20px rgba(0,0,0,.08)">
-    <div class="post-date">June 2026</div>
-    <h2><a href="/blog/ma-wo-koma-mmo/">Ma wo koma mmɔ</a></h2>
-    <p>An Ithaca artist painted our tagline. A reflection on the painting, the people we serve, and why this work must keep a nation's heart beating.</p>
-    <a href="/blog/ma-wo-koma-mmo/" class="read-more">Read more &rarr;</a>
+  <article class="feat feat-img">
+    <img src="/images/bre-painting-hero.jpg" alt="Painting of a Ghanaian woman in profile carrying a basket of produce on her head, a child held close at her side, with the Twi words Ma wo koma mmɔ lettered beside her." class="feat-pic">
+    <div class="feat-body">
+      <div class="post-date">June 2026</div>
+      <h2><a href="/blog/ma-wo-koma-mmo/">Ma wo koma mmɔ</a></h2>
+      <p>An Ithaca artist painted our tagline. A reflection on the painting, the people we serve, and why this work must keep a nation's heart beating.</p>
+      <a href="/blog/ma-wo-koma-mmo/" class="read-more">Read more &rarr;</a>
+    </div>
   </article>
-  <div class="post-grid">
-    <article class="post-card reveal">
-      <div class="post-date">May 2026</div>
-      <h2 class="post-title"><a href="/blog/research-leadership-may-2026/">GHSI Adds Research Leadership Ahead of the Pilot</a></h2>
-      <p class="post-excerpt">As GHSI prepares for the December 2026 pilot, the project has brought on senior research leadership to anchor its study design and evidence base. The same standard now guides the training curriculum, still in development, which is being reviewed by a focus group led by GHSI's research team.</p>
-      <a href="/blog/research-leadership-may-2026/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">May 2026</div>
-      <h2 class="post-title"><a href="/blog/ithaca-festival-may-2026/">GHSI Brings the Mission to the Ithaca Festival</a></h2>
-      <p class="post-excerpt">On May 30 and 31, GHSI met its neighbors for the first time at the Ithaca Festival. The weekend was less about the donation jar than about connection: handmade and Ghana-origin items drew people in, and a donated original canvas drew the strongest response of all.</p>
-      <a href="/blog/ithaca-festival-may-2026/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">May 2026</div>
-      <h2 class="post-title"><a href="/blog/ccheq-symposium-may-2026/">What We Took From the Cornell Health Equity Symposium</a></h2>
-      <p class="post-excerpt">GHSI presented at the Cornell Center for Health Equity 2026 Symposium, themed "Nothing About Us Without Us." The day affirmed a conviction at the heart of GHSI's model: community partnership is not an add-on to health research, it is the foundation.</p>
-      <a href="/blog/ccheq-symposium-may-2026/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">April 2026</div>
-      <h2 class="post-title"><a href="/blog/team-and-partners-april-2026/">GHSI Core Team and Partnership Network Expands Ahead of Pilot</a></h2>
-      <p class="post-excerpt">With three new core team members and three implementation partnerships confirmed, GHSI now has the clinical, operational, and institutional infrastructure to support the December 2026 pilot in Greater Accra.</p>
-      <a href="/blog/team-and-partners-april-2026/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">April 2026</div>
-      <h2 class="post-title"><a href="/blog/curriculum-review-workshop/">GHSI Convenes 15-Member Panel for Curriculum Co-Design Workshop</a></h2>
-      <p class="post-excerpt">GHSI has assembled a multidisciplinary review panel of 15 health professionals, educators, and community leaders to co-design culturally adapted training curricula for the pilot screening program. The virtual workshop brings together voices from Ghana, the United States, and Kenya to ensure the curriculum reflects community realities.</p>
-      <a href="/blog/curriculum-review-workshop/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">April 2026</div>
-      <h2 class="post-title"><a href="/blog/ccheq-symposium-accepted/">GHSI Poster Accepted for Cornell Community Health Equity Symposium</a></h2>
-      <p class="post-excerpt">The Cornell Center for Health Equity has accepted a GHSI research poster for its May 2026 symposium, recognizing the initiative's community-engaged approach to hypertension prevention in Ghana's informal sector.</p>
-      <a href="/blog/ccheq-symposium-accepted/" class="read-more">Read more &rarr;</a>
-    </article>
-    <article class="post-card reveal">
-      <div class="post-date">March 2026</div>
-      <h2 class="post-title"><a href="/blog/advisory-team-grows/">GHSI Advisory Team Grows to Include Health Financing, Epidemiology, and Clinical Expertise</a></h2>
-      <p class="post-excerpt">GHSI has confirmed advisory partnerships spanning health financing, medical epidemiology, clinical practice, and maternal health, building a multidisciplinary foundation for the December 2026 pilot launch.</p>
-      <a href="/blog/advisory-team-grows/" class="read-more">Read more &rarr;</a>
-    </article>
   </div>
+  <ul class="post-list">
+    <li><a href="/blog/research-leadership-may-2026/"><span class="post-date">May 2026</span><span class="post-title">GHSI Adds Research Leadership Ahead of the Pilot</span></a></li>
+    <li><a href="/blog/ithaca-festival-may-2026/"><span class="post-date">May 2026</span><span class="post-title">GHSI Brings the Mission to the Ithaca Festival</span></a></li>
+    <li><a href="/blog/ccheq-symposium-may-2026/"><span class="post-date">May 2026</span><span class="post-title">What We Took From the Cornell Health Equity Symposium</span></a></li>
+    <li><a href="/blog/team-and-partners-april-2026/"><span class="post-date">April 2026</span><span class="post-title">GHSI Core Team and Partnership Network Expands Ahead of Pilot</span></a></li>
+    <li><a href="/blog/curriculum-review-workshop/"><span class="post-date">April 2026</span><span class="post-title">GHSI Convenes 15-Member Panel for Curriculum Co-Design Workshop</span></a></li>
+    <li><a href="/blog/ccheq-symposium-accepted/"><span class="post-date">April 2026</span><span class="post-title">GHSI Poster Accepted for Cornell Community Health Equity Symposium</span></a></li>
+    <li><a href="/blog/advisory-team-grows/"><span class="post-date">March 2026</span><span class="post-title">GHSI Advisory Team Grows to Include Health Financing, Epidemiology, and Clinical Expertise</span></a></li>
+  </ul>
 </div>
 </main>
 <footer class="footer" role="contentinfo">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
-      <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
-      <p style="margin-top:.75rem;font-style:italic;color:var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
+  <div class="footer-row">
+    <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
+    <div class="footer-side">
+      <p class="footer-tag">Ma wo koma mmɔ. Let your heart beat.</p>
+      <p class="footer-links"><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a> <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></p>
     </div>
-    <div>
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/approach/">Our Approach</a></li>
-        <li><a href="/pilot/">The Pilot</a></li>
-        <li><a href="/team/">Team &amp; Partners</a></li>
-        <li><a href="/research/">Research</a></li>
-        <li><a href="/involved/">Get Involved</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
-        <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></li>
-        <li><a href="https://ghanabloodpressure.org" target="_blank" rel="noopener noreferrer">ghanabloodpressure.org</a></li>
-      </ul>
-    </div>
-  </div>
-  <div style="max-width:1100px;margin:1.5rem auto 0;padding:0 2rem;text-align:center;">
-    <p style="font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:italic;color:#E8D590;font-size:1rem;margin:0;">We do not stop at the cuff. We stay until care continues.</p>
   </div>
   <div class="footer-bottom">&copy; 2026 Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI), a program of <a href="/foundation/" style="color:inherit;text-decoration:underline;">Blessed Health Foundation LBG</a>. All rights reserved.</div>
 </footer>

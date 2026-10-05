@@ -156,13 +156,6 @@ section { padding: 5rem 2rem; }
 .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s; }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--teal); }
 .footer { background: var(--burgundy-deep); color: var(--cream); padding: 3rem 2rem 1.5rem; }
-.footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
-.footer-brand p { max-width: 350px; font-size: 0.95rem; line-height: 1.6; margin-top: 0.75rem; }
-.footer h4 { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; }
-.footer ul { list-style: none; }
-.footer ul li { margin-bottom: 0.5rem; }
-.footer ul li a { color: var(--cream); text-decoration: none; color: #C5BBAB; font-size: 0.9rem; transition: color 0.3s; }
-.footer ul li a:hover { color: var(--cream); }
 .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); text-align: center; font-size: 0.85rem; color: #B0A88F; }
 .dark-section { background: var(--burgundy-deep); color: var(--cream); }
 .dark-section .section-label { color: var(--gold-pale); }
@@ -206,8 +199,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     .timeline { flex-wrap: wrap; gap: 2rem; }
     .timeline::before { display: none; }
     .contact-grid { grid-template-columns: 1fr; }
-    .footer-content { grid-template-columns: 1fr; text-align: center; } .footer-logo-img{margin:0 auto}
-    .footer-brand p { max-width: none; }
+.footer-logo-img{margin:0 auto}
     section { padding: 3rem 1.5rem; }
     .section-title { font-size: 2rem; }
     .team-grid { grid-template-columns: 1fr; }
@@ -215,11 +207,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .animate-in { animation: fadeInUp 0.5s ease forwards; }
 .ghsi-figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;align-items:start}.ghsi-figure-pair>.ghsi-figure{margin:0}@media(max-width:768px){.ghsi-figure-pair{grid-template-columns:1fr;gap:1rem}}.ghsi-figure{margin:2rem auto;max-width:100%;text-align:center}.ghsi-figure img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin:0 auto}.ghsi-figure figcaption{color:var(--charcoal-light);font-size:0.9rem;font-style:italic;line-height:1.6;max-width:700px;margin:0.75rem auto 0}
-/* === FULL-BLEED BAND === */
-.band{position:relative;min-height:60vh;display:flex;align-items:flex-end;background:linear-gradient(0deg,rgba(74,21,37,.82),rgba(74,21,37,.22) 52%,rgba(74,21,37,.04)),url('/images/ghana-trotro-worker.jpg') 50% 42%/cover}
-.band .bandtext{padding:50px 56px}
-.band .bandtext .k{color:#E9C765;font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;display:block;margin-bottom:10px}
-.band .bandtext .line{font-family:"Playfair Display",serif;color:#fff;font-size:34px;font-weight:700;max-width:640px;line-height:1.16}
 /* === HORIZONTAL TIMELINE === */
 .stepper{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;max-width:1000px;margin:0 auto}
 .stepper::before{content:'';position:absolute;top:24px;left:8%;right:8%;height:3px;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:2px;z-index:0}
@@ -231,12 +218,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media(max-width:768px){.stepper{grid-template-columns:1fr;gap:0;max-width:420px}.stepper::before{display:none}.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:0.85rem;align-items:center;text-align:left;padding:0.6rem 0}.step:not(:last-child)::after{content:'';position:absolute;left:22.5px;top:50%;height:100%;width:3px;background:var(--teal);z-index:0}.step:nth-last-child(2)::after{background:linear-gradient(180deg,var(--teal),var(--gold))}.step-node{margin:0;position:relative;z-index:1}.step-desc{max-width:none}}</style>
 <style>
 /* ===== Phase 2 shared shell ===== */
-.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
-.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
-.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
-.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
-.utilbar a{color:#cfeaea;text-decoration:none}
-.utilbar a:hover{color:#fff}
 .nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);box-shadow:none;border-bottom:1px solid var(--cream-dark);transition:box-shadow .3s,background .3s}
 .nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
 .nav-logo-img{height:46px;width:auto;display:block}
@@ -246,7 +227,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-links a.active{color:var(--teal)}
 .nav-mobile-toggle span{background:var(--teal-dark)}
 @media (max-width:768px){.nav-links a{color:var(--cream)}.nav-links a:hover,.nav-links a.active{color:var(--gold)}}
-@media(max-width:760px){ .utilbar .ulinks{display:none} .nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0} }
+@media(max-width:760px){ .nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0} }
 @media (prefers-reduced-motion: reduce){ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important} .reveal{opacity:1!important;transform:none!important} }
 /* Fast Facts band (Global Hubs pattern) */
 .fastfacts{background:var(--teal);padding:2.6rem 2rem}
@@ -265,18 +246,82 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media(max-width:760px){.ff-wrap{grid-template-columns:1fr 1fr;gap:1.4rem}.ff+.ff{border-left:none}}
 /* mid widths: the header logo may shrink so the nav fits without sideways scroll */
 @media(min-width:769px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
+/* === THE PILOT (RUN 2026-10-04) === */
+.pilot-art{width:100%;height:380px;display:block;position:relative;overflow:hidden}
+.hero-image-overlay{padding:2.5rem 2rem 1.75rem}
+.ov-sec{padding:2.5rem 2rem}
+.ov-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:62fr 38fr;grid-template-areas:"text photo" "cards photo";column-gap:2.5rem}
+.ov-text{grid-area:text}
+.ov-text .section-header{text-align:left;margin-bottom:1.25rem}
+.ov-text .section-intro{margin:0;max-width:none}
+.ov-text .ff-note{text-align:left;margin:.6rem 0 0}
+.ov-cards{grid-area:cards;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-self:start}
+.ov-cards .card{padding:1.25rem 1.4rem}
+.ov-cards .card h4{font-size:1.1rem;margin-bottom:.5rem}
+.ov-cards .card p{font-size:.92rem;line-height:1.6}
+.ov-photo{grid-area:photo;position:relative;min-height:260px;margin:0;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.ov-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block}
+.ov-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.75rem 1.25rem .9rem;background:linear-gradient(180deg,rgba(74,21,37,0),rgba(74,21,37,.92) 62%);color:#E9C765;font-size:13px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase}
+.tl-sec{background:var(--cream-dark);padding:2.25rem 2rem}
+.tl-sec .section-header{margin-bottom:1.25rem}
+.tl-sec .stepper{list-style:none;padding:0}
+.tl-sec .step-name{margin-bottom:0}
+.after-sec{padding:2.5rem 2rem}
+.after-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:end}
+.after-left .section-header{text-align:left;margin-bottom:1.25rem}
+.after-sec p,.after-sec li{font-size:1rem;line-height:1.7;color:var(--charcoal)}
+.after-sec .after-quote{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:italic;color:#1A5F5F;font-size:1.3rem;font-weight:500;line-height:1.4;margin:0 0 1rem;border-left:4px solid #1A5F5F;padding:.25rem 0 .25rem 1.5rem}
+.after-right p{margin-bottom:.75rem}
+.after-right ul{padding-left:1.5rem}
+.after-right li{margin-bottom:.75rem}
+.after-right li:last-child{margin-bottom:0}
+.after-sec .after-close{max-width:760px;margin:1.5rem auto 0;text-align:center;font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:italic;color:#1A5F5F;font-size:1.25rem;font-weight:500;line-height:1.5}
+@media(max-width:768px){
+  .pilot-art{height:400px}
+  .hero-image-overlay{padding:2rem 1.25rem 1.4rem}
+  .ov-sec{padding:1.75rem 1.25rem}
+  .ov-sec .section-title,.tl-sec .section-title,.after-sec .section-title{font-size:1.75rem}
+  .ov-grid{grid-template-columns:1fr;grid-template-areas:"text" "cards" "photo"}
+  .ov-text .section-header{margin-bottom:1.1rem}
+  .ov-text .section-intro{font-size:.97rem;line-height:1.6}
+  .ov-text .ff-note{font-size:.9rem}
+  .ov-cards{grid-template-columns:1fr;gap:.7rem}
+  .ov-cards .card{padding:.85rem 1rem}
+  .ov-cards .card h4{margin-bottom:.35rem}
+  .ov-cards .card p{font-size:.9rem;line-height:1.55}
+  .ov-photo{height:175px;min-height:0;margin-top:.7rem}
+  .tl-sec{padding:1.75rem 1.25rem}
+  .tl-sec .section-header{margin-bottom:1.1rem}
+  .tl-sec .stepper{grid-template-columns:1fr 1fr;gap:.6rem 1rem;max-width:none}
+  .tl-sec .step{display:flex;align-items:center;gap:.65rem;padding:0;text-align:left}
+  .tl-sec .step:not(:last-child)::after{display:none}
+  .tl-sec .step-node{width:40px;height:40px;margin:0;font-size:1rem;flex-shrink:0}
+  .after-sec{padding:1.75rem 1.25rem}
+  .after-grid{grid-template-columns:1fr;gap:1rem}
+  .after-left .section-header{margin-bottom:1rem}
+  .after-sec p,.after-sec li{font-size:.95rem;line-height:1.6}
+  .after-right li{margin-bottom:.4rem}
+  .after-sec .after-quote{font-size:1.12rem;padding-left:1rem;margin-bottom:.85rem}
+  .after-sec .after-close{font-size:1.05rem;margin-top:1.1rem;text-align:left}
+  .donate-cta{padding:2.25rem 1.25rem}
+  .donate-cta h2{font-size:1.8rem;margin-bottom:.75rem}
+  .donate-cta p{font-size:.97rem;line-height:1.55;margin-bottom:1.1rem}
+  .donate-cta p[style]{font-size:1.08rem!important;margin-bottom:1.1rem!important}
+  .donate-cta .btn[style]{padding:.85rem 1.75rem!important;font-size:1rem!important}
+}
+/* === SHORT FOOTER AND PHONE TAP TARGETS (RUN 2026-10-04) === */
+.footer-row{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.footer-side{text-align:right}
+.footer-tag{font-style:italic;color:var(--gold-pale);font-size:.95rem;line-height:1.6;margin:0}
+.footer-links{display:flex;justify-content:flex-end;flex-wrap:wrap;column-gap:1.5rem;margin:0}
+.footer-links a{color:#C5BBAB;text-decoration:none;font-size:.9rem;display:inline-flex;align-items:center;min-height:44px;transition:color .3s}
+.footer-links a:hover{color:var(--cream)}
+.nav-mobile-toggle{min-width:44px;min-height:44px}
+@media(max-width:768px){.footer{padding:2.25rem 1.25rem 1.25rem}.footer-bottom{margin-top:1.25rem;padding-top:1.1rem;font-size:.8rem}.footer-logo-img{height:72px}.footer-row{flex-direction:column;gap:.5rem;text-align:center}.footer-side{text-align:center}.footer-links{flex-direction:column;align-items:center}.footer-logo-img{margin:0 auto}.nav-links .nav-donate-btn{min-height:44px!important}div[role=note]>a{padding:12px 0}.footer-bottom a{padding:14px 0}main p a,main li a,main h2 a{padding-top:12px;padding-bottom:12px}.loop-link a,.partner-link a{padding-top:0;padding-bottom:0}.article .back,.bre-feature .backlink{display:inline-flex;align-items:center;vertical-align:top;min-height:44px;margin-bottom:calc(1.75rem - 16px)}}
 </style>
 </head>
 <body>
     <a href="#main-content" class="skip-nav">Skip to main content</a>
-    <div class="utilbar"><div class="uwrap">
-        <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
-        <span class="ulinks">
-            <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
-            <a href="/involved/">Get Involved</a>
-        </span>
-    </div></div>
-
     <div class="countdown-banner" id="countdownBanner">
         <span id="countdownText"></span>
         <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support the Initiative on Ko-fi &rarr;</a>
@@ -333,7 +378,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     <div role="note" style="background:#1A5F5F;color:#fff;text-align:center;padding:.6rem 1rem;font-size:.95rem;line-height:1.5;">The Ghana Hypertension Screening Initiative (GHSI) is now the <strong>Community Hypertension Initiative in Ghana</strong>, a program of <a href="/foundation/" style="color:#E8D590;text-decoration:underline;">Blessed Health Foundation LBG</a>.</div>
 <main id="main-content">
     <div class="hero-image-section">
-        <div style="width:100%;height:500px;display:block;position:relative;overflow:hidden;" role="img" aria-label="The Initiative's health worker screening a trotro driver at a lorry station in Accra, Ghana">
+        <div class="pilot-art" role="img" aria-label="The Initiative's health worker screening a trotro driver at a lorry station in Accra, Ghana">
             <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block;" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="pilotSky" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#2a8f8f"/><stop offset="50%" stop-color="#1A5F5F"/><stop offset="100%" stop-color="#0d3a3a"/></linearGradient>
@@ -391,16 +436,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
       </div>
     </section>
 
-    <section style="padding: 3.5rem 2rem;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Pilot Overview</div>
-                <h2 class="section-title">From Planning to Impact</h2>
-                <p class="section-intro">The Initiative's pilot will operate across six screening sites in the Greater Accra region, including major transport hubs and church-based community health fairs. The pilot launches with 12-month patient follow-up on an offline-capable tracking system built on the open-source DHIS2 platform, the same foundation as Ghana's national DHIMS-2 system.</p>
-                <p class="section-intro">Sites are selected to concentrate screening within defined communities, reaching each population deeply rather than spreading events thinly, because depth is what makes complete twelve-month follow-up possible.</p>
-                <p class="ff-note"><strong>Exact locations</strong> across Greater Accra will be announced closer to launch.</p>
+    <!-- Pilot Overview: text and cards beside the lorry station photo -->
+    <section class="ov-sec">
+        <div class="ov-grid">
+            <div class="ov-text">
+                <div class="section-header">
+                    <div class="section-label">Pilot Overview</div>
+                    <h2 class="section-title">From Planning to Impact</h2>
+                    <p class="section-intro">Sites are selected to concentrate screening within defined communities, reaching each population deeply rather than spreading events thinly, because depth is what makes complete twelve-month follow-up possible.</p>
+                    <p class="ff-note"><strong>Exact locations</strong> across Greater Accra will be announced closer to launch.</p>
+                </div>
             </div>
-            <div class="card-grid reveal" style="margin-top: 2rem;">
+            <div class="ov-cards">
                 <div class="card">
                     <h4>Three Lorry Park Screenings</h4>
                     <p>Community-based blood pressure screening events at major transport hubs where trotro drivers and market women converge, the heart of the transport hub ecosystem.</p>
@@ -409,85 +456,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
                     <h4>Three Church-Based Health Fairs</h4>
                     <p>Hypertension resource fairs at church communities, leveraging trusted parish networks and existing congregational gatherings to reach additional populations.</p>
                 </div>
-                <div class="card">
-                    <h4>12-Month Closed-Loop Follow-Up</h4>
-                    <p>Every participant identified with elevated blood pressure will be tracked at Days 14, 30, 90, 180, and 365, measuring who connects to care and whose outcomes improve.</p>
-                </div>
             </div>
+            <figure class="ov-photo">
+                <img src="/images/ghana-trotro-worker.jpg" alt="A trotro station worker, Accra" loading="lazy">
+                <figcaption>LORRY STATION • ACCRA</figcaption>
+            </figure>
         </div>
     </section>
-    <section class="band"><div class="bandtext"><span class="k">LORRY STATION • ACCRA</span><div class="line">the heart of the transport hub ecosystem</div></div></section>
-    <section style="background: var(--cream-dark); padding: 3.5rem 2rem;">
+    <!-- Pilot Timeline: the six phases by name -->
+    <section class="tl-sec">
         <div class="container">
             <div class="section-header">
                 <div class="section-label">Implementation Phases</div>
                 <h2 class="section-title">Pilot Timeline</h2>
             </div>
-            <div class="stepper reveal">
-                <div class="step">
-                    <div class="step-node">1</div>
-                    <div class="step-text">
-                        <div class="step-name">Foundation</div>
-                        <div class="step-desc">Partnerships, regulatory clearances, team recruitment</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-node">2</div>
-                    <div class="step-text">
-                        <div class="step-name">Training</div>
-                        <div class="step-desc">ToT curriculum delivery, volunteer training, data system setup</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-node">3</div>
-                    <div class="step-text">
-                        <div class="step-name">Dry Run</div>
-                        <div class="step-desc">Practice screening events, workflow testing</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-node">4</div>
-                    <div class="step-text">
-                        <div class="step-name">Screening</div>
-                        <div class="step-desc">Six events across Greater Accra</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-node">5</div>
-                    <div class="step-text">
-                        <div class="step-name">Follow-Up</div>
-                        <div class="step-desc">12-month tracking cycle</div>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-node">6</div>
-                    <div class="step-text">
-                        <div class="step-name">Evaluate</div>
-                        <div class="step-desc">Data analysis, outcomes reporting, scale planning</div>
-                    </div>
-                </div>
-            </div>
+            <ol class="stepper">
+                <li class="step"><div class="step-node">1</div><div class="step-name">Foundation</div></li>
+                <li class="step"><div class="step-node">2</div><div class="step-name">Training</div></li>
+                <li class="step"><div class="step-node">3</div><div class="step-name">Dry Run</div></li>
+                <li class="step"><div class="step-node">4</div><div class="step-name">Screening</div></li>
+                <li class="step"><div class="step-node">5</div><div class="step-name">Follow-Up</div></li>
+                <li class="step"><div class="step-node">6</div><div class="step-name">Evaluate</div></li>
+            </ol>
         </div>
     </section>
-    <section style="padding: 3.5rem 2rem;">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Beyond the Pilot</div>
-                <h2 class="section-title">What Comes After the Pilot</h2>
-                <p class="section-intro">The pilot is not a one-time event. It is the structured test of the Initiative's closed-loop follow-up model across six Greater Accra sites, with 12 months of follow-up at days 14, 30, 90, 180, and 365.</p>
+    <!-- What Comes After the Pilot -->
+    <section class="after-sec">
+        <div class="after-grid">
+            <div class="after-left">
+                <div class="section-header">
+                    <div class="section-label">Beyond the Pilot</div>
+                    <h2 class="section-title">What Comes After the Pilot</h2>
+                </div>
+                <p class="after-quote">What the pilot proves is whether the model holds. What comes after is what the model enables.</p>
+                <p>Post-pilot, the Initiative's focus shifts from running screening events to embedding the follow-up model into partner-led programs aligned with Ghana's Free Primary Healthcare Programme.</p>
             </div>
-            <div style="max-width: 760px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; color: var(--charcoal);">
-                <p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #1A5F5F; font-size: 1.35rem; font-weight: 500; line-height: 1.4; margin: 0 0 2rem; border-left: 4px solid #1A5F5F; padding: 0.25rem 0 0.25rem 1.5rem;">What the pilot proves is whether the model holds. What comes after is what the model enables.</p>
-                <p style="margin-bottom: 1.5rem;">Post-pilot, the Initiative's focus shifts from running screening events to embedding the follow-up model into partner-led programs aligned with Ghana's Free Primary Healthcare Programme. Screening is the entry point. The mission is everything that happens after a person learns their blood pressure is high.</p>
-                <p style="margin-bottom: 1rem;">We are building toward three things:</p>
-                <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">
-                    <li style="margin-bottom: 0.85rem;">A licensable closed-loop follow-up curriculum that trained partners can deliver, so the model travels without the Initiative's staff on every site.</li>
-                    <li style="margin-bottom: 0.85rem;">Embedded continuity-of-care support within FPHC-aligned community and institutional networks.</li>
-                    <li style="margin-bottom: 0;">Longitudinal outcome data (retention, control, and loss-to-follow-up at 30, 90, 180, and 365 days) that informs national hypertension policy.</li>
+            <div class="after-right">
+                <p>We are building toward three things:</p>
+                <ul>
+                    <li>A licensable closed-loop follow-up curriculum that trained partners can deliver, so the model travels without the Initiative's staff on every site.</li>
+                    <li>Embedded continuity-of-care support within FPHC-aligned community and institutional networks.</li>
+                    <li>Longitudinal outcome data (retention, control, and loss-to-follow-up at 30, 90, 180, and 365 days) that informs national hypertension policy.</li>
                 </ul>
-                <p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #1A5F5F; font-size: 1.25rem; font-weight: 500; line-height: 1.5; margin: 0;">The Initiative's long-term value is not how many people we screen. It is how many stay alive on treatment because the system held.</p>
             </div>
         </div>
+        <p class="after-close">The Initiative's long-term value is not how many people we screen. It is how many stay alive on treatment because the system held.</p>
     </section>
     <section class="donate-cta">
         <h2>Fund the Staying</h2>
@@ -497,34 +510,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     </section>
     </main>
     <footer class="footer" role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
-                <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
-                <p style="margin-top: 0.75rem; font-style: italic; color: var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
+        <div class="footer-row">
+            <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
+            <div class="footer-side">
+                <p class="footer-tag">Ma wo koma mmɔ. Let your heart beat.</p>
+                <p class="footer-links"><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a> <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></p>
             </div>
-            <div>
-                <h4>Navigate</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/approach/">Our Approach</a></li>
-                    <li><a href="/pilot/">The Pilot</a></li>
-                    <li><a href="/team/">Team &amp; Partners</a></li>
-                    <li><a href="/research/">Research</a></li>
-                    <li><a href="/involved/">Get Involved</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
-                    <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></li>
-                    <li><a href="https://ghanabloodpressure.org" target="_blank" rel="noopener noreferrer">ghanabloodpressure.org</a></li>
-                </ul>
-            </div>
-        </div>
-        <div style="max-width: 1100px; margin: 1.5rem auto 0; padding: 0 2rem; text-align: center;">
-            <p style="font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-style: italic; color: #E8D590; font-size: 1rem; margin: 0;">We do not stop at the cuff. We stay until care continues.</p>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI), a program of <a href="/foundation/" style="color:inherit;text-decoration:underline;">Blessed Health Foundation LBG</a>. All rights reserved.</p>

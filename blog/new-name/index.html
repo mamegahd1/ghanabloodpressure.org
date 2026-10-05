@@ -57,12 +57,6 @@ body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Ox
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;line-height:1.2}
 .skip-nav{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--burgundy-deep);padding:.75rem 1.5rem;font-weight:700;z-index:2000;border-radius:0 0 6px 6px;text-decoration:none}
 .skip-nav:focus{top:0}
-.utilbar{background:var(--teal-dark);color:#cfeaea;font-size:.82rem}
-.utilbar .uwrap{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:38px;gap:1rem}
-.utilbar .twi-strip{font-style:italic;letter-spacing:.02em;opacity:.92}
-.utilbar .ulinks{display:flex;gap:1.3rem;flex:none}
-.utilbar a{color:#cfeaea;text-decoration:none}
-.utilbar a:hover{color:#fff}
 .nav{position:sticky;top:0;z-index:1000;background:rgba(253,250,245,.96);-webkit-backdrop-filter:saturate(140%) blur(8px);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--cream-dark);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center;transition:box-shadow .3s,background .3s}
 .nav.scrolled{box-shadow:0 2px 16px rgba(19,71,71,.12);background:rgba(253,250,245,.99)}
 .nav-logo{display:flex;align-items:center;text-decoration:none}
@@ -90,34 +84,28 @@ main.article{max-width:760px;margin:0 auto;padding:3.5rem 2rem}
 .bre-feature .signature .role{display:block;font-style:normal;font-family:'DM Sans',-apple-system,sans-serif;font-size:.95rem;color:var(--charcoal-light);letter-spacing:.02em;margin-top:.15em}
 /* footer */
 .footer{background:var(--burgundy-deep);color:var(--cream);padding:3rem 2rem 1.5rem;margin-top:3rem}
-.footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem}
-.footer-brand strong{color:var(--gold);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.2rem}
-.footer-brand p{max-width:350px;font-size:.95rem;line-height:1.6;margin-top:.75rem}
-.footer h4{color:var(--gold);font-size:1rem;margin-bottom:1rem}
-.footer ul{list-style:none}
-.footer ul li{margin-bottom:.5rem}
-.footer ul li a{color:#C5BBAB;text-decoration:none;font-size:.9rem;transition:color .3s}
-.footer ul li a:hover{color:var(--cream)}
 .footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:.85rem;color:#B0A88F}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 /* motion */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important}.reveal{opacity:1!important;transform:none!important}}
-@media(max-width:760px){.utilbar .ulinks{display:none}.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.footer-content{grid-template-columns:1fr;text-align:center}.footer-logo-img{margin:0 auto}.footer-brand p{max-width:none}}
+@media(max-width:760px){.nav-logo-img{height:40px}.nav-logo{padding:2px 0;margin:-2px 0}.footer-logo-img{margin:0 auto}}
 /* mid widths: the header logo may shrink so the nav fits without sideways scroll */
 @media(min-width:1001px) and (max-width:1260px){.nav-logo{flex:0 1 auto;min-width:0}.nav-logo-img{height:auto;max-width:100%;max-height:46px}.nav-links{gap:.5rem}}
+/* === SHORT FOOTER AND PHONE TAP TARGETS (RUN 2026-10-04) === */
+.footer-row{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.footer-side{text-align:right}
+.footer-tag{font-style:italic;color:var(--gold-pale);font-size:.95rem;line-height:1.6;margin:0}
+.footer-links{display:flex;justify-content:flex-end;flex-wrap:wrap;column-gap:1.5rem;margin:0}
+.footer-links a{color:#C5BBAB;text-decoration:none;font-size:.9rem;display:inline-flex;align-items:center;min-height:44px;transition:color .3s}
+.footer-links a:hover{color:var(--cream)}
+.nav-mobile-toggle{min-width:44px;min-height:44px}
+@media(max-width:768px){.footer{padding:2.25rem 1.25rem 1.25rem}.footer-bottom{margin-top:1.25rem;padding-top:1.1rem;font-size:.8rem}.footer-logo-img{height:72px}.footer-row{flex-direction:column;gap:.5rem;text-align:center}.footer-side{text-align:center}.footer-links{flex-direction:column;align-items:center}.footer-logo-img{margin:0 auto}.nav-links .nav-donate-btn{min-height:44px!important}div[role=note]>a{padding:12px 0}.footer-bottom a{padding:14px 0}main p a,main li a,main h2 a{padding-top:12px;padding-bottom:12px}.loop-link a,.partner-link a{padding-top:0;padding-bottom:0}.article .back,.bre-feature .backlink{display:inline-flex;align-items:center;vertical-align:top;min-height:44px;margin-bottom:calc(1.75rem - 16px)}}
 </style>
 </head>
 <body>
 <a class="skip-nav" href="#main">Skip to content</a>
-<div class="utilbar"><div class="uwrap">
-  <span class="twi-strip">Ma wo koma mmɔ. Let your heart beat.</span>
-  <span class="ulinks">
-    <a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a>
-    <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Donate</a>
-  </span>
-</div></div>
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <a href="/" class="nav-logo" aria-label="Community Hypertension Initiative in Ghana home"><img src="/images/logo-header.svg" alt="Community Hypertension Initiative in Ghana" class="nav-logo-img"></a>
   <ul class="nav-links" id="navLinks">
@@ -152,34 +140,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 </main>
 
 <footer class="footer" role="contentinfo">
-  <div class="footer-content">
-    <div class="footer-brand">
-      <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
-      <p>Bringing accessible blood pressure screening and health education to Ghana's transport hub communities. Community-driven. Evidence-based. Life-saving.</p>
-      <p style="margin-top:.75rem;font-style:italic;color:var(--gold-pale);">Ma wo koma mmɔ. Let your heart beat.</p>
+  <div class="footer-row">
+    <img src="/images/logo-footer.svg" alt="Community Hypertension Initiative in Ghana, a program of Blessed Health Foundation" class="footer-logo-img">
+    <div class="footer-side">
+      <p class="footer-tag">Ma wo koma mmɔ. Let your heart beat.</p>
+      <p class="footer-links"><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a> <a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></p>
     </div>
-    <div>
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/approach/">Our Approach</a></li>
-        <li><a href="/pilot/">The Pilot</a></li>
-        <li><a href="/team/">Team &amp; Partners</a></li>
-        <li><a href="/research/">Research</a></li>
-        <li><a href="/involved/">Get Involved</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Connect</h4>
-      <ul>
-        <li><a href="mailto:info@ghanabloodpressure.org">info@ghanabloodpressure.org</a></li>
-        <li><a href="https://ko-fi.com/ghanahealthscreening" target="_blank" rel="noopener noreferrer">Support Us on Ko-fi</a></li>
-        <li><a href="https://ghanabloodpressure.org" target="_blank" rel="noopener noreferrer">ghanabloodpressure.org</a></li>
-      </ul>
-    </div>
-  </div>
-  <div style="max-width:1100px;margin:1.5rem auto 0;padding:0 2rem;text-align:center;">
-    <p style="font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-style:italic;color:#E8D590;font-size:1rem;margin:0;">We do not stop at the cuff. We stay until care continues.</p>
   </div>
   <div class="footer-bottom">&copy; 2026 Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI), a program of <a href="/foundation/" style="color:inherit;text-decoration:underline;">Blessed Health Foundation LBG</a>. All rights reserved.</div>
 </footer>
