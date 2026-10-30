@@ -97,6 +97,11 @@
 .team-link a{display:inline-flex;align-items:center;min-height:44px}
 .lead-card{margin-top:1.25rem;border-top-color:var(--teal)}
 .lead-card .founder-eyebrow{color:var(--teal-dark)}
+.group-card{max-width:none;margin:1.25rem auto 0;background:var(--white);border-radius:14px;box-shadow:0 10px 36px rgba(19,71,71,.10);border-top:5px solid var(--teal);padding:1.75rem 2.25rem}
+.group-member{display:grid;grid-template-columns:180px 1fr;gap:2rem;align-items:center;padding:1.25rem 0}
+.group-member+.group-member{border-top:1px solid var(--cream-dark)}
+.group-member:last-child{padding-bottom:0}
+@media(max-width:760px){.group-card{padding:1.6rem 1.4rem}.group-member{grid-template-columns:1fr;gap:1rem}.group-member .founder-photo{max-width:200px;margin:0 auto}}
 .founder-initials{display:flex;align-items:center;justify-content:center;background:var(--teal);color:var(--gold-pale);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:3rem;font-weight:700}
 .lead-card a{color:var(--teal);font-weight:600;text-decoration:none}.lead-card a:hover{text-decoration:underline}
 .team-photo,.team-initials{width:96px;height:96px;border-radius:50%;display:block;margin:0 auto .75rem;box-shadow:0 4px 14px rgba(0,0,0,.12)}
@@ -265,40 +270,42 @@
                     <p class="founder-bio">Ms. Anaba is a public health researcher at the University for Development Studies, Tamale, and a Quality Improvement Advisor with the Christian Health Association of Ghana. She leads the development of the Initiative's curriculum with the Curricula Workshop Team and, as Co-Principal Investigator, co-leads its research program, anchoring the northern research perspective and the pathways that link community screening to Ghana's wider health system.</p>
                 </div>
             </div>
-            <div class="founder lead-card">
-                <div class="founder-photo founder-initials" aria-hidden="true">EY</div>
-                <div class="founder-text">
-                    <div class="founder-eyebrow">Clinical Advisory</div>
+            <div class="lead-card group-card">
+                <div class="founder-eyebrow">Clinical Advisory</div>
+                <div class="group-member">
+                    <div class="founder-photo founder-initials" aria-hidden="true">EY</div>
+                    <div class="founder-text">
                     <h3 class="founder-name">Ekua Yeboah, MD, MPH</h3>
                     <div class="founder-role">Clinical Advisor</div>
                     <p class="founder-bio">Dr. Yeboah is a Johns Hopkins-trained physician and public health specialist serving as the Initiative's second clinical lens. She reviews the curriculum's clinical content and the follow-up and referral protocols to ensure clinical accuracy and alignment with international standards.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="founder lead-card">
-                <img src="/images/maame-araba-oduro.jpg" alt="Dr. Maame Araba Oduro" class="founder-photo" loading="lazy">
-                <div class="founder-text">
-                    <div class="founder-eyebrow">Clinical Advisory</div>
+                <div class="group-member">
+                    <img src="/images/maame-araba-oduro.jpg" alt="Dr. Maame Araba Oduro" class="founder-photo" loading="lazy">
+                    <div class="founder-text">
                     <h3 class="founder-name">Dr. Maame Araba Oduro, MBChB, MPH</h3>
                     <div class="founder-role">Clinical Lead, Maternal Health &amp; Hypertension in Pregnancy</div>
                     <p class="founder-bio">Dr. Oduro guides the curriculum's pregnancy protocol and how pregnant women found with raised blood pressure are referred to antenatal care and followed. Her expertise in maternal health ensures they receive appropriate clinical direction, communication, and referral.</p>
+                    </div>
                 </div>
             </div>
-            <div class="founder lead-card">
-                <img src="/images/leonora-ahorkonu.jpg" alt="Leonora Ahorkonu" class="founder-photo" loading="lazy">
-                <div class="founder-text">
-                    <div class="founder-eyebrow">Follow-Up Team</div>
+            <div class="lead-card group-card">
+                <div class="founder-eyebrow">Follow-Up Team</div>
+                <div class="group-member">
+                    <img src="/images/leonora-ahorkonu.jpg" alt="Leonora Ahorkonu" class="founder-photo" loading="lazy">
+                    <div class="founder-text">
                     <h3 class="founder-name">Leonora Ahorkonu</h3>
                     <div class="founder-role">Community Follow-Up &amp; Language Lead</div>
                     <p class="founder-bio">Leonora brings hands-on community experience and Ewe and Twi language capacity to the follow-up team, reviewing call scripts so every person is reached in a language they trust.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="founder lead-card">
-                <img src="/images/prince-osei-agyemang.jpg" alt="Prince Osei Agyemang" class="founder-photo" loading="lazy">
-                <div class="founder-text">
-                    <div class="founder-eyebrow">Follow-Up Team</div>
+                <div class="group-member">
+                    <img src="/images/prince-osei-agyemang.jpg" alt="Prince Osei Agyemang" class="founder-photo" loading="lazy">
+                    <div class="founder-text">
                     <h3 class="founder-name">Prince Osei Agyemang, PharmD, MPH</h3>
                     <div class="founder-role">Follow-Up &amp; Pharmacy Pathways</div>
                     <p class="founder-bio">Prince brings training in pharmacy and population health analytics to the Initiative's follow-up: the pharmacy referral pathways and the follow-up protocol that keep each person in care for twelve months.</p>
+                    </div>
                 </div>
             </div>
         </div>
