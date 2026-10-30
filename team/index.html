@@ -104,14 +104,19 @@
 @media(max-width:760px){.group-card{padding:1.6rem 1.4rem}.group-member{grid-template-columns:1fr;gap:1rem}.group-member .founder-photo{max-width:200px;margin:0 auto}}
 @media(min-width:769px){.bio-more>summary{display:none}}
 @media(max-width:768px){
-.founder,.group-member{grid-template-columns:72px 1fr!important;gap:.4rem 1rem!important;align-items:start;text-align:left}
+.founder,.group-member{grid-template-columns:72px 1fr!important;gap:.25rem 1rem!important;align-items:center;text-align:left}
 .founder{padding:1.25rem 1.1rem!important}
 .founder-photo,.group-member .founder-photo{width:72px!important;max-width:72px!important;height:72px;margin:0!important;border-radius:50%;box-shadow:0 3px 10px rgba(0,0,0,.12)}
 .founder-initials{font-size:1.4rem}
 .founder-name{font-size:1.3rem!important;margin:0}
 .founder-eyebrow{font-size:.7rem;margin-bottom:.2rem}
 .founder-role{font-size:.88rem;margin-bottom:0!important}
-.bio-more{border-top:1px solid var(--cream-dark);margin-top:.6rem}
+.bio-more{grid-column:1 / -1;border-top:1px solid var(--cream-dark);margin-top:.6rem}
+.group-member .founder-text{display:contents}
+.group-member .founder-photo{grid-row:1 / span 2;align-self:center}
+.group-member .founder-name{grid-column:2;align-self:end}
+.group-member .founder-role{grid-column:2;align-self:start}
+.bio-more .founder-bio{margin-top:0}
 .bio-more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;min-height:44px;font-weight:700;color:var(--teal-dark)}
 .bio-more>summary::-webkit-details-marker{display:none}
 .bio-more>summary::before{content:'\25B8';color:var(--gold)}
