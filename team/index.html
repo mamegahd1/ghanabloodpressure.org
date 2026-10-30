@@ -102,6 +102,25 @@
 .group-member+.group-member{border-top:1px solid var(--cream-dark)}
 .group-member:last-child{padding-bottom:0}
 @media(max-width:760px){.group-card{padding:1.6rem 1.4rem}.group-member{grid-template-columns:1fr;gap:1rem}.group-member .founder-photo{max-width:200px;margin:0 auto}}
+@media(min-width:769px){.bio-more>summary{display:none}}
+@media(max-width:768px){
+.founder,.group-member{grid-template-columns:72px 1fr!important;gap:.4rem 1rem!important;align-items:start;text-align:left}
+.founder{padding:1.25rem 1.1rem!important}
+.founder-photo,.group-member .founder-photo{width:72px!important;max-width:72px!important;height:72px;margin:0!important;border-radius:50%;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.founder-initials{font-size:1.4rem}
+.founder-name{font-size:1.3rem!important;margin:0}
+.founder-eyebrow{font-size:.7rem;margin-bottom:.2rem}
+.founder-role{font-size:.88rem;margin-bottom:0!important}
+.bio-more{border-top:1px solid var(--cream-dark);margin-top:.6rem}
+.bio-more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;min-height:44px;font-weight:700;color:var(--teal-dark)}
+.bio-more>summary::-webkit-details-marker{display:none}
+.bio-more>summary::before{content:'\25B8';color:var(--gold)}
+.bio-more[open]>summary::before{content:'\25BE'}
+.bio-more .founder-bio{font-size:.95rem;line-height:1.65;padding-bottom:.5rem}
+
+.group-card{padding:1.25rem 1.1rem}
+.group-member{padding:1rem 0}
+}
 .founder-initials{display:flex;align-items:center;justify-content:center;background:var(--teal);color:var(--gold-pale);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:3rem;font-weight:700}
 .lead-card a{color:var(--teal);font-weight:600;text-decoration:none}.lead-card a:hover{text-decoration:underline}
 .team-photo,.team-initials{width:96px;height:96px;border-radius:50%;display:block;margin:0 auto .75rem;box-shadow:0 4px 14px rgba(0,0,0,.12)}
@@ -239,7 +258,9 @@
                     <div class="founder-eyebrow">Founder</div>
                     <h3 class="founder-name">Mavis Amegah-Dorr</h3>
                     <div class="founder-role">Founder &amp; Executive Director</div>
-                    <p class="founder-bio">Mavis is Ghanaian-born and brings a systems thinking background to global health. The Initiative grew from the loss of her father to a stroke in 2019 and a commitment to building health infrastructure that tracks outcomes, not just events. She leads the Initiative's strategy, partnerships and program design, and leads the design and build of Stay, its follow-up platform.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Mavis is Ghanaian-born and brings a systems thinking background to global health. The Initiative grew from the loss of her father to a stroke in 2019 and a commitment to building health infrastructure that tracks outcomes, not just events. She leads the Initiative's strategy, partnerships and program design, and leads the design and build of Stay, its follow-up platform.</p>
+                    </details>
                 </div>
             </div>
             <div class="founder lead-card">
@@ -248,7 +269,9 @@
                     <div class="founder-eyebrow">Clinical Leadership</div>
                     <h3 class="founder-name">Dr. Joana Amegah</h3>
                     <div class="founder-role">Medical Director</div>
-                    <p class="founder-bio">Dr. Amegah provides clinical oversight of the curriculum's clinical content, the follow-up protocol in Stay, including when a person must be sent for urgent care, and the referral pathways that link people to care, and brings direct access to Ghana's medical network.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Dr. Amegah provides clinical oversight of the curriculum's clinical content, the follow-up protocol in Stay, including when a person must be sent for urgent care, and the referral pathways that link people to care, and brings direct access to Ghana's medical network.</p>
+                    </details>
                 </div>
             </div>
             <div class="founder lead-card">
@@ -257,8 +280,10 @@
                     <div class="founder-eyebrow">Research Leadership</div>
                     <h3 class="founder-name">Dr. Hubert Amu</h3>
                     <div class="founder-role">Anchor Principal Investigator, University of Health and Allied Sciences</div>
-                    <p class="founder-bio">Dr. Amu is a Ghanaian population health researcher and Senior Lecturer at the University of Health and Allied Sciences. As Anchor Principal Investigator, he leads the curriculum's next phase and the Initiative's research program: the evaluation of the pilot, the outcomes research on twelve-month follow-up, and the publications that turn the Initiative's data into evidence for policy.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Dr. Amu is a Ghanaian population health researcher and Senior Lecturer at the University of Health and Allied Sciences. As Anchor Principal Investigator, he leads the curriculum's next phase and the Initiative's research program: the evaluation of the pilot, the outcomes research on twelve-month follow-up, and the publications that turn the Initiative's data into evidence for policy.</p>
                     <p class="team-link"><a href="https://scholar.google.com/citations?user=c5RjivAAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar &rarr;</a></p>
+                    </details>
                 </div>
             </div>
             <div class="founder lead-card">
@@ -267,7 +292,9 @@
                     <div class="founder-eyebrow">Curriculum &amp; Research Leadership</div>
                     <h3 class="founder-name">Cynthia Lamisi Anaba</h3>
                     <div class="founder-role">Co-Principal Investigator &amp; Curriculum Lead, University for Development Studies</div>
-                    <p class="founder-bio">Ms. Anaba is a public health researcher at the University for Development Studies, Tamale, and a Quality Improvement Advisor with the Christian Health Association of Ghana. She leads the development of the Initiative's curriculum with the Curricula Workshop Team and, as Co-Principal Investigator, co-leads its research program, anchoring the northern research perspective and the pathways that link community screening to Ghana's wider health system.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Ms. Anaba is a public health researcher at the University for Development Studies, Tamale, and a Quality Improvement Advisor with the Christian Health Association of Ghana. She leads the development of the Initiative's curriculum with the Curricula Workshop Team and, as Co-Principal Investigator, co-leads its research program, anchoring the northern research perspective and the pathways that link community screening to Ghana's wider health system.</p>
+                    </details>
                 </div>
             </div>
             <div class="lead-card group-card">
@@ -277,7 +304,9 @@
                     <div class="founder-text">
                     <h3 class="founder-name">Ekua Yeboah, MD, MPH</h3>
                     <div class="founder-role">Clinical Advisor</div>
-                    <p class="founder-bio">Dr. Yeboah is a Johns Hopkins-trained physician and public health specialist serving as the Initiative's second clinical lens. She reviews the curriculum's clinical content and the follow-up and referral protocols to ensure clinical accuracy and alignment with international standards.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Dr. Yeboah is a Johns Hopkins-trained physician and public health specialist serving as the Initiative's second clinical lens. She reviews the curriculum's clinical content and the follow-up and referral protocols to ensure clinical accuracy and alignment with international standards.</p>
+                    </details>
                     </div>
                 </div>
                 <div class="group-member">
@@ -285,7 +314,9 @@
                     <div class="founder-text">
                     <h3 class="founder-name">Dr. Maame Araba Oduro, MBChB, MPH</h3>
                     <div class="founder-role">Clinical Lead, Maternal Health &amp; Hypertension in Pregnancy</div>
-                    <p class="founder-bio">Dr. Oduro guides the curriculum's pregnancy protocol and how pregnant women found with raised blood pressure are referred to antenatal care and followed. Her expertise in maternal health ensures they receive appropriate clinical direction, communication, and referral.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Dr. Oduro guides the curriculum's pregnancy protocol and how pregnant women found with raised blood pressure are referred to antenatal care and followed. Her expertise in maternal health ensures they receive appropriate clinical direction, communication, and referral.</p>
+                    </details>
                     </div>
                 </div>
             </div>
@@ -296,7 +327,9 @@
                     <div class="founder-text">
                     <h3 class="founder-name">Leonora Ahorkonu</h3>
                     <div class="founder-role">Community Follow-Up &amp; Language Lead</div>
-                    <p class="founder-bio">Leonora brings hands-on community experience and Ewe and Twi language capacity to the follow-up team, reviewing call scripts so every person is reached in a language they trust.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Leonora brings hands-on community experience and Ewe and Twi language capacity to the follow-up team, reviewing call scripts so every person is reached in a language they trust.</p>
+                    </details>
                     </div>
                 </div>
                 <div class="group-member">
@@ -304,7 +337,9 @@
                     <div class="founder-text">
                     <h3 class="founder-name">Prince Osei Agyemang, PharmD, MPH</h3>
                     <div class="founder-role">Follow-Up &amp; Pharmacy Pathways</div>
-                    <p class="founder-bio">Prince brings training in pharmacy and population health analytics to the Initiative's follow-up: the pharmacy referral pathways and the follow-up protocol that keep each person in care for twelve months.</p>
+                    <details class="js-open bio-more"><summary>Read more</summary>
+                        <p class="founder-bio">Prince brings training in pharmacy and population health analytics to the Initiative's follow-up: the pharmacy referral pathways and the follow-up protocol that keep each person in care for twelve months.</p>
+                    </details>
                     </div>
                 </div>
             </div>
