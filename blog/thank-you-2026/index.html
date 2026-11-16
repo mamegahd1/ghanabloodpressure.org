@@ -123,6 +123,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .yearend .share{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
 .yearend .share a{display:inline-flex;align-items:center;min-height:44px;padding:0 1.1rem;border:2px solid var(--teal);border-radius:22px;color:var(--teal);font-weight:700;font-size:.92rem;text-decoration:none;transition:background .2s,color .2s}
 .yearend .share a:hover{background:var(--teal);color:var(--white)}
+.yearend .share.flash #share-email{background:var(--teal);color:var(--white)}
 .yearend .give-wrap{text-align:center;margin:1.5rem 0 0}
 .yearend .give{display:inline-flex;align-items:center;min-height:48px;padding:0 1.75rem;background:var(--gold);color:var(--burgundy-deep);font-weight:700;border-radius:4px;text-decoration:none}
 .yearend .give:hover{background:var(--gold-light)}
@@ -189,7 +190,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 
     <h2 class="reveal ye-h">How you can help</h2>
     <ul class="rows reveal">
-      <li><img src="/images/newsletter/2026-11/team-icon-forward.png" alt="" width="48" height="48"><div><h3 class="ye-i">Share our work</h3><p>With colleagues who care about blood pressure care in Ghana.</p><div class="share"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook">Facebook</a><a href="mailto:?subject=Thank%20you%20for%202026%3A%20Community%20Hypertension%20Initiative%20in%20Ghana&amp;body=I%20thought%20you%20would%20like%20to%20see%20this%20year-end%20update%20from%20the%20Community%20Hypertension%20Initiative%20in%20Ghana%3A%20what%20they%20built%20in%202026%20and%20their%20goals%20for%202027.%20https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" title="Share by email">Email</a></div></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-forward.png" alt="" width="48" height="48"><div><h3 class="ye-i">Share our work</h3><p>With colleagues who care about blood pressure care in Ghana.</p><div class="share" id="share"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook">Facebook</a><a href="mailto:?subject=Thank%20you%20for%202026%3A%20Community%20Hypertension%20Initiative%20in%20Ghana&amp;body=I%20thought%20you%20would%20like%20to%20see%20this%20year-end%20update%20from%20the%20Community%20Hypertension%20Initiative%20in%20Ghana%3A%20what%20they%20built%20in%202026%20and%20their%20goals%20for%202027.%20https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" id="share-email" title="Share by email">Email</a></div></div></li>
       <li><img src="/images/newsletter/2026-11/team-icon-connect.png" alt="" width="48" height="48"><div><h3 class="ye-i">Introduce us</h3><p>To organizations in Ghana that already screen for blood pressure, so the people they find can stay in care.</p></div></li>
       <li><img src="/images/newsletter/2026-11/team-icon-heart.png" alt="" width="48" height="48"><div><h3 class="ye-i">Share or support Fund the Staying</h3><p>Our first year-end campaign is open now.</p></div></li>
     </ul>
@@ -231,6 +232,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 <script>
 /* menu: Escape closes the open menu and returns focus to the menu button; focus moving out of the nav closes it */
 (function(){var l=document.getElementById('navLinks'),b=document.querySelector('.nav-mobile-toggle'),n=document.querySelector('.nav');if(!l||!b||!n)return;function shut(f){l.classList.remove('active');b.setAttribute('aria-expanded','false');if(f)b.focus();}document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('active'))shut(true);});document.addEventListener('focusin',function(e){if(l.classList.contains('active')&&!n.contains(e.target))shut(false);});})();
+</script>
+<script>
+/* ?share=email (from the newsletter's Email button): open the email app with the note filled in; show the Email button in case it does not open */
+(function(){if(!/[?&]share=email(&|$)/.test(location.search))return;var a=document.getElementById('share-email'),s=document.getElementById('share');if(!a)return;if(s){s.classList.add('flash');var r=s.closest('.reveal');if(r)r.classList.add('in');s.scrollIntoView({block:'center'})}window.location.href=a.href})();
 </script>
 </body>
 </html>
