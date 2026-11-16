@@ -105,20 +105,20 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 /* === YEAR-END POST (2026-11-16) === */
 .yearend .hero{margin:1.75rem 0 .5rem;border-radius:8px;overflow:hidden}
 .yearend .hero img{display:block;width:100%;height:auto}
-.yearend h2{color:var(--burgundy-deep);font-size:1.75rem;margin:2.75rem 0 1.25rem}
+.yearend .ye-h{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;line-height:1.2;color:var(--burgundy-deep);font-size:1.75rem;margin:2.75rem 0 1.25rem}
 .yearend .rows{list-style:none;margin:0;padding:0}
 .yearend .rows li{display:flex;gap:1.1rem;align-items:flex-start;margin:0 0 1.35rem}
 .yearend .rows img{flex:0 0 48px;width:48px;height:48px;display:block}
-.yearend .rows h3{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1.05rem;font-weight:700;color:var(--burgundy-deep);margin:.15rem 0 .2rem;line-height:1.35}
+.yearend .ye-i{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1.05rem;font-weight:700;color:var(--burgundy-deep);margin:.15rem 0 .2rem;line-height:1.35}
 .yearend .rows p{margin:0;color:var(--charcoal-light);line-height:1.7}
 .yearend .goals{background:var(--teal);border-radius:10px;padding:1.9rem 1.9rem .8rem;margin:2.75rem 0 .5rem}
 .yearend .goals .label,.yearend .vision .label{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
 .yearend .goals .label{color:var(--gold-pale)}
-.yearend .goals h2{color:var(--white);margin:.35rem 0 1.35rem}
+.yearend .goals .ye-h{color:var(--white);margin:.35rem 0 1.35rem}
 .yearend .goals ol{list-style:none;margin:0;padding:0}
 .yearend .goals li{display:flex;gap:1rem;align-items:flex-start;margin:0 0 1.2rem}
 .yearend .goals .n{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--burgundy-deep);font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:700;display:flex;align-items:center;justify-content:center}
-.yearend .goals h3{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:1.05rem;font-weight:700;color:var(--white);margin:.25rem 0 .2rem}
+.yearend .goals .ye-i{color:var(--white);margin:.25rem 0 .2rem}
 .yearend .goals p{margin:0;color:#E6EFEF;line-height:1.7}
 .yearend .share{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
 .yearend .share a{display:inline-flex;align-items:center;min-height:44px;padding:0 1.1rem;border:2px solid var(--teal);border-radius:22px;color:var(--teal);font-weight:700;font-size:.92rem;text-decoration:none;transition:background .2s,color .2s}
@@ -134,7 +134,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .yearend .vision .label{color:var(--teal)}
 .yearend .vision .statement{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-size:1.5rem;line-height:1.4;color:var(--burgundy-deep);margin:.45rem 0 .5rem}
 .yearend .vision p{margin:.4rem 0}
-@media(max-width:760px){.yearend h2{font-size:1.5rem}.yearend .goals{padding:1.5rem 1.25rem .6rem}.yearend .vision .statement{font-size:1.3rem}.yearend .who{gap:.4rem}}
+@media(max-width:760px){.yearend .ye-h{font-size:1.5rem}.yearend .goals{padding:1.5rem 1.25rem .6rem}.yearend .vision .statement{font-size:1.3rem}.yearend .who{gap:.4rem}}
 </style>
 </head>
 <body>
@@ -161,37 +161,37 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
   <div class="bre-feature yearend">
     <a class="backlink" href="/blog/">&larr; Updates</a>
     <div class="eyebrow reveal"><time datetime="2026-11-16">November 2026</time></div>
-    <h1 class="reveal">Thank you for 2026</h1>
+    <h1 class="reveal ye-title">Thank you for 2026</h1>
     <p class="lead reveal">What we built together this year, and where we go in 2027.</p>
     <figure class="hero reveal"><img src="/images/newsletter/2026-11/team-hero-produce-seller.jpg" alt="A produce seller at her market stall in Ghana" width="975" height="552"></figure>
     <p class="reveal">As the year closes, here is what we built together at the Community Hypertension Initiative in Ghana (formerly the Ghana Hypertension Screening Initiative, GHSI), a program of Blessed Health Foundation LBG, with our team, our advisors and our partners.</p>
 
-    <h2 class="reveal">What we built in 2026</h2>
+    <h2 class="reveal ye-h">What we built in 2026</h2>
     <ul class="rows reveal">
-      <li><img src="/images/newsletter/2026-11/team-icon-people.png" alt="" width="48" height="48"><div><h3>Team</h3><p>Our team of clinicians, researchers and community leads grew this year. Our advisors gave their time to review our work and to work alongside us.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-institution.png" alt="" width="48" height="48"><div><h3>Partners</h3><p>Akoma+ Health and Wellness Foundation is our screening partner. Our partnership with The Public Health Alliance International Ghana (PHAIG) was formalized in April, and Central University became our academic partner this year.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-house.png" alt="" width="48" height="48"><div><h3>A home for the work</h3><p>Blessed Health Foundation LBG was incorporated in Ghana on 17 September. In the United States, Blessed Health Foundation USA, Inc. is now recognized by the IRS as a 501(c)(3) public charity.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-book.png" alt="" width="48" height="48"><div><h3>Curriculum</h3><p>Our training curriculum entered its next phase, co-led by Ms. Anaba and Dr. Amu.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-phone.png" alt="" width="48" height="48"><div><h3>Follow-up</h3><p>We built Stay, our system for following each person found at risk for 12 months, on DHIS2.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-globe.png" alt="" width="48" height="48"><div><h3>Network</h3><p>We became an Associate Member of the World Hypertension League.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-heart.png" alt="" width="48" height="48"><div><h3>Giving</h3><p>Our first year-end campaign, Fund the Staying, opened on 14 November.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-people.png" alt="" width="48" height="48"><div><h3 class="ye-i">Team</h3><p>Our team of clinicians, researchers and community leads grew this year. Our advisors gave their time to review our work and to work alongside us.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-institution.png" alt="" width="48" height="48"><div><h3 class="ye-i">Partners</h3><p>Akoma+ Health and Wellness Foundation is our screening partner. Our partnership with The Public Health Alliance International Ghana (PHAIG) was formalized in April, and Central University became our academic partner this year.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-house.png" alt="" width="48" height="48"><div><h3 class="ye-i">A home for the work</h3><p>Blessed Health Foundation LBG was incorporated in Ghana on 17 September. In the United States, Blessed Health Foundation USA, Inc. is now recognized by the IRS as a 501(c)(3) public charity.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-book.png" alt="" width="48" height="48"><div><h3 class="ye-i">Curriculum</h3><p>Our training curriculum entered its next phase, co-led by Ms. Anaba and Dr. Amu.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-phone.png" alt="" width="48" height="48"><div><h3 class="ye-i">Follow-up</h3><p>We built Stay, our system for following each person found at risk for 12 months, on DHIS2.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-globe.png" alt="" width="48" height="48"><div><h3 class="ye-i">Network</h3><p>We became an Associate Member of the World Hypertension League.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-heart.png" alt="" width="48" height="48"><div><h3 class="ye-i">Giving</h3><p>Our first year-end campaign, Fund the Staying, opened on 14 November.</p></div></li>
     </ul>
 
     <section class="goals reveal" aria-labelledby="goals-2027">
       <div class="label">Looking ahead</div>
-      <h2 id="goals-2027">Our goals for 2027</h2>
+      <h2 class="ye-h" id="goals-2027">Our goals for 2027</h2>
       <ol>
-        <li><span class="n" aria-hidden="true">1</span><div><h3>Curriculum</h3><p>Publish the training curriculum as a vetted guide.</p></div></li>
-        <li><span class="n" aria-hidden="true">2</span><div><h3>Stay</h3><p>Prepare Stay for its first users: hosting in Ghana and registration with Ghana's Data Protection Commission.</p></div></li>
-        <li><span class="n" aria-hidden="true">3</span><div><h3>Funding</h3><p>Secure funding to link 1,000+ people already screened to care, and keep them there for a year.</p></div></li>
+        <li><span class="n" aria-hidden="true">1</span><div><h3 class="ye-i">Curriculum</h3><p>Publish the training curriculum as a vetted guide.</p></div></li>
+        <li><span class="n" aria-hidden="true">2</span><div><h3 class="ye-i">Stay</h3><p>Prepare Stay for its first users: hosting in Ghana and registration with Ghana's Data Protection Commission.</p></div></li>
+        <li><span class="n" aria-hidden="true">3</span><div><h3 class="ye-i">Funding</h3><p>Secure funding to link 1,000+ people already screened to care, and keep them there for a year.</p></div></li>
       </ol>
     </section>
 
-    <h2 class="reveal">How you can help</h2>
+    <h2 class="reveal ye-h">How you can help</h2>
     <ul class="rows reveal">
-      <li><img src="/images/newsletter/2026-11/team-icon-forward.png" alt="" width="48" height="48"><div><h3>Share our work</h3><p>With colleagues who care about blood pressure care in Ghana.</p><div class="share"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook">Facebook</a><a href="mailto:?subject=Thank%20you%20for%202026%3A%20Community%20Hypertension%20Initiative%20in%20Ghana&amp;body=I%20thought%20you%20would%20like%20to%20see%20this%20year-end%20update%20from%20the%20Community%20Hypertension%20Initiative%20in%20Ghana%3A%20what%20they%20built%20in%202026%20and%20their%20goals%20for%202027.%20https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" title="Share by email">Email</a></div></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-connect.png" alt="" width="48" height="48"><div><h3>Introduce us</h3><p>To organizations in Ghana that already screen for blood pressure, so the people they find can stay in care.</p></div></li>
-      <li><img src="/images/newsletter/2026-11/team-icon-heart.png" alt="" width="48" height="48"><div><h3>Share or support Fund the Staying</h3><p>Our first year-end campaign is open now.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-forward.png" alt="" width="48" height="48"><div><h3 class="ye-i">Share our work</h3><p>With colleagues who care about blood pressure care in Ghana.</p><div class="share"><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn">LinkedIn</a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook">Facebook</a><a href="mailto:?subject=Thank%20you%20for%202026%3A%20Community%20Hypertension%20Initiative%20in%20Ghana&amp;body=I%20thought%20you%20would%20like%20to%20see%20this%20year-end%20update%20from%20the%20Community%20Hypertension%20Initiative%20in%20Ghana%3A%20what%20they%20built%20in%202026%20and%20their%20goals%20for%202027.%20https%3A%2F%2Fghanabloodpressure.org%2Fblog%2Fthank-you-2026%2F" title="Share by email">Email</a></div></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-connect.png" alt="" width="48" height="48"><div><h3 class="ye-i">Introduce us</h3><p>To organizations in Ghana that already screen for blood pressure, so the people they find can stay in care.</p></div></li>
+      <li><img src="/images/newsletter/2026-11/team-icon-heart.png" alt="" width="48" height="48"><div><h3 class="ye-i">Share or support Fund the Staying</h3><p>Our first year-end campaign is open now.</p></div></li>
     </ul>
     <div class="give-wrap reveal">
       <a class="give" href="https://www.zeffy.com/en-US/donation-form/community-hypertension-initiative-in-ghana" target="_blank" rel="noopener noreferrer">Visit Fund the Staying</a>
